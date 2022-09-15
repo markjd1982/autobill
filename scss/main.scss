@@ -1,0 +1,265 @@
+/*   Main   */
+
+@import "compass/css3";
+@import "color";
+@import "mixin";
+@import "form";
+@import "layout";
+@import "modal";
+@import "lnb";
+
+.main{
+	background: $gray;
+}
+
+.main-title-wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	.title{
+		font-size: 20px;
+	}
+	.select-date{
+		height: 24px;
+		align-items: center;
+		width: calc(100px * 3);
+		li{
+			color: #969696;
+			font-weight: 700;
+			text-align: center;
+			cursor: pointer;
+			line-height: 24px;
+			&.on{
+				color: $second;
+			}
+		}
+	}
+	button{
+		z-index: 10;
+		width: 24px;
+		height: 24px;
+		background: url("../_images/common/icon-s-caret-left@2x.png") no-repeat center $gray;
+		position: absolute;
+		top: 0;
+		
+		&.swiper-button-next{
+			left: 0;
+			background-size: 24px;
+		}
+		&.swiper-button-prev{
+			right: 0;
+			background-image: url("../_images/common/icon-s-caret-right@2x.png");
+			background-size: 24px;
+		}
+	}
+}
+
+.flex{
+	display: flex;
+	justify-content: space-between;
+	&.col4{
+		div{
+			width: calc((100% - 30px) / 4);
+		}
+	}
+	&.col3{
+		div{
+			width: calc((100% - 20px) / 3);
+		}
+	}
+	&.col2{
+		div{
+			width: calc((100% - 10px) / 2);
+		}
+	}
+}
+
+.shadow-box{
+	border-radius: 10px;
+	box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	padding: 20px;
+}
+
+.main-top{
+	.shadow-box{
+		.title{
+			font-size: 16px;
+			letter-spacing: -0.47px;
+		}
+		.number{
+			margin-top: 35px;
+			font-size: 24px;
+			font-weight: 700;
+			text-align: right;
+			em{
+				font-size: 16px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+.main-mid,.main-bottom{
+	.shadow-box{
+		padding: 30px;
+		.title{
+			font-size: 20px;
+			text-align: center;
+			letter-spacing: -0.59px;
+			margin-top: 20px;
+		}
+	}
+}
+
+.main-rank-wrap{
+	display: flex;
+	justify-content: space-between;
+	>div{
+		width: 440px;
+		.shadow-box{
+			border-top-left-radius: 0;
+			padding: 30px;
+			.key{
+				font-size: 16px;
+				letter-spacing: -0.47px;
+			}
+			.value{
+				font-size: 16px;
+				letter-spacing: -0.47px;
+				strong{
+					font-weight: 700;
+					font-size: 30px;
+				}
+			}
+			.flex{
+				width: 100%;
+				.flex{
+					align-items: flex-end;
+					&:last-child{
+						border-left: 1px solid $lineColor;
+					}
+				}
+			}
+		}
+		.list-sac{
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 10px;
+			p{
+				width: 82px;
+				color: $textColor;
+				letter-spacing: -0.41px;
+				text-align: center;
+			}
+		}
+		.list-wrap{
+			ul{
+				display: flex;
+				align-items: center;
+				width: 100%;
+				margin-bottom: 10px;
+				li{
+					font-size: 16px;
+					width: 215px;
+					em{
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						color: $white;
+						font-size: 16px;
+						font-weight: 700;
+						text-align: center;
+						line-height: 30px;
+						border-radius: 100%;
+						background: #969696;
+						margin-right: 10px;
+					}
+					&:nth-child(2){
+						width: 82px;
+						color: $third;
+						text-align: center;
+						margin-left: auto;
+					}
+					&:nth-child(3){
+						width: 82px;
+						color: $second;
+						text-align: center;
+						margin-left: auto;
+					}
+					&.high{
+						em{
+							background: $third;
+						}
+					}
+				}
+				&:last-of-type{
+					margin: 0;
+				}
+			}
+		}
+		&.right{
+			.shadow-box{
+				height: 487px;
+			}
+			.list-wrap{
+				li{
+					&:nth-child(2){
+						width: 164px;
+						color: $second;
+						text-align: right;
+						margin-left: auto;
+						letter-spacing: -0.47px;
+						span{
+							color: #000;
+						}
+					}
+					&.high{
+						em{
+							background: $second;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-tab{
+	display: flex;
+	li{
+		width: 160px;
+		line-height: 40px;
+		font-size: 16px;
+		font-weight: 700;
+		color: #969696;
+		background: #e9e9e9;
+		border-radius: 10px 10px 0 0;
+		text-align: center;
+		cursor: pointer;
+		&.on{
+			background: $white;
+			color: $second;
+		}
+	}
+}
+
+.tab-wrap{
+	.tab-con{
+		display: none;
+		&:first-of-type{
+			display: block;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

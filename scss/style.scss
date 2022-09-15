@@ -1,0 +1,425 @@
+/*   Main   */
+
+@import "compass/css3";
+@import "color";
+@import "mixin";
+@import "form";
+@import "table";
+@import "layout";
+@import "lnb";
+@import "modal";
+@import "login";
+@import "calendar";
+
+
+h2{
+	margin-top: 50px;
+	font-size: 30px;
+  	font-weight: 300;
+
+}
+
+h3{
+	margin: 30px 0 10px 0;
+	font-size: 20px;
+  	font-weight: 700;
+}
+
+.flex{
+	display: flex;
+}
+
+.tab{
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 30px;
+	height: 40px;
+	position: relative;
+	&:after{
+		display: block;
+		width: 100%;
+		height: 1px;
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background: $second;
+		z-index: -1;
+	}
+	ul{
+		display: flex;
+		position: absolute;
+		left: 0;
+		top: 0;
+		li{
+			width: 160px;
+			border: 1px solid $lineColor;
+			background: $gray;
+			color: $textColor;
+			text-align: center;
+			line-height: 38px;
+			border-radius: 10px 10px 0 0;
+			height: 40px;
+			border-bottom-color:$second;
+			cursor: pointer;
+			&.on{
+				border-color: $second;
+				border-bottom-color: $white;
+				background: $white;
+				font-weight: 700;
+				color: $second;
+			}
+		}
+	}
+}
+
+#paging{
+	width:100%;
+	margin-top:40px;
+	text-align:center;
+	.wrap{
+		display: inline-block;
+	}
+	a{
+		display:inline-block;
+		width:30px;
+		height:30px;
+		vertical-align:middle;
+		line-height:30px;
+		text-align:center;
+		font-size: 14px;
+		color: $textColor;
+	}
+	a.on{
+		color: $second;
+		font-weight: 700;
+	}
+	a.l{
+		width: 50px;
+		height: 50px;
+		border: solid 1px #454545;
+		background:url("../_images/_board/icon-s-caret-left@2x.png") no-repeat center / 24px;
+		text-indent: -9999px;
+		border-radius: 100%;
+		margin-right: 20px;
+	}
+	a.r{
+		width: 50px;
+		height: 50px;
+		border: solid 1px #454545;
+		background:url("../_images/_board/icon-s-caret-right@2x.png") no-repeat center / 24px;
+		text-indent: -9999px;
+		border-radius: 100%;
+		margin-left: 20px;
+	}
+}
+
+.board-top{
+	margin: 50px 0 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	.right{
+		display: flex;
+		justify-content: flex-end;
+		.btn{
+			min-width: 100px;
+			background: $second;
+			color: $white;
+			font-size: 16px;
+			font-weight: 700;
+			margin-left: 10px;
+			border-radius: 20px;
+            height: 40px;
+		}
+	}
+}
+
+.board-search{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	.input-wrap{
+		display: flex;
+		justify-content: center;
+		input[type="text"]{
+			width: 400px;
+		}
+		.btn-search{
+			min-width: 80px;
+			height: 40px;
+			border-radius: 10px;
+			font-size: 16px;
+			font-weight: 700;
+			text-align: center;
+			background-color: $primary;
+			color: $white;
+			margin-left: 10px;
+		}
+	}
+}
+
+.cal-wrap{
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+	.dash{
+		width: 30px;
+		text-align: center;
+	}
+    .input-wrap{
+        //width: calc((100% / 2) - 4.167vw);
+        position: relative;
+        input{
+            text-indent: 10px;
+        }
+        &:before{
+            display: block;
+            width: 16px;
+            height: 16px;
+            content: "";
+            background: url("../_images/common/btn-calendar@2x.png") no-repeat center / 16px;
+            right: 15px;
+            top: 50%;
+			transform: translateY(-50%);
+            position: absolute;
+        }
+    }
+}
+
+.btn-wrap{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+	&.left{
+		justify-content: flex-start;
+	}
+	&.center{
+		justify-content: center;
+	}
+	button{
+		color: $white;
+		font-weight: 700;
+		font-size: 16px;
+		background: $primary;
+		min-width: 100px;
+		padding: 0 20px;
+		height: 40px;
+		border-radius: 20px;
+		margin: 0 5px;
+		&.init{
+			background: #969696;
+		}
+		&.sec{
+			background: $second;
+		}
+	}
+}
+
+.top-search-wrap{
+	.btn-wrap{
+		justify-content: center;
+	}
+}
+
+.graph-wrap{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.graph{
+		margin-top: 50px;
+		width: calc((100% - 50px) / 2);
+		&.graph3{
+			width: calc((100% - 50px) / 3);	
+		}
+		border: 1px solid $lineColor;
+		border-radius: 20px;
+		padding: 30px;
+		.title{
+			font-size: 20px;
+			margin-top: 20px;
+			text-align: center;
+		}
+		&.full{
+			width: 100%;
+		}
+	}
+}
+
+
+.top-btn-wrap{
+	margin-bottom: 10px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-end;
+	button{
+		height: 40px;
+		width: 120px;
+		color: $white;
+		font-size: 16px;
+		font-weight: 700;
+		background: $second;
+		border-radius: 20px;
+	}
+}
+
+.franchise-search{
+	border-radius: 20px;
+	background: $gray;
+	padding: 30px;
+	.wrap{
+		display: flex;
+		justify-content: space-between;
+		.field{
+			width: calc((100% - 30px) / 2);
+			input[type="text"]{
+				width: 100%;
+			}
+			.flex{
+				align-items: center;
+				height: 40px;
+			}
+		}
+		.title{
+			font-weight: 700;
+			margin-bottom: 10px;
+			margin-top: 20px;
+		}
+	}
+	.cal-wrap{
+		width: 100%;
+		.input-wrap{
+			width: calc((100% - 30px) / 2);
+		}
+	}
+	.btn-wrap{
+		padding-top: 20px;
+		justify-content: center;
+		border-top: 1px solid $lineColor;
+		margin-top: 30px;
+	}
+}
+
+
+
+
+
+
+
+.myinfo{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	.myinfo-wrap{ 
+		z-index: 1;
+		margin-top: 30px;
+		width: 550px;
+		border-radius: 30px 0 30px 30px;
+		background: $primary;
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		.top{
+			width: 200px;
+			height: 100px;
+			background: url("../_images/common/icon-s-man.png") no-repeat center / 100px;
+		}
+		.wrap{
+			width: 350px;
+			justify-content: flex-end;
+			background: $white;
+			border-radius: 50px 0 30px 30px;
+			padding: 30px; 
+			.form-wrap{
+				p{
+					font-size: 16px;
+					font-weight: 700;
+                    margin-top: 20px;
+                    em{
+                        color: $red;
+                    }
+				}
+				input{
+					width: 100%;
+					border: 1p solid $lineColor;
+					border-radius: 10px;
+					height: 40px;
+					margin-top: 10px;
+					//margin-bottom: 20px;
+				}
+                .text{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #969696;
+                    margin-top: 10px;
+                }
+			}
+			.error{
+				color: $red;
+			}
+			button{
+				background: $second;
+				color: #fff;
+				height: 50px;
+				border-radius: 25px;
+				width: 100%;
+				font-size: 16px;
+				font-weight: 700;
+				margin-top: 20px;
+			}
+			.image-text{
+				background: $textColor;
+				color: $white;
+				height: 190px;
+				text-align: center;
+				margin-top: 20px;
+			}
+			.wrapper-top{
+				text-align: center;
+				margin-top: 10px;
+				font-size: 30px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid $lineColor;
+				margin-bottom: 30px;
+				font-weight: 700;
+			}
+		}
+	}
+	.cs{
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		.number{
+			font-size: 30px;
+  			font-weight: bold;
+			color: $white;
+			margin-bottom: 10px;
+		}
+		.time{
+			font-size: 14px;
+			color: $white;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.multi-sel{
+    display: flex;
+    flex-wrap: wrap;
+    .item{
+        padding: 0 15px 0 30px;
+        border: 1px solid $lineColor;
+        border-radius: 20px;
+        line-height: 38px;
+        margin-top: 10px;
+        margin-right: 10px;
+        background: url("../_images/common/icon-s-cross@2x.png") no-repeat 10px 13px;
+        background-size: 12px;
+        cursor: pointer;
+    }
+}
+
+
+
+

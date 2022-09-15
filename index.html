@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="_list/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="_list/guide.js"></script>
+<link type="text/css" rel="stylesheet" href="_list/guide.css" />
+</head>
+<body>
+<div id="list_wrap">
+	<!-- header s -->
+	<div id="header">
+		<h1>온통대전 지자체 관리자</h1>
+		<ul class="gnb">
+			<li><a href="index.html" class="on">국문</a></li>
+		</ul>
+	</div><!--// header e -->
+
+
+	<!-- container s -->
+	<div id="container">
+		<div id="g_content">
+			<table id="focus" class="mlist">
+				<colgroup>
+				<col width="3%" />
+				<col width="6%" />
+				<col width="14%" />
+				<col width="10%" />
+				<col width="14%" />
+				<col width="10%" />
+				<col width="10%" />
+				<col width="10%" />
+				<col width="*" />
+				</colgroup>
+				<thead>
+					<tr onMouseDown="toggleed(this)">
+						<th class="first">NUM</th>
+						<th>Depth</th>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>ID</th>
+						<th>작업완료</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01">관리자</td>
+						<td class="itemtit02">메인</td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="00_main/index.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">로그인</td>
+						<td class="itemtit03">로그인</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="01_login/login.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">이중 인증 절차</td>
+						<td class="itemtit04">SMS</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="01_login/2factor-sms.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">E-Mail</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="01_login/2factor-email.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">E-Mail 인증</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/email.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">멤버십</td>
+						<td class="itemtit03">내 정보</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/member1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">계정생성</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/member2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">계정관리</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/member3.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">빅데이터 관리</td>
+						<td class="itemtit03">가입</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bigdata1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">발급</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bigdata2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">충전</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bigdata3.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">결제</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bigdata4.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">레포트 관리</td>
+						<td class="itemtit03">일일레포트(지자체)</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/report1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">일일레포트(판매점)</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/report2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">월간리포트</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/report3.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">가맹점 조회</td>
+						<td class="itemtit03">목록</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/franchise1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">상세</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/franchise2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">정책수당관리</td>
+						<td class="itemtit03">정책사업자관리</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/policy1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">정책수당관리</td>
+						<td class="itemtit04"></td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/policy2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">부정유통 의심</td>
+						<td class="itemtit03">가맹점</td>
+						<td class="itemtit04">조회case1</td>
+						<td class="itemtit05">의심거래지정,등록 팝업호출</td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung1-1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">조회case2</td>
+						<td class="itemtit05">고객 id클릭시 팝업호출</td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung1-2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">조회case3</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung1-3.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+                    
+                    <tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">조회case4</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung1-4.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">등록</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung2-1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					
+					<!--<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">고객</td>
+						<td class="itemtit04">조회(case5)</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung3-1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">등록</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung4-1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">처리이력</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung4-2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>-->
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02">부정유통 지정</td>
+						<td class="itemtit03">가맹점</td>
+						<td class="itemtit04">조회</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung5-1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">등록(최초등록)</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung5-2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">등록</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung5-3.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">거래히스토리(CASE1,2,3,4)</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung5-3-1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<!--<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03">고객</td>
+						<td class="itemtit04">조회</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung6-1.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">등록(최초등록)</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung6-2.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">등록</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung6-4.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					
+					<tr onMouseDown="toggleed(this)">
+						<th></th>
+						<td class="itemtit01"></td>
+						<td class="itemtit02"></td>
+						<td class="itemtit03"></td>
+						<td class="itemtit04">거래히스토리</td>
+						<td class="itemtit05"></td>
+						<td class="itemtit06">program</td>
+						<td class="txt_ok">OK</td>
+						<td><a href="02_pages/bujung6-3.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>-->
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--// container e -->
+</div>
+</body>
+<script type="text/javascript">$(document).ready(function() {$('#focus').tableHover();});</script>
+<script type="text/javascript">
+	$(function(){
+		var total = $("#focus tbody tr th").length;
+		var ok = $("#focus .txt_ok").filter(function(){return $(this).text().length == 10;}).length;
+		var per = Math.round((ok * 100) / total);
+		$("#per").html(per + "%").css("color","red");
+
+		$.each($("td:last a","#focus tbody tr"), function(){
+			var fn = $(this).attr("href").split(".ht")[0].split("/")[3];
+
+			if(typeof fn != "undefined") $(this).parent().append("<span class='fn'>"+fn+"</span>");
+		});
+		$("title").text($("h1").text());
+	});
+
+
+	var st1 = new SortableTable(document.getElementById("focus"), ["Number" ,"String","String", "String", "String", "String"]);
+	$(function(){
+
+		var tds = $("#focus tbody  th:first-child");
+		for(var i=0; i < tds.length; i++) {
+			$(tds[i]).html(i+1);
+
+		}
+	});
+	$('#focus thead th').click(function(){
+		//alert("a");
+		var tds = $("#focus tbody  th:first-child");
+		for(var i=0; i < tds.length; i++) {
+			//alert(tds[i].firstChild.nodeValue);
+			$(tds[i]).html(i+1);
+		}
+	});
+</script>
+<script type="text/javascript">
+//<!--
+	function toggleed(trEle){
+	 //alert(trEle.parentElement.rows)
+	 var rows = trEle.parentElement.rows;
+
+	 for(i = 0; i < rows.length; i++){
+		if(rows[i] == trEle){
+		 trEle.style.backgroundColor = "#ffebeb"
+		}else{
+		 rows[i].style.backgroundColor = ""
+		}
+	 }
+	}
+//-->
+</script>
+<script type="text/javascript">
+	// popup
+	 function openPopup(url, winName, pwidth, pheight, scrollYN, resizeYN) {
+	 var win = null;
+
+	 var winL = (screen.width-pwidth)/2;
+	 var winT = (screen.height-pheight)/2;
+	 var spec = 'toolbar=no,';
+	 spec += 'status=no,';
+	 spec += 'location=yes,';
+	 spec += 'height='+pheight+',';
+	 spec += 'width='+pwidth+',';
+	 spec += 'top='+winT+',';
+	 spec += 'left='+winL+',';
+	 spec += 'scrollbars='+(scrollYN == undefined ? "yes" : scrollYN)+',';
+	 spec += 'resizable='+(resizeYN == undefined ? "no" : resizeYN);
+	 win = window.open(url, winName, spec);
+	 if(parseInt(navigator.appVersion) >= 4) {
+	  win.window.focus();
+	 }
+ }
+</script>
+</html>

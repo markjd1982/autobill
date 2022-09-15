@@ -1,0 +1,1242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>온통대전 지자체 관리자</title>
+
+<link href="../_css/reset.css" rel="stylesheet" type="text/css">
+<link href="../_css/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="../_css/style.css" rel="stylesheet" type="text/css">
+	
+<script>
+
+	var m = 2;
+	
+</script>
+	
+<script type="text/javascript" src="../_js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../_js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../_js/jquery-ui.js"></script>
+<script type="text/javascript" src="../_js/jquery.js"></script>
+<script type="text/javascript" src="../_js/chart.js"></script>
+<script type="text/javascript" src="../_js/chartjs-plugin-datalabels.js"></script>
+	
+</head>
+<body>
+	
+	<div id="container">
+		
+		<!--   LNB   -->
+		<div id="lnb"></div>
+		
+		<div id="contents">
+			<h2>빅데이터 관리</h2>
+			<div class="content">
+				<div class="tab">
+					<ul>
+						<li>가입</li>
+						<li>발급</li>
+						<li>충전</li>
+						<li class="on">결제</li>
+					</ul>
+				</div>
+				
+				<div class="top-search-wrap">
+					<table class="search-table">
+					<colgroup>
+						<col width="215px">
+						<col width="*">
+					</colgroup>
+					<tr>
+						<th>기간</th>
+						<td class="flex">
+							<div class="cal-wrap">
+								<p class="input-wrap">
+									<input type="text" id="datepicker">
+								</p>
+								<p class="dash">~</p>
+								<p class="input-wrap">
+									<input type="text" id="datepicker2">
+								</p>
+							</div>
+							<div class="flex">
+								<button class="btn solid ml10">1일</button>
+								<button class="btn solid ml5">1개월</button>
+								<button class="btn solid ml5">1년</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>업종선택</th>
+						<td>
+							<div class="flex">
+								<button class="btn solid btn-modal" data-target="category-modal" style="width: 100px">업종선택</button>
+							</div>
+                            <ul class="multi-sel">
+                                <li class="item">item1</li>
+                                <li class="item">item2</li>
+                                <li class="item">item3</li>
+                                <li class="item">item4</li>
+                                <li class="item">item5</li>
+                                <li class="item">item6</li>
+                                <li class="item">item7</li>
+                                <li class="item">item8</li>
+                                <li class="item">item9</li>
+                                <li class="item">item10</li>
+                                <li class="item">item11</li>
+                                <li class="item">item12</li>
+                            </ul>
+						</td>
+					</tr>
+					<tr>
+						<th>지역선택</th>
+						<td align="left">
+							<div class="flex">
+								<input type="checkbox" id="chk11">
+								<label for="chk11">전체</label>
+								<input type="checkbox" id="chk12">
+								<label for="chk12">중구</label>
+								<input type="checkbox" id="chk13">
+								<label for="chk13">동구</label>
+								<input type="checkbox" id="chk14">
+								<label for="chk14">대덕구</label>
+								<input type="checkbox" id="chk15">
+								<label for="chk15">서구</label>
+								<input type="checkbox" id="chk16">
+								<label for="chk16">유성구</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>성별</th>
+						<td>
+							<div class="flex">
+								<input type="checkbox" id="chk21">
+								<label for="chk21">전체</label>
+								<input type="checkbox" id="chk22">
+								<label for="chk22">남자</label>
+								<input type="checkbox" id="chk23">
+								<label for="chk23">여자</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>상품별</th>
+						<td>
+							<div class="flex">
+								<input type="checkbox" id="chk31">
+								<label for="chk31">전체</label>
+								<input type="checkbox" id="chk32">
+								<label for="chk32">체크카드</label>
+								<input type="checkbox" id="chk33">
+								<label for="chk33">선불카드</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>연령별</th>
+						<td>
+							<div class="flex">
+								<input type="checkbox" id="chk41">
+								<label for="chk41">전체</label>
+								<input type="checkbox" id="chk42">
+								<label for="chk42">10대</label>
+								<input type="checkbox" id="chk43">
+								<label for="chk43">20대</label>
+								<input type="checkbox" id="chk44">
+								<label for="chk44">30대</label>
+								<input type="checkbox" id="chk45">
+								<label for="chk45">40대</label>
+								<input type="checkbox" id="chk46">
+								<label for="chk46">50대</label>
+								<input type="checkbox" id="chk47">
+								<label for="chk47">60대</label>
+								<input type="checkbox" id="chk48">
+								<label for="chk48">70대</label>
+							</div>
+						</td>
+					</tr>
+				</table>
+					<div class="btn-wrap">
+						<button class="init">초기화</button>
+						<button class="confirm">조회</button>
+					</div>
+				</div>
+				
+				
+				<div class="graph-wrap">
+					<div class="graph full">
+						<canvas id="myChart0" width="827" height="500"></canvas>
+						<p class="title">대분류 업종정보</p>
+					</div>
+					<div class="graph">
+						<canvas id="myChart1" width="356" height="356"></canvas>
+						<p class="title">지역별</p>
+					</div>
+					<div class="graph">
+						<canvas id="myChart2" width="356" height="356"></canvas>
+						<p class="title">성별</p>
+					</div>
+					<div class="graph">
+						<canvas id="myChart3" width="356" height="356"></canvas>
+						<p class="title">상품별</p>
+					</div>
+					<div class="graph">
+						<canvas id="myChart4" width="356" height="356"></canvas>
+						<p class="title">연령별</p>
+					</div>
+				</div>
+			</div>
+				
+		</div>
+	</div>
+	
+	
+	<div id="modal-wrap" class="category-modal">
+		<div class="modal-aco">
+			<div class="flex">
+				<p class="title">업종선택</p>
+				<div class="btn-close modal-close"></div>
+			</div>
+			<div class="acodion-wrap">
+				<div class="acodion">
+					<button class="btn-aco btn-up">병원/약국</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="achk1">
+							<label for="achk1">동물병원</label>
+							<input type="checkbox" id="achk2">
+							<label for="achk2">요양.보육.복지시설</label>
+							<input type="checkbox" id="achk3">
+							<label for="achk3">소비조합(구내매점)</label>
+							<input type="checkbox" id="achk4">
+							<label for="achk4">기타 약품.의료기기</label>
+							<input type="checkbox" id="achk5">
+							<label for="achk5">한약방</label>
+							<input type="checkbox" id="achk6">
+							<label for="achk6">약국</label>
+							<input type="checkbox" id="achk7">
+							<label for="achk7">의약품판매</label>
+							<input type="checkbox" id="achk8">
+							<label for="achk8">정형외과</label>
+							<input type="checkbox" id="achk9">
+							<label for="achk9">소아과</label>
+							<input type="checkbox" id="achk10">
+							<label for="achk10">한의원</label>
+							<input type="checkbox" id="achk11">
+							<label for="achk11">기타 의료업</label>
+							<input type="checkbox" id="achk12">
+							<label for="achk12">이비인후과</label>
+							<input type="checkbox" id="achk13">
+							<label for="achk13">안과</label>
+							<input type="checkbox" id="achk14">
+							<label for="achk14">산부인과</label>
+							<input type="checkbox" id="achk15">
+							<label for="achk15">성형외과</label>
+							<input type="checkbox" id="achk16">
+							<label for="achk16">외과</label>
+							<input type="checkbox" id="achk17">
+							<label for="achk17">신경정신</label>
+							<input type="checkbox" id="achk18">
+							<label for="achk18">내과</label>
+							<input type="checkbox" id="achk19">
+							<label for="achk19">치과</label>
+							<input type="checkbox" id="achk20">
+							<label for="achk20">요양병원</label>
+							<input type="checkbox" id="achk21">
+							<label for="achk21">한방병원</label>
+							<input type="checkbox" id="achk22">
+							<label for="achk22">일반병원</label>
+							<input type="checkbox" id="achk23">
+							<label for="achk23">종합병원</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">슈퍼/마트</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="bchk1">
+							<label for="bchk1">편의점</label>
+							<input type="checkbox" id="bchk2">
+							<label for="bchk2">슈퍼마켓.마트</label>
+							<input type="checkbox" id="bchk3">
+							<label for="bchk3">아이스크림전문점</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">스포츠/헬스</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="cchk1">
+							<label for="cchk1">헬스클럽</label>
+							<input type="checkbox" id="cchk2">
+							<label for="cchk2">전문 스포츠용품점</label>
+							<input type="checkbox" id="cchk3">
+							<label for="cchk3">건강보조식품</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">미용/뷰티/위생</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="dchk1">
+							<label for="dchk1">피부과</label>
+							<input type="checkbox" id="dchk2">
+							<label for="dchk2">피부.체형미 관리</label>
+							<input type="checkbox" id="dchk3">
+							<label for="dchk3">미용실(두발전문)</label>
+							<input type="checkbox" id="dchk4">
+							<label for="dchk4">이발소</label>
+							<input type="checkbox" id="dchk5">
+							<label for="dchk5">미용재료</label>
+							<input type="checkbox" id="dchk6">
+							<label for="dchk6">화장품</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">레저</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="echk1">
+							<label for="echk1">테마파크(놀이시설)</label>
+							<input type="checkbox" id="echk2">
+							<label for="echk2">카지노.복권방</label>
+							<input type="checkbox" id="echk3">
+							<label for="echk3">사우나.목욕탕.찜질방</label>
+							<input type="checkbox" id="echk4">
+							<label for="echk4">노래방</label>
+							<input type="checkbox" id="echk5">
+							<label for="echk5">성인오락실</label>
+							<input type="checkbox" id="echk6">
+							<label for="echk6">기타 취미.레저.스포츠</label>
+							<input type="checkbox" id="echk7">
+							<label for="echk7">골프연습장</label>
+							<input type="checkbox" id="echk8">
+							<label for="echk8">당구장</label>
+							<input type="checkbox" id="echk9">
+							<label for="echk9">골프장</label>
+							<input type="checkbox" id="echk10">
+							<label for="echk10">기타 오락.휴식시설</label>
+							<input type="checkbox" id="echk11">
+							<label for="echk11">기타 레저,스포츠용품</label>
+							<input type="checkbox" id="echk12">
+							<label for="echk12">여객선</label>
+							<input type="checkbox" id="echk13">
+							<label for="echk13">여행사</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">학원/교육</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="fchk1">
+							<label for="fchk1">교육 및 교구</label>
+							<input type="checkbox" id="fchk2">
+							<label for="fchk2">기타 교육.교습.학원</label>
+							<input type="checkbox" id="fchk3">
+							<label for="fchk3">기술.직업훈련학원</label>
+							<input type="checkbox" id="fchk4">
+							<label for="fchk4">자동차운전학원</label>
+							<input type="checkbox" id="fchk5">
+							<label for="fchk5">예체능 계열 학원</label>
+							<input type="checkbox" id="fchk6">
+							<label for="fchk6">무술도장 등(학원)</label>
+							<input type="checkbox" id="fchk7">
+							<label for="fchk7">외국어학원</label>
+							<input type="checkbox" id="fchk8">
+							<label for="fchk8">입시학원,보습학원</label>
+							<input type="checkbox" id="fchk9">
+							<label for="fchk9">대학교.대학원</label>
+							<input type="checkbox" id="fchk10">
+							<label for="fchk10">초중고등학교</label>
+							<input type="checkbox" id="fchk11">
+							<label for="fchk11">유치원</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">주방/가정/부동산/인테리어</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="gchk1">
+							<label for="gchk1">부동산 중개</label>
+							<input type="checkbox" id="gchk2">
+							<label for="gchk2">기타 부동산관련업</label>
+							<input type="checkbox" id="gchk3">
+							<label for="gchk3">실내장식 (인테리어)</label>
+							<input type="checkbox" id="gchk4">
+							<label for="gchk4">기타 건축자재</label>
+							<input type="checkbox" id="gchk5">
+							<label for="gchk5">기타 가정.주방용품</label>
+							<input type="checkbox" id="gchk6">
+							<label for="gchk6">가구판매점</label>
+							<input type="checkbox" id="gchk7">
+							<label for="gchk7">조명기구.전기</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">숙박/캠핑</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="hchk1">
+							<label for="hchk1">레저용 숙박업소</label>
+							<input type="checkbox" id="hchk2">
+							<label for="hchk2">기타 숙박업소</label>
+							<input type="checkbox" id="hchk3">
+							<label for="hchk3">호텔 (특급외)</label>
+							<input type="checkbox" id="hchk4">
+							<label for="hchk4">호텔 (특급)</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">도서/문화/공연</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="ichk1">
+							<label for="ichk1">영화.공연장</label>
+							<input type="checkbox" id="ichk2">
+							<label for="ichk2">비디오.음반</label>
+							<input type="checkbox" id="ichk3">
+							<label for="ichk3">서적</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">일반음식점</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="jchk1">
+							<label for="jchk1">유흥주점</label>
+							<input type="checkbox" id="jchk2">
+							<label for="jchk2">기타 주점</label>
+							<input type="checkbox" id="jchk3">
+							<label for="jchk3">단란주점</label>
+							<input type="checkbox" id="jchk4">
+							<label for="jchk4">주류 전문점</label>
+							<input type="checkbox" id="jchk5">
+							<label for="jchk5">일반주점</label>
+							<input type="checkbox" id="jchk6">
+							<label for="jchk6">기타 음식점</label>
+							<input type="checkbox" id="jchk7">
+							<label for="jchk7">식음료(기타)</label>
+							<input type="checkbox" id="jchk8">
+							<label for="jchk8">치킨전문점</label>
+							<input type="checkbox" id="jchk9">
+							<label for="jchk9">패스트푸드점</label>
+							<input type="checkbox" id="jchk10">
+							<label for="jchk10">서양식전문점</label>
+							<input type="checkbox" id="jchk11">
+							<label for="jchk11">일식전문점</label>
+							<input type="checkbox" id="jchk12">
+							<label for="jchk12">중식전문점</label>
+							<input type="checkbox" id="jchk13">
+							<label for="jchk13">일반음식점</label>
+							<input type="checkbox" id="jchk14">
+							<label for="jchk14">기타 식음료품</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">분식</button>
+					<div class="aco-con">
+						<div class="flex">
+							
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">카페/베이커리</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="lchk1">
+							<label for="lchk1">커피전문점</label>
+							<input type="checkbox" id="lchk2">
+							<label for="lchk2">제과.제빵</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">산모/육아</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="mchk1">
+							<label for="mchk1">산후조리원</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">의류/잡화/안경</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="nchk1">
+							<label for="nchk1">완구</label>
+							<input type="checkbox" id="nchk2">
+							<label for="nchk2">문구,사무용품</label>
+							<input type="checkbox" id="nchk3">
+							<label for="nchk3">철재,사무용 가구</label>
+							<input type="checkbox" id="nchk4">
+							<label for="nchk4">가</label>
+							<input type="checkbox" id="nchk5">
+							<label for="nchk5">가방.핸드백</label>
+							<input type="checkbox" id="nchk6">
+							<label for="nchk6">구두.신발</label>
+							<input type="checkbox" id="nchk7">
+							<label for="nchk7">안경.광학제품</label>
+							<input type="checkbox" id="nchk8">
+							<label for="nchk8">시계.귀금속</label>
+							<input type="checkbox" id="nchk9">
+							<label for="nchk9">기타 잡화</label>
+							<input type="checkbox" id="nchk10">
+							<label for="nchk10">침구 및 수예품</label>
+							<input type="checkbox" id="nchk11">
+							<label for="nchk11">커튼.카펫.수건</label>
+							<input type="checkbox" id="nchk12">
+							<label for="nchk12">의류관련(기타)</label>
+							<input type="checkbox" id="nchk13">
+							<label for="nchk13">교복</label>
+							<input type="checkbox" id="nchk14">
+							<label for="nchk14">내의류</label>
+							<input type="checkbox" id="nchk15">
+							<label for="nchk15">모피,무스탕</label>
+							<input type="checkbox" id="nchk16">
+							<label for="nchk16">종합 스포츠용품점</label>
+							<input type="checkbox" id="nchk17">
+							<label for="nchk17">일반의류</label>
+							<input type="checkbox" id="nchk18">
+							<label for="nchk18">아동.유아복</label>
+							<input type="checkbox" id="nchk19">
+							<label for="nchk19">양복점.한복점</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">자동차/자전거</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="ochk1">
+							<label for="ochk1">기타 운송기구</label>
+							<input type="checkbox" id="ochk2">
+							<label for="ochk2">자전거</label>
+							<input type="checkbox" id="ochk3">
+							<label for="ochk3">고속도로 통행카드</label>
+							<input type="checkbox" id="ochk4">
+							<label for="ochk4">차량견인서비스</label>
+							<input type="checkbox" id="ochk5">
+							<label for="ochk5">세차장</label>
+							<input type="checkbox" id="ochk6">
+							<label for="ochk6">주차장.폐차장</label>
+							<input type="checkbox" id="ochk7">
+							<label for="ochk7">전기차충전소</label>
+							<input type="checkbox" id="ochk8">
+							<label for="ochk8">기타 연료판매</label>
+							<input type="checkbox" id="ochk9">
+							<label for="ochk9">타이어 판매점</label>
+							<input type="checkbox" id="ochk10">
+							<label for="ochk10">자동차정비</label>
+							<input type="checkbox" id="ochk11">
+							<label for="ochk11">차량부품.용품</label>
+							<input type="checkbox" id="ochk12">
+							<label for="ochk12">오토바이</label>
+							<input type="checkbox" id="ochk13">
+							<label for="ochk13">자동차 (중고차)</label>
+							<input type="checkbox" id="ochk14">
+							<label for="ochk14">자동차 (수입 신차)</label>
+							<input type="checkbox" id="ochk15">
+							<label for="ochk15">자동차 (국산 신차)</label>
+							<input type="checkbox" id="ochk16">
+							<label for="ochk16">지하철</label>
+							<input type="checkbox" id="ochk17">
+							<label for="ochk17">기타 승객운송업</label>
+							<input type="checkbox" id="ochk18">
+							<label for="ochk18">고속.시외버스</label>
+							<input type="checkbox" id="ochk19">
+							<label for="ochk19">택시</label>
+							<input type="checkbox" id="ochk20">
+							<label for="ochk20">시내버스</label>
+							<input type="checkbox" id="ochk21">
+							<label for="ochk21">차량임대 (렌터카)</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">주유소</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="pchk1">
+							<label for="pchk1">주유소 (LPG)</label>
+							<input type="checkbox" id="pchk2">
+							<label for="pchk2">주유소</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">가전/통신</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="qchk1">
+							<label for="qchk1">전화요금</label>
+							<input type="checkbox" id="qchk2">
+							<label for="qchk2">유선 및 위성방송</label>
+							<input type="checkbox" id="qchk3">
+							<label for="qchk3">카메라.캠코더</label>
+							<input type="checkbox" id="qchk4">
+							<label for="qchk4">통신.방문판매</label>
+							<input type="checkbox" id="qchk5">
+							<label for="qchk5">통신기기</label>
+							<input type="checkbox" id="qchk6">
+							<label for="qchk6">컴퓨터 및 소프트웨어</label>
+							<input type="checkbox" id="qchk7">
+							<label for="qchk7">기타 전자제품</label>
+							<input type="checkbox" id="qchk8">
+							<label for="qchk8">정수기.비데</label>
+							<input type="checkbox" id="qchk9">
+							<label for="qchk9">가전제품</label>
+						</div>
+					</div>
+				</div>
+				<div class="acodion">
+					<button class="btn-aco">기타</button>
+					<div class="aco-con">
+						<div class="flex">
+							<input type="checkbox" id="rchk1">
+							<label for="rchk1">기부금(정치자금)</label>
+							<input type="checkbox" id="rchk2">
+							<label for="rchk2">기부금</label>
+							<input type="checkbox" id="rchk3">
+							<label for="rchk3">자체대금결제용(당사)</label>
+							<input type="checkbox" id="rchk4">
+							<label for="rchk4">비씨카드정산용(할인)</label>
+							<input type="checkbox" id="rchk5">
+							<label for="rchk5">비씨카드정산용</label>
+							<input type="checkbox" id="rchk6">
+							<label for="rchk6">자체대금결제용(B2B)</label>
+							<input type="checkbox" id="rchk7">
+							<label for="rchk7">자체대금결제용(정산)</label>
+							<input type="checkbox" id="rchk8">
+							<label for="rchk8">각종 단체 회비</label>
+							<input type="checkbox" id="rchk9">
+							<label for="rchk9">선불전자지급</label>
+							<input type="checkbox" id="rchk10">
+							<label for="rchk10">온라인상품권판매</label>
+							<input type="checkbox" id="rchk11">
+							<label for="rchk11">일반 상품권</label>
+							<input type="checkbox" id="rchk12">
+							<label for="rchk12">기타 서비스</label>
+							<input type="checkbox" id="rchk13">
+							<label for="rchk13">기타 전문서비스</label>
+							<input type="checkbox" id="rchk14">
+							<label for="rchk14">광고기획.대행업</label>
+							<input type="checkbox" id="rchk15">
+							<label for="rchk15">세무 전문서비스</label>
+							<input type="checkbox" id="rchk16">
+							<label for="rchk16">법무 전문서비스</label>
+							<input type="checkbox" id="rchk17">
+							<label for="rchk17">기계.장비(기타)</label>
+							<input type="checkbox" id="rchk18">
+							<label for="rchk18">판촉물.인쇄.복사</label>
+							<input type="checkbox" id="rchk19">
+							<label for="rchk19">창고보관업</label>
+							<input type="checkbox" id="rchk20">
+							<label for="rchk20">택배 서비스</label>
+							<input type="checkbox" id="rchk21">
+							<label for="rchk21">기타 화물운송업</label>
+							<input type="checkbox" id="rchk22">
+							<label for="rchk22">인터넷서비스요금</label>
+							<input type="checkbox" id="rchk23">
+							<label for="rchk23">공공시설요금</label>
+							<input type="checkbox" id="rchk24">
+							<label for="rchk24">국세</label>
+							<input type="checkbox" id="rchk25">
+							<label for="rchk25">지방세</label>
+							<input type="checkbox" id="rchk26">
+							<label for="rchk26">공과금</label>
+							<input type="checkbox" id="rchk27">
+							<label for="rchk27">우편요금</label>
+							<input type="checkbox" id="rchk28">
+							<label for="rchk28">사금융</label>
+							<input type="checkbox" id="rchk29">
+							<label for="rchk29">기타 금융업</label>
+							<input type="checkbox" id="rchk30">
+							<label for="rchk30">기타보험</label>
+							<input type="checkbox" id="rchk31">
+							<label for="rchk31">손해보험</label>
+							<input type="checkbox" id="rchk32">
+							<label for="rchk32">생명보험</label>
+							<input type="checkbox" id="rchk33">
+							<label for="rchk33">안마시술소</label>
+							<input type="checkbox" id="rchk34">
+							<label for="rchk34">기타요금</label>
+							<input type="checkbox" id="rchk35">
+							<label for="rchk35">기타 대인서비스</label>
+							<input type="checkbox" id="rchk36">
+							<label for="rchk36">민예품,공예품</label>
+							<input type="checkbox" id="rchk37">
+							<label for="rchk37">화방.표구점</label>
+							<input type="checkbox" id="rchk38">
+							<label for="rchk38">총포류</label>
+							<input type="checkbox" id="rchk39">
+							<label for="rchk39">점술업</label>
+							<input type="checkbox" id="rchk40">
+							<label for="rchk40">사진관.현상소</label>
+							<input type="checkbox" id="rchk41">
+							<label for="rchk41">기타 상품 판매점</label>
+							<input type="checkbox" id="rchk42">
+							<label for="rchk42">애완동물,용품</label>
+							<input type="checkbox" id="rchk43">
+							<label for="rchk43">화원.화초</label>
+							<input type="checkbox" id="rchk44">
+							<label for="rchk44">예술품,골동품</label>
+							<input type="checkbox" id="rchk45">
+							<label for="rchk45">악기 판매점</label>
+							<input type="checkbox" id="rchk46">
+							<label for="rchk46">대리운전</label>
+							<input type="checkbox" id="rchk47">
+							<label for="rchk47">대한항공</label>
+							<input type="checkbox" id="rchk48">
+							<label for="rchk48">아시아나항공</label>
+							<input type="checkbox" id="rchk49">
+							<label for="rchk49">항공사</label>
+							<input type="checkbox" id="rchk50">
+							<label for="rchk50">철도</label>
+							<input type="checkbox" id="rchk51">
+							<label for="rchk51">선물용품점</label>
+							<input type="checkbox" id="rchk52">
+							<label for="rchk52">수집품,기념품</label>
+							<input type="checkbox" id="rchk53">
+							<label for="rchk53">유학.이민 대행사</label>
+							<input type="checkbox" id="rchk54">
+							<label for="rchk54">기타 무점포</label>
+							<input type="checkbox" id="rchk55">
+							<label for="rchk55">홈쇼핑</label>
+							<input type="checkbox" id="rchk56">
+							<label for="rchk56">PG(소득공제 제외)</label>
+							<input type="checkbox" id="rchk57">
+							<label for="rchk57">기타 PG</label>
+							<input type="checkbox" id="rchk58">
+							<label for="rchk58">PG(공공서비스)</label>
+							<input type="checkbox" id="rchk59">
+							<label for="rchk59">PG대학등록금</label>
+							<input type="checkbox" id="rchk60">
+							<label for="rchk60">PG(일반)</label>
+							<input type="checkbox" id="rchk61">
+							<label for="rchk61">PG(Open Market)</label>
+							<input type="checkbox" id="rchk62">
+							<label for="rchk62">인터넷상거래</label>
+							<input type="checkbox" id="rchk63">
+							<label for="rchk63">비료.사료.종자</label>
+							<input type="checkbox" id="rchk64">
+							<label for="rchk64">기타 종합소매점</label>
+							<input type="checkbox" id="rchk65">
+							<label for="rchk65">기타</label>
+							<input type="checkbox" id="rchk66">
+							<label for="rchk66">연쇄점</label>
+							<input type="checkbox" id="rchk67">
+							<label for="rchk67">농협식품전문점</label>
+							<input type="checkbox" id="rchk68">
+							<label for="rchk68">농수축협직판장</label>
+							<input type="checkbox" id="rchk69">
+							<label for="rchk69">면세점</label>
+							<input type="checkbox" id="rchk70">
+							<label for="rchk70">기타 상설할인.아울렛</label>
+							<input type="checkbox" id="rchk71">
+							<label for="rchk71">대형 할인점</label>
+							<input type="checkbox" id="rchk72">
+							<label for="rchk72">백화점</label>
+							<input type="checkbox" id="rchk73">
+							<label for="rchk73">기타가례서비스</label>
+							<input type="checkbox" id="rchk74">
+							<label for="rchk74">예식장</label>
+							<input type="checkbox" id="rchk75">
+							<label for="rchk75">웨딩토탈서비스</label>
+							<input type="checkbox" id="rchk76">
+							<label for="rchk76">경비업</label>
+							<input type="checkbox" id="rchk77">
+							<label for="rchk77">기타 수리.수선전문</label>
+							<input type="checkbox" id="rchk78">
+							<label for="rchk78">기타 장비임대</label>
+							<input type="checkbox" id="rchk79">
+							<label for="rchk79">중고품 판매점</label>
+							<input type="checkbox" id="rchk80">
+							<label for="rchk80">보일러,펌프,샷시</label>
+							<input type="checkbox" id="rchk81">
+							<label for="rchk81">기타 사무용 기기</label>
+							<input type="checkbox" id="rchk82">
+							<label for="rchk82">뷔페.출장연회</label>
+							<input type="checkbox" id="rchk83">
+							<label for="rchk83">한국인삼공사</label>
+							<input type="checkbox" id="rchk84">
+							<label for="rchk84">인삼 전문점</label>
+							<input type="checkbox" id="rchk85">
+							<label for="rchk85">농산물,청과물</label>
+							<input type="checkbox" id="rchk86">
+							<label for="rchk86">수산물,건어물</label>
+							<input type="checkbox" id="rchk87">
+							<label for="rchk87">축산물,정육점</label>
+							<input type="checkbox" id="rchk88">
+							<label for="rchk88">유흥.사치용품</label>
+							<input type="checkbox" id="rchk89">
+							<label for="rchk89">세탁업</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-wrap center">
+				<button class="modal-close">확인</button>
+			</div>
+		</div>
+	</div>
+	
+<script>
+	
+	
+	/////     대분류 업종정보     /////
+	
+	var context = document.getElementById('myChart0').getContext('2d');
+            var myChart0 = new Chart(context, {
+				plugins:[ChartDataLabels],
+                type: 'bar', // 차트의 형태
+                data: { // 차트에 들어갈 데이터
+                    labels: [
+                        //x 축
+                        '병원/약국', '슈퍼/마트', '스포츠/헬스', '미용/뷰티/위생', '레저', '학원/교육', '부동산/인테리어', '숙박/캠핑', '도서/문화/공연', '일반음식점', '분식', '카페/베이커리', '산모/육아', '의류/잡화/안경', '자동차/자전거', '주유소', '가전/통신', '기타'],
+                    datasets: [
+                        { //데이터
+                            label: '', //차트 제목
+                            fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                            data: [
+                                65,35,165,35,65,65,35,165,35,65,65,35,165,35,65,65,35,165 //x축 label에 대응되는 데이터 값
+                            ],
+                            backgroundColor: [
+                                //색상
+                                '#4866db',
+                            ],
+                        }
+                    ]
+                },
+                options: {
+					indexAxis: 'y',
+					borderWidth: 0,
+					borderRadius: 10,
+					weight : 10,
+					title : {
+						display : true,
+					},
+					plugins: {
+						legend: {
+							display: false,
+						},
+						datalabels: {
+							align: 'end',
+        					anchor: 'end',
+							font: {
+							  weight: 'bold'
+							},
+							color: function(context) {
+							  return context.dataset.backgroundColor;
+							},
+							 display: function(context) {
+								  return context.dataset.data[context.dataIndex] > 15;
+								},
+								font: {
+								  weight: 'bold'
+								},
+								formatter: function(value, context) { return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+						}
+					},
+					// Core options
+					/*aspectRatio: 5 / 3,
+					layout: {
+					  padding: {
+						top: 32,
+					  }
+					},
+					elements: {
+						line: {
+							fill: false,
+							tension: 0.4
+						}
+					},*/
+					barThickness : 10,
+					scales: {
+						x: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+								},
+							ticks: {
+								display: false
+							}
+						},
+						y: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+							},
+							ticks: {
+								//display: false,
+							},
+
+						},
+					}
+                }
+            });
+
+	
+	/////     지역별     /////
+	
+	var context = document.getElementById('myChart1').getContext('2d');
+            var myChart1 = new Chart(context, {
+				plugins:[ChartDataLabels],
+                type: 'bar', // 차트의 형태
+                data: { // 차트에 들어갈 데이터
+                    labels: [
+                        //x 축
+                        '중구','동구','대덕구','서구','유성구'],
+                    datasets: [
+                        { //데이터
+                            label: '', //차트 제목
+                            fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                            data: [
+                                65,35,165,35,65 //x축 label에 대응되는 데이터 값
+                            ],
+                            backgroundColor: [
+                                //색상
+                                '#4866db',
+                            ],
+                        }
+                    ]
+                },
+                options: {
+					borderWidth: 0,
+					borderRadius: 10,
+					weight : 10,
+					title : {
+						display : true,
+					},
+					plugins: {
+						legend: {
+							display: false,
+						},
+						datalabels: {
+							align: 'end',
+        					anchor: 'end',
+							font: {
+							  weight: 'bold'
+							},
+							color: function(context) {
+							  return context.dataset.backgroundColor;
+							},
+							 display: function(context) {
+								  return context.dataset.data[context.dataIndex] > 15;
+								},
+								font: {
+								  weight: 'bold'
+								},
+								formatter: Math.round
+						}
+					},
+					// Core options
+					/*aspectRatio: 5 / 3,
+					layout: {
+					  padding: {
+						top: 32,
+					  }
+					},
+					elements: {
+						line: {
+							fill: false,
+							tension: 0.4
+						}
+					},*/
+					barThickness : 10,
+					scales: {
+						x: {
+							stacked: true,
+							grid: {
+								display: false,
+								//drawBorder : false,
+								},
+							ticks: {
+								//display: false
+							}
+						},
+						y: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+							},
+							ticks: {
+								display: false,
+							},
+
+						},
+					}
+                }
+            });
+
+	
+	/////     성별     /////
+	
+	var context = document.getElementById('myChart2').getContext('2d');
+            var myChart2 = new Chart(context, {
+				plugins:[ChartDataLabels],
+                type: 'doughnut', // 차트의 형태
+                data: { // 차트에 들어갈 데이터
+                    labels: [
+                        //x 축
+                        '남성','여성'],
+                    datasets: [
+                        { //데이터
+                            label: 'test1', //차트 제목
+                            fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                            data: [
+                                75,25 //x축 label에 대응되는 데이터 값
+                            ],
+                            backgroundColor: [
+                                //색상
+                                '#4866DB',
+                                '#F94450'
+                            ],
+                        }
+                    ]
+                },
+                options: {
+					borderWidth: 0,
+					borderRadius: 100,
+					cutout: "92%",
+					plugins: {
+						legend: {
+							display: true,
+							position : 'bottom',
+							labels:{
+								usePointStyle : true,
+								boxWidth : 20,
+								boxHeight : 20,
+								borderRadius : 100,
+							},
+						},
+						datalabels: {
+							align: 'end',
+        					anchor: 'end',
+							font: {
+							  weight: 'bold'
+							},
+							color: function(context) {
+							  return context.dataset.backgroundColor;
+							},
+							 display: function(context) {
+								  return context.dataset.data[context.dataIndex] > 15;
+								},
+								font: {
+								  weight: 'bold'
+								},
+								formatter: Math.round
+						}
+					},
+					scales: {
+						x: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+								},
+							ticks: {
+								display: false
+							}
+						},
+						y: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+							},
+							ticks: {
+								display: false,
+							},
+
+						},
+					}
+                }
+            });
+
+	
+	/////     기기별     /////
+	
+	var context = document.getElementById('myChart3').getContext('2d');
+            var myChart3 = new Chart(context, {
+				plugins:[ChartDataLabels],
+                type: 'doughnut', // 차트의 형태
+                data: { // 차트에 들어갈 데이터
+                    labels: [
+                        //x 축
+                        '체크카드','선불카드'],
+                    datasets: [
+                        { //데이터
+                            label: 'test1', //차트 제목
+                            fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                            data: [
+                                65,35 //x축 label에 대응되는 데이터 값
+                            ],
+                            backgroundColor: [
+                                //색상
+                                '#4100FF',
+                                '#33DC9E'
+                            ],
+                        }
+                    ]
+                },
+                options: {
+					borderWidth: 0,
+					borderRadius: 100,
+					cutout: "92%",
+					plugins: {
+						legend: {
+							display: true,
+							position : 'bottom',
+							labels:{
+								usePointStyle : true,
+								boxWidth : 20,
+								boxHeight : 20,
+								borderRadius : 100,
+							},
+						},
+						datalabels: {
+							align: 'end',
+        					anchor: 'end',
+							font: {
+							  weight: 'bold'
+							},
+							color: function(context) {
+							  return context.dataset.backgroundColor;
+							},
+							 display: function(context) {
+								  return context.dataset.data[context.dataIndex] > 15;
+								},
+								font: {
+								  weight: 'bold'
+								},
+								formatter: Math.round
+						}
+					},
+					scales: {
+						x: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+								},
+							ticks: {
+								display: false
+							}
+						},
+						y: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+							},
+							ticks: {
+								display: false,
+							},
+
+						},
+					}
+                }
+            });
+	
+	
+	
+	/////     연령별     /////
+	
+	var context = document.getElementById('myChart4').getContext('2d');
+            var myChart4 = new Chart(context, {
+				plugins:[ChartDataLabels],
+                type: 'bar', // 차트의 형태
+                data: { // 차트에 들어갈 데이터
+                    labels: [
+                        //x 축
+                        '10대','20대','30대','40대','50대','60대','70대'],
+                    datasets: [
+                        { //데이터
+                            label: '', //차트 제목
+                            fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                            data: [
+                                65,35,165,35,65,135,65 //x축 label에 대응되는 데이터 값
+                            ],
+                            backgroundColor: [
+                                //색상
+                                '#3B405D',
+                            ],
+                        }
+                    ]
+                },
+                options: {
+					borderWidth: 0,
+					borderRadius: 10,
+					weight : 10,
+					title : {
+						display : true,
+					},
+					plugins: {
+						legend: {
+							display: false,
+						},
+						datalabels: {
+							align: 'end',
+        					anchor: 'end',
+							font: {
+							  weight: 'bold'
+							},
+							color: function(context) {
+							  return context.dataset.backgroundColor;
+							},
+							 display: function(context) {
+								  return context.dataset.data[context.dataIndex] > 15;
+								},
+								font: {
+								  weight: 'bold'
+								},
+								formatter: Math.round
+						}
+					},
+					barThickness : 10,
+					scales: {
+						x: {
+							stacked: true,
+							grid: {
+								display: false,
+								//drawBorder : false,
+								},
+							ticks: {
+								//display: false
+							}
+						},
+						y: {
+							stacked: true,
+							grid: {
+								display: false,
+								drawBorder : false,
+							},
+							ticks: {
+								display: false,
+							},
+
+						},
+					}
+                }
+            });
+	
+</script>	
+</body>
+</html>

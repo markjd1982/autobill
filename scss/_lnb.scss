@@ -1,0 +1,111 @@
+////////////////////     LNB     ////////////////////
+
+
+#lnb{
+	position: sticky;
+	top: 0;
+	width: 250px;
+	height: 100vh;
+	.con{
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		.top{
+			height: 120px;
+			.icons{
+				display: flex;
+				padding-top: 32px;
+				li{
+					margin-right: 15px;
+					width: 24px;
+					height: 24px;
+					&.home{
+						background: url("../_images/common/icon-home.png") no-repeat center;
+					}
+					&.logout{
+						background: url("../_images/common/icon-logout.png") no-repeat center;
+					}
+					&.mypage{
+						background: url("../_images/common/icon-man.png") no-repeat center;
+					}
+					a{
+						display: block;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+			.name{
+				color: $textColor;
+				margin-top: 15px;
+				font-size: 16px;
+				strong{
+					font-weight: 700;
+				}
+			}
+            .log{
+                margin-top: 10px;
+                color: $textColor;
+            }
+		}
+		.menu{
+			width: 250px;
+			height: calc(100vh - 200px);
+			background-color: $primary;
+			border-radius: 0 50px 30px 40px;
+			padding: 30px;
+			li{
+				font-size: 16px;
+				line-height: 40px;
+				color: $lineColor;
+				font-weight: 300;
+				&.on{
+					font-weight: 700;
+					color: $white;
+				}
+			}
+		}
+	}
+	.bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		width: 250px;
+		height: calc(100vh - 200px);
+		background-color: $gray;
+		border-radius: 0 50px 30px 40px;
+	}
+	&:before{
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 0 50px 30px 40px;
+		content: "";
+		display: block;
+		width: 50vw;
+		background-color: $gray;
+		height: calc(100vh - 200px);
+	}
+}
+
+.main{
+	#lnb{
+		.bg{
+			background: $gray;
+		}
+		&:before{
+			background: $gray;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

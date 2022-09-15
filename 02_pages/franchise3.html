@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>온통대전 지자체 관리자</title>
+
+<link href="../_css/reset.css" rel="stylesheet" type="text/css">
+<link href="../_css/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="../_css/style.css" rel="stylesheet" type="text/css">
+	
+<script>
+
+	var m = 6;
+	
+</script>
+	
+<script type="text/javascript" src="../_js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../_js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../_js/jquery-ui.js"></script>
+<script type="text/javascript" src="../_js/jquery.js"></script>
+	
+</head>
+<body>
+	
+	<div id="container">
+		
+		<!--   LNB   -->
+		<div id="lnb"></div>
+		
+		<div id="contents">
+			<h2>가맹점 확인서</h2>
+			<div class="content">
+				
+				<div class="franchise-search mt30">
+					<div class="wrap">
+						<div>
+							<p class="title">지역</p>
+							<div class="flex">
+								<input type="radio" name="num" id="rdx11" checked><label for="rdx11">중구</label>
+								<input type="radio" name="num" id="rdx12"><label for="rdx12">동구</label>
+								<input type="radio" name="num" id="rdx13"><label for="rdx13">대덕구</label>
+								<input type="radio" name="num" id="rdx14"><label for="rdx14">서구</label>
+								<input type="radio" name="num" id="rdx15"><label for="rdx15">유성구</label>
+							</div>
+						</div>
+					</div>
+					<div class="wrap">
+						<div class="field">
+							<p class="title">사업자 등록번호</p>
+							<input type="text" placeholder="사업자등록번호를 입력하세요">
+						</div>
+						<div class="field">
+							<p class="title">사업자 명칭</p>
+							<input type="text" placeholder="사업자 명칭을 입력하세요">
+						</div>
+					</div>
+					<div class="wrap">
+						<div class="field">
+							<p class="title">등록자</p>
+							<input type="text" placeholder="등록자를 입력하세요">
+						</div>
+						<div class="field">
+							<p class="title">등록일자</p>
+							<div class="cal-wrap">
+								<p class="input-wrap">
+									<input type="text" id="datepicker">
+								</p>
+								<p class="dash">~</p>
+								<p class="input-wrap">
+									<input type="text" id="datepicker2">
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="btn-wrap">
+						<button class="init">초기화</button>
+						<button class="confirm">조회</button>
+					</div>
+				</div>
+				
+				<div class="board-top">
+					<div class="page_num">
+						<p>페이지 1/8 결과 73건</p>
+					</div>
+					<div class="right">
+						<div class="select-wrap" style="width: 150px">
+							<select>
+								<option>10개씩 보기</option>
+								<option>20개씩 보기</option>
+								<option>50개씩 보기</option>
+								<option>100개씩 보기</option>
+							</select>
+						</div>
+						<button class="btn">다운로드</button>
+					</div>
+				</div>
+				
+				<table>
+					<colgroup>
+						<col width="75px">
+						<col width="155px">
+						<col width="100px">
+						<col width="120px">
+						<col width="120px">
+						<col width="80px">
+						<col width="120px">
+						<col width="120px">
+					</colgroup>
+					<tr>
+						<th><input type="checkbox" id="chk"><label for="chk" style="height: 20px;"></label></th>
+						<th>사업자 번호</th>
+						<th>대표자성명</th>
+						<th>등록일자</th>
+						<th>휴대폰번호</th>
+						<th>지역</th>
+						<th>신청목적</th>
+						<th>확인서</th>
+					</tr>
+					<tr>
+						<td rowspan="2"><input type="checkbox" id="chk1"><label for="chk1" style="height: 20px;"></label></td>
+						<td rowspan="2"><a href="#">470-15-01444</a></td>
+						<td>정*임</td>
+						<td>2022.04.22</td>
+						<td>010-****-8943</td>
+						<td>중구</td>
+						<td>확인</td>
+						<td><button class="btn solid">등록</button></td>
+					</tr>
+					<tr>
+						<td class="left" colspan="6">사업자 명칭 : 더스킨앤바디<br>업종 : 7103(보건위생 / 피부미용실)<br>주소 : (21602) 인천 남동구 **** ***-* *층 (서창동)</td>
+					</tr>
+					<tr>
+						<td rowspan="2"><input type="checkbox" id="chk2"><label for="chk2" style="height: 20px;"></label></td>
+						<td rowspan="2"><a href="#">470-15-01444</a></td>
+						<td>정*임</td>
+						<td>2022.04.22</td>
+						<td>010-****-8943</td>
+						<td>중구</td>
+						<td>확인</td>
+						<td><button class="btn stroke">삭제</button></td>
+					</tr>
+					<tr>
+						<td class="left" colspan="6">사업자 명칭 : 더스킨앤바디<br>업종 : 7103(보건위생 / 피부미용실)<br>주소 : (21602) 인천 남동구 **** ***-* *층 (서창동)</td>
+					</tr>
+					
+				</table>
+				
+				<div id="paging">
+					<a href="#" class="l">이전 목록</a>
+					<div class="wrap">
+						<a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a>
+					</div>
+					<a href="#" class="r">다음 목록</a>
+				</div>
+				
+			</div>
+				
+		</div>
+	</div>
+</body>
+</html>
