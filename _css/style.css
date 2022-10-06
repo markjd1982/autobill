@@ -284,11 +284,13 @@ h3 { font-size: 16px; line-height: 1.5; color: #454545; }
 .tab1-wrap ul { display: flex; height: 40px; position: relative; z-index: 1; }
 .tab1-wrap ul li { line-height: 40px; font-size: 16px; font-weight: 500; width: 80px; border-radius: 10px 10px 0 0; color: #454545; text-align: center; border: solid 1px #dedede; border-bottom: solid 1px #4866db; background-color: #f5f5f5; }
 .tab1-wrap ul li.on { width: 180px; border: solid 1px #4866db; background-color: #fff; color: #4866db; border-bottom: none; }
+.tab1-wrap ul li a { display: block; }
 
 .tab2-wrap { height: 40px; }
 .tab2-wrap ul { display: flex; height: 40px; }
 .tab2-wrap ul li { line-height: 30px; padding: 5px 10px; border-bottom: 1px solid #dedede; color: #727f89; }
 .tab2-wrap ul li.on { padding: 5px 10px; border-bottom: 1px solid #4866db; font-weight: 500; color: #4866db; }
+.tab2-wrap ul li a { display: block; }
 
 .popup-wrap { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 280px; height: 162px; border-radius: 20px 20px 25px 25px; box-shadow: 0 10px 20px -8px rgba(6, 16, 88, 0.5); background-color: #fff; z-index: 1; }
 .popup-wrap .title { text-align: center; margin-top: 30px; font-size: 16px; font-weight: 700; line-height: 24px; letter-spacing: -0.68px; color: #000; }
