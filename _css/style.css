@@ -89,7 +89,7 @@ table { border-top: 2px solid #454545; text-align: left; width: 100%; }
 table th { line-height: 1.6; border-bottom: 1px solid #dedede; padding: 5px 0; color: #454545; font-weight: 500; background-color: #E9EDF7; vertical-align: middle; text-align: center; font-size: 14px; height: 40px; }
 table th.left { text-align: left; padding-left: 10px; }
 table th.up:after { width: 16px; height: 16px; display: inline-block; content: ""; background: url("../_images/common/icon-s-caret-up@2x.png") no-repeat 50% 1px/16px; margin-left: 5px; }
-table th.down:after { width: 16px; height: 16px; display: inline-block; content: ""; background: url("../_images/common/icon-s-caret-up@2x.png") no-repeat 50% 1px/16px; margin-left: 5px; }
+table th.down:after { width: 16px; height: 16px; display: inline-block; content: ""; background: url("../_images/common/icon-s-caret-down@2x.png") no-repeat 50% 1px/16px; margin-left: 5px; }
 table th.on { background-color: #4866db; color: #fff; }
 table th.on.up:after { background: url("../_images/common/icon-s-caret-up-w@2x.png") no-repeat 50% 1px/16px; }
 table th.on.down:after { background: url("../_images/common/icon-s-caret-down-w@2x.png") no-repeat 50% 1px/16px; }
@@ -277,6 +277,7 @@ h3 { font-size: 16px; line-height: 1.5; color: #454545; }
 .btn-btm-wrap a:not(:first-child) { margin-left: 10px; }
 .btn-btm-wrap a.pri { background-color: #4866db; }
 .btn-btm-wrap a.dis { background-color: #979797; }
+.btn-btm-wrap a.modalwidth { width: 200px; }
 
 .tab1-wrap { border-bottom: 1px solid #4866db; height: 40px; }
 .tab1-wrap ul { display: flex; height: 40px; position: relative; z-index: 1; }
