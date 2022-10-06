@@ -293,7 +293,7 @@ h3 { font-size: 16px; line-height: 1.5; color: #454545; }
 .tab2-wrap ul li.on { padding: 5px 10px; border-bottom: 1px solid #4866db; font-weight: 500; color: #4866db; }
 .tab2-wrap ul li a { display: block; }
 
-.popup-wrap { display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 280px; height: 162px; border-radius: 20px 20px 25px 25px; box-shadow: 0 10px 20px -8px rgba(6, 16, 88, 0.5); background-color: #fff; z-index: 1; }
+.popup-wrap { display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 280px; border-radius: 20px 20px 25px 25px; box-shadow: 0 10px 20px -8px rgba(6, 16, 88, 0.5); background-color: #fff; z-index: 1; }
 .popup-wrap .title { text-align: center; margin-top: 30px; font-size: 16px; font-weight: 700; line-height: 24px; letter-spacing: -0.68px; color: #000; }
 .popup-wrap .text { margin-top: 20px; font-size: 12px; line-height: 18px; letter-spacing: -0.51px; text-align: center; color: #454545; }
 .popup-wrap .btn-popup { margin-top: 30px; display: flex; height: 40px; font-size: 14px; font-weight: 500; color: #fff; line-height: 40px; text-align: center; }
@@ -301,5 +301,4 @@ h3 { font-size: 16px; line-height: 1.5; color: #454545; }
 .popup-wrap .btn-popup .btn-cancel.half { width: calc(100% / 2); border-radius: 0 0 0 20px; }
 .popup-wrap .btn-popup .btn-ok { width: 100%; border-radius: 0 0 20px 20px; background-color: #4866db; }
 .popup-wrap .btn-popup .btn-ok.half { width: calc(100% / 2); border-radius: 0 0 20px 0; }
-.popup-wrap.none-title { height: 118px; }
 .popup-wrap.none-title .text { margin-top: 30px; }

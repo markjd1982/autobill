@@ -104,7 +104,7 @@ $(function(){
 	
 	////////////////////     modal     ////////////////////    
     
-    $(document).on("click",".btn-modal",function(){
+    $(document).on("click",".btn-modal,.btn-popup",function(){
         var target = $(this).attr("data-target");
         modalPopup(target)
         
