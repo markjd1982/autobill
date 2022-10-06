@@ -87,9 +87,9 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 /* Layout */
 .container-full { width: 100%; }
 
-#container { width: 1390px; margin: 0 auto; display: flex; justify-content: space-between; padding-bottom: 100px; }
+#container { width: 1390px; margin: 0 auto; display: flex; justify-content: space-between; }
 
-#contents { width: 1080px; }
+#contents { width: 1080px; padding-bottom: 100px; }
 
 .point { color: #4866db !important; }
 
