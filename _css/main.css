@@ -234,6 +234,8 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 .main-mid3 .wrapper ul li.bar { width: 100%; display: flex; }
 .main-mid3 .wrapper ul li.bar p { background-color: #4866db; line-height: 32px; font-size: 12px; text-align: center; color: #fff; }
 .main-mid3 .wrapper ul li.bar p.right { background-color: #eaeff5; color: #454545; }
+.main-mid3 .wrapper .legend { display: flex; justify-content: center; font-size: 14px; }
+.main-mid3 .wrapper .legend p.before { display: inline-block; content: ""; width: 12px; height: 12px; margin-right: 5px; border-radius: 100%; }
 
 .main-mid4 .wrap-1 { width: calc((100% - 24px)/2); }
 .main-mid4 .wrap-1 .box-1 { padding: 20px 30px; width: 100%; height: 230px; }
