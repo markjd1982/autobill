@@ -87,6 +87,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 /* table */
 table { border-top: 2px solid #454545; text-align: left; width: 100%; }
 table th { line-height: 1.6; border-bottom: 1px solid #dedede; padding: 5px 0; color: #454545; font-weight: 500; background-color: #E9EDF7; vertical-align: middle; text-align: center; font-size: 14px; height: 40px; }
+table th.up, table th.down { cursor: pointer; }
 table th.left { text-align: left; padding-left: 10px; }
 table th.up:after { width: 16px; height: 16px; display: inline-block; content: ""; background: url("../_images/common/icon-s-caret-up@2x.png") no-repeat 50% 1px/16px; margin-left: 5px; }
 table th.down:after { width: 16px; height: 16px; display: inline-block; content: ""; background: url("../_images/common/icon-s-caret-down@2x.png") no-repeat 50% 1px/16px; margin-left: 5px; }

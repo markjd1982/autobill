@@ -17,6 +17,9 @@ table{
 		text-align: center;
   		font-size: 14px;
 		height: 40px;
+        &.up,&.down{
+            cursor: pointer;
+        }
 		&.left{
 			text-align: left;
 			padding-left: 10px;

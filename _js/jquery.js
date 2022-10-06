@@ -77,6 +77,22 @@ $(function(){
 		$(this).addClass("on");
         
 	});
+    
+    ////////////////////     테이블소팅     ////////////////////
+	
+	
+	$(document).on("click",".table-group .item",function(){
+        $(this).closest(".table-group").find(".item").removeClass("on");
+		$(this).addClass("on");
+        if($(this).hasClass("up")){
+            $(this).removeClass("up");
+            $(this).addClass("down");
+        }else{
+            $(this).removeClass("down");
+            $(this).addClass("up");
+        }
+        
+	});
 	
 	
 	
