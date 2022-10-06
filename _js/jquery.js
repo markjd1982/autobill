@@ -105,7 +105,7 @@ $(function(){
         target.show();
     }
     
-    $(document).on("click",".modal-close",function(){
+    $(document).on("click",".btn-close",function(){
 		
         $(this).closest("#modal-wrap").hide();
 	});
