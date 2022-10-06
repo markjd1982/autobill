@@ -8,13 +8,8 @@ $(function(){
 	////////////////////     LNB     ////////////////////
 	
 	/*   LNB 로드   */
-	$("#lnb").load('../_inc/lnb.html',function(){
-		lnbLoad();
-	});
+	$("#lnb").load('../_inc/lnb.html');
 	
-	function lnbLoad(){
-		$("#lnb .menu li").eq(m).addClass("on");
-	};
     
     
     $(document).on("click",".menu ul li a",function(){
