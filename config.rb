@@ -6,10 +6,10 @@ require 'compass/import-once/activate'
 Encoding.default_external = "utf-8"
 
 http_path = "/"
-css_dir = "css"
+css_dir = "_css"
 sass_dir = "scss"
-images_dir = "images"
-javascripts_dir = "js"
+images_dir = "_images"
+javascripts_dir = "_js"
 
 output_style = :compact
 

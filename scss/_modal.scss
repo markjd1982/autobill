@@ -8,7 +8,7 @@
 	z-index: 100;
 	left: 0;
 	top: 0;
-	display: none;
+	//display: none;
 	.alert-wrap{
 		position: absolute;
 		left: 50%;
@@ -18,7 +18,7 @@
 		width: 280px;
 		background: $white;
 		box-shadow: 0 10px 20px -8px rgba(6, 16, 88, 0.5);
-		border-radius: 20px;
+		//border-radius: 20px;
 		.title{
 			margin-top: 30px;
 			text-align: center;
@@ -66,31 +66,108 @@
 		}
 	}
 	.modal-con{
+		width: 500px;
+		&.w800{
+			width: 800px;
+		}
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%,-50%);
 		background: #fff;
-		padding: 30px;
-		border: solid 4px $primary;
+		padding: 30px; 
+		border: solid 2px $textColor;
 		//display: none;
 		@include box-sizing(border-box);
 		.btn-close{
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 40px;
+			height: 40px;
 			position: absolute;
-			top: 24px;
-			right: 25px;
-			background: url(../_images/common/icon-s-cross@2x.png) no-repeat center;
-			background-size: 20px;
+			top: -1px;
+			right: 0;
+			background: url("../_images/common/icon-s-cross-w@2x.png") no-repeat center;
+			background-size: 24px;
+			background-color: $textColor;
 			text-indent: -9999px;
 		}
+		.bottom-con{
+			margin-top: 10px;
+			border: 1px solid #dedede;
+			padding: 10px;
+			font-size: 14px;
+			letter-spacing: -0.59px;
+			color: $textColor;
+			line-height: 1.5;
+			dt{
+				margin-bottom: 20px;
+			}
+			dd:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
 		.title{
+			margin-top: 22px;
+			font-size: 20px;
+			font-weight: 500;
+			letter-spacing: -0.85px;;
+			color: $black;
+			padding-bottom: 10px;
+			border-bottom: 2px solid $textColor;
+		}
+		.sub-title{
+			margin-top: 30px;
 			font-size: 16px;
 			font-weight: 700;
 			letter-spacing: -0.68px;
+			color: $black;
+		}
+		.box-sub-title{
+			margin-top: 30px;
+			border: 1px solid #dedede;
+			line-height: 38px;
+			letter-spacing: -0.59px;
 			color: $textColor;
+			background-color: #f5f5f5;
+			padding-left: 15px;
+			//@include box-sizing(border-box);
+		}
+		.box-select-radio{
+			width: 100%;
+			margin-top: 20px;
+			.box-item{
+				width: 100%;
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+				border-radius: 20px;
+				border: solid 1px #dedede;
+				padding: 20px;
+				line-height: 20px;
+				position: relative;
+				cursor: pointer;
+				p{
+					text-align: left;
+				}
+				&.marbottom:not(:last-child){
+					margin-bottom: 10px;
+				}
+				&.on{
+					border-color: $second;
+					color: $second;
+					&:after{
+						display: block;
+						width: 20px;
+						height: 20px;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 15px;
+						content: "";
+						background:url("../_images/common/radio@2x.png") no-repeat center / 20px;
+					}
+				}
+			}
 		}
 		.text{
 			font-size: 14px;
@@ -98,6 +175,17 @@
 			margin-top: 20px;
 			text-align: center;
 			line-height: 1.6;
+		}
+		.agree-wrap{
+			margin-top: 10px;
+			display: flex;
+			justify-content: space-between;
+			.agree-title{
+				font-size: 14px;
+				font-weight: 500;
+				letter-spacing: -0.59px;
+				color: $textColor;
+			}
 		}
 		.modal-btn-wrap{
 			width: 100%;

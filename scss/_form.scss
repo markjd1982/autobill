@@ -1,15 +1,12 @@
 /* form */
 .select-wrap{
+	width: 100%;
 	position: relative;
 	height: 40px;
 	select{
-		width: 100%; 
-		/*padding: .58em .5em;  */
+		width: 100%;
 		padding-left: 15px;
-		//text-indent: 15px;
-		font-family: inherit;
 		border:1px solid $lineColor;
-		background-size:contain;
 		vertical-align:middle;
 		height: 40px;
 		border-radius: 10px;
@@ -27,52 +24,21 @@
 		display: block;
 		right: 15px;
 		background: url("../_images/_form/icon-s-caret-down.png")no-repeat center;
-		background-size: 16px;
+		background-size: contain;
 	}
 }
 
-.search-wrap{
-	position: relative;
-	height: 40px;
-	input[type="search"]{
-		width: 100%; 
-		/*padding: .58em .5em;  */
-		padding-left: 15px;
-		//text-indent: 15px;
-		font-family: inherit;
-		border:1px solid $lineColor;
-		background-size:contain;
-		vertical-align:middle;
-		height: 40px;
-		border-radius: 10px;
-		@include appearance(none); 
-		@include box-sizing(border-box);
-		color: $textColor;
-	}
-	&:after{
-		content: "";
-		width: 16px;
-		height: 16px;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		display: block;
-		right: 15px;
-		background: url("../_images/common/icon-s-search.png")no-repeat center;
-		background-size: 16px;
-	}
-}
 
-select::-ms-expand { 
+select::-ms-expand {
   display: none;
 }
 
 input[type="text"],input[type="password"],input[type="tel"],input[type="email"]{
 	line-height: 38px;
 	height: 40px;
-	text-indent: 10px;
-	//width: 400px;
+	padding: 0 10px;
 	font-size: 14px;
+	letter-spacing: -0.59px;
 	border:1px solid $lineColor;
 	vertical-align:middle;
 	@include border-radius(10px);
@@ -80,6 +46,9 @@ input[type="text"],input[type="password"],input[type="tel"],input[type="email"]{
 	@include box-sizing(border-box);
 }
 
+input:focus, textarea:focus{
+	border: 1px solid $second;
+}
 
 textarea{
 	width: 100%;
@@ -87,15 +56,12 @@ textarea{
 	padding: 10px;
 	border: 1px solid $lineColor;
 	color: $textColor;
-	line-height: 18px;
+	line-height: 1.5;
 	@include border-radius(10px);
 	@include appearance(none);
 	@include box-sizing(border-box);
 }
 
-
-
-	
 input[type="radio"], input[type="checkbox"]{
 	position: absolute;
 	width: 1px;
@@ -167,9 +133,6 @@ input[type="radio"]:checked + label,input[type="checkbox"]:checked + label{
 		
 	}
 } 
-	
-
-
 
 input[type="file"]{
 	//text-indent: 10px;
@@ -182,7 +145,38 @@ input[type="file"]{
 	border-radius: 10px;
 	box-sizing: border-box;
 }
-
+/*
+//1. 인풋 스타일 변경
+.filebox .upload-name{
+	display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    width: 78%;
+    color: #999999;
+}
+//2. label 스타일 변경
+.filebox label {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+}
+//3. 기존 디자인 없애기
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+*/
 input[type="file"]::-webkit-file-upload-button{
 	appearance:none;
 	-webkit-appearance:none;
@@ -190,7 +184,7 @@ input[type="file"]::-webkit-file-upload-button{
 	box-sizing:border-box; 
 	color:#fff; 
 	border:0; 
-	background:#343f4e;
+	background:#3b405d;
 	line-height:38px;
 	height: 40px;
 	margin:0px;
@@ -198,8 +192,8 @@ input[type="file"]::-webkit-file-upload-button{
 	width: 100px;
 	cursor: pointer;
 	margin-right: 10px;
-	font-size: 16px;
-	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: -0.59px;
 }
 
 /*.btn-input-file{
@@ -255,10 +249,5 @@ input[type="file"]::-ms-browse {
 		border: 0;
 	}
 }*/
-
-
-
-
-
 
 

@@ -4,7 +4,7 @@
 	width: 100%;
 }
 #container{
-	width: 1200px;
+	width: 1390px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -12,10 +12,12 @@
 }
 
 #contents{
-	width: 890px;
+	width: 1080px;
 }
 
-
+.point{
+	color: $second !important;
+}
 
 
 

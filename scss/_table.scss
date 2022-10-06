@@ -2,65 +2,81 @@
 
 
 table{ 
-	border-top:2px solid $primary; 
+	border-top:2px solid #454545;
 	text-align:left;
 	width: 100%;
 	th{
 		line-height: 1.6;
 		border-bottom:1px solid $lineColor;
 		//border-left:1px solid $lineColor; 
-		padding:10px; 
+		padding:5px 0;
 		color:$textColor;
-		font-weight: 700;
-		background:$bgColor; 
+		font-weight: 500;
+		background-color:$bgColor; 
 		vertical-align:middle;
 		text-align: center;
-		//line-height: 18px;
-  		font-size: 16px;
-		min-height: 42px;
-		&.cate{
-			background: $primary;
-			color: $white;
-			text-align: center;
-			border-bottom:1px solid #62677D;
-		}
+  		font-size: 14px;
+		height: 40px;
 		&.left{
 			text-align: left;
+			padding-left: 10px;
 		}
-		&.nobg{
-			font-size: 14px;
-			background: none;
+		&.up:after{
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			content: "";
+			background: url("../_images/common/icon-s-caret-up@2x.png")no-repeat 50% 1px / 16px;
+			margin-left: 5px;
+		}
+		&.down:after{
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			content: "";
+			background: url("../_images/common/icon-s-caret-up@2x.png")no-repeat 50% 1px / 16px;
+			margin-left: 5px; 
+		}
+		&.on{
+			background-color: $second;
+			color: $white;
+			&.up:after{
+				background: url("../_images/common/icon-s-caret-up-w@2x.png")no-repeat 50% 1px / 16px;
+			}
+			&.down:after{
+				background: url("../_images/common/icon-s-caret-down-w@2x.png")no-repeat 50% 1px / 16px;
+			}
 		}
 	}
 	td{
 		line-height: 1.6;
 		border-bottom:1px solid $lineColor;
-		//border-left:1px solid $lineColor;
 		padding:5px 10px; 
 		vertical-align:middle;
-		//line-height: 18px;
 		text-align: center;
 		font-size: 14px;
+		font-weight: 300;
 		color: $textColor;
 		height: 50px;
 		.btn{
-			min-width: 80px;
+			width: 100%;
 			height: 40px;
 			border-radius: 10px;
-			font-size: 16px;
-			font-weight: 700;
+			font-size: 14px;
 			text-align: center;
+			border-radius: 10px;
+			padding: 0 5px;
 			&.solid{
 				background-color: $primary;
 				color: $white;
 			}
 			&.stroke{
-				border: 1px solid $primary;
-				color: $primary
+				border: 1px solid $lineColor;
+				color: $textColor;
 			}
 		}
 		&.state{
-			font-weight: 700;
+			font-weight: 500;
 			&.done{
 				color: $second;
 			}
@@ -69,11 +85,14 @@ table{
 			}
 		}
 		a{
-			font-weight: 700;
+			font-weight: 500;
 			text-decoration: underline;
 		}
 		&.left{
 			text-align: left;
+		}
+		&.right{
+			text-align: right;
 		}
 		&.flex{
 			align-items: center;
@@ -87,7 +106,6 @@ table{
 	th:first-child,td:first-child{
 		border-left:none;
 	}
-	
 	&.search-table{
 		th{
 			text-align: left;
