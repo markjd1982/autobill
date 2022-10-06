@@ -125,6 +125,11 @@ $(function(){
 		
         $(this).closest("#modal-wrap").hide();
 	});
+    
+    $(document).on("click",".popup-close",function(){
+		
+        $(this).closest(".popup-wrap").hide();
+	});
 	
 	
 	//    달력
