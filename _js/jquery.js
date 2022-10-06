@@ -93,22 +93,23 @@ $(function(){
 	
 	////////////////////     탭     ////////////////////
 	
-	$(".tab li").click(function(){
+	/*$(".tab li").click(function(){
 		var idx = $(this).index();
 		$(this).closest(".tab-wrap").find(".tab-con").hide();
 		$(this).closest(".tab-wrap").find(".tab-con").eq(idx).show();
 		$(this).closest(".tab").find("li").removeClass("on");
 		$(this).addClass("on");
-	});
+	});*/
 	
 	
 	////////////////////     modal     ////////////////////    
     
-    $(document).on("click",".btn-modal",function(){
+    $(document).on("click",".btn-modal,.btn-popup",function(){
         var target = $(this).attr("data-target");
         modalPopup(target)
         
 	});
+    
     
     function modalPopup(tg){
         
@@ -150,6 +151,18 @@ $(function(){
 	});
     
     
+    ////////////////////     top-search-wrap     ////////////////////
+    
+    $(document).on("click",".top-search-wrap .expand",function(){
+        if($(this).closest(".wrap").hasClass("on")){
+            $(this).closest(".wrap").removeClass("on");
+            $(".top-search-wrap .expand-wrap").slideUp(500,"easeInOutExpo");
+        }else{
+            $(this).closest(".wrap").addClass("on");
+            $(".top-search-wrap .expand-wrap").slideDown(500,"easeInOutExpo");
+        }
+        
+    });
     
 });
 
