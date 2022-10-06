@@ -47,6 +47,11 @@ a{
 .btn-top-wrap{
 	display: flex;
 	justify-content: flex-end;
+	&.sample{
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+	}
 	a{
 		border-radius: 25px;
 		width: 120px;
@@ -190,12 +195,13 @@ a{
 }
 
 .popup-wrap{
+	display: none;
 	position: fixed;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 280px;
-	height: 162px;
+	//height: 162px;
 	border-radius: 20px 20px 25px 25px;
 	box-shadow: 0 10px 20px -8px rgba(6, 16, 88, 0.5);
 	background-color: #fff;
@@ -246,7 +252,7 @@ a{
 		}
 	}
 	&.none-title{
-		height: 118px;
+		//height: 118px;
 		.text{
 			margin-top: 30px;
 		}
