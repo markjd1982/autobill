@@ -177,6 +177,10 @@
 							<p class="right" style="width: 25%">10,345</p>
 						</li>
 					</ul>
+                    <div class="legend">
+                        <p class="blue">예산 사용</p>
+                        <p class="gray">예산 잔액</p>
+                    </div>
 					<ul class="center">
 						<li class="dot-blue"></li>
 						<li class="mr15">예산 사용</li>
@@ -705,115 +709,8 @@
 					}
                 }
             });
-	
-	var context = document.getElementById('myChart4').getContext('2d');
-            var myChart4 = new Chart(context, {
-				plugins:[ChartDataLabels],
-                type: 'bar', // 차트의 형태
-                data: { // 차트에 들어갈 데이터
-                    labels: [
-                        //x 축
-                        '1','2','3','4','5'],
-                    datasets: [
-                        { //데이터
-                            label: '영업1실', //차트 제목
-                            fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                            data: [
-                                155,105 //x축 label에 대응되는 데이터 값
-                            ],
-                            backgroundColor: [
-                                //색상
-                                '#4866db',
-                            ],
-							//borderColor:'#4866db',
-							//stack: 'combined',
-							//type:'line',
-                        },
-						{ //데이터
-                            label: '영업2실', //차트 제목
-                            fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                            data: [
-                                50,45 //x축 label에 대응되는 데이터 값
-                            ],
-                            backgroundColor: [
-                                //색상
-                                '#eaeff5',
-                            ],
-							//borderColor:'#3d91ff',
-							//stack: 'combined',
-							//type:'line',
-                        },
-                    ]
-                },
-                options: {
-					indexAxis: 'y',		//바 가로, 세로타입
-					borderWidth: 0,  //바 사이 간격
-					//borderRadius: 6, //바 radius
-					weight : 10,
-					title : {
-						display : true,
-					},
-					plugins: {		// 색인 
-						legend: {
-							display: true,
-							position : 'bottom',
-							labels:{
-								usePointStyle : true,
-								boxWidth : 12,
-								boxHeight : 12,
-								borderRadius : 100,
-								font: {
-									size: 12
-								}
-							},
-						},
-						datalabels: {
-							align: 'center',
-        					anchor: 'center',
-							font: {
-							  weight: 'bold'
-							},
-							color: function(context) {
-							  return context.dataset.backgroundColor;
-							},
-							 display: function(context) {
-								  return context.dataset.data[context.dataIndex] > 15;
-								},
-								font: {
-								  weight: 'bold'
-								},
-								formatter: Math.round
-						}
-					},
-					
-					barThickness : 32,
-					scales: {
-						x: {
-							stacked: true,
-							grid: {
-								display: false,
-								//drawBorder : false,
-								},
-							ticks: {
-								font:{
-									size:14,
-								}
-							}
-						},
-						y: {
-							stacked: true,
-							grid: {
-								display: false,
-								drawBorder : false,
-							},
-							ticks: {
-								display: false,
-							},
-
-						},
-					}
-                }
-            });	
+    
+    
        
 </script>
 </html>

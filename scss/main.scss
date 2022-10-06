@@ -274,6 +274,21 @@
 				}
 			}
 		}
+        .legend{ 
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            p{
+                &.before{
+                    display: inline-block;
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 5px;
+                    border-radius: 100%;
+                }
+            }
+        }
 	}
 }
 
