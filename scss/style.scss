@@ -140,6 +140,9 @@ h3{
 				color: $second;
 				border-bottom: none;
 			}
+			a{
+				display: block;
+			}
 		}
 	}
 }
@@ -159,6 +162,9 @@ h3{
 				border-bottom: 1px solid $second;
 				font-weight: 500;
 				color: $second;
+			}
+			a{
+				display: block;
 			}
 		}
 	}
