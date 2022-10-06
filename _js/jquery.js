@@ -1,50 +1,73 @@
 // JavaScript Document
 
 
-////////////////////     BROWSER POPUP      ////////////////////
-	
-function openWin(url, width, height){
-	window.open(url, "", "width="+width+", height="+height+", toolbar=no, menubar=no, scrollbars=yes, resizable=no" );
-} 
-
 $(function(){
     
     
-    
-    /*var loginTime = 1800;
-    
-    setInterval(function(){
-        
-        if( loginTime > 0){
-        
-        loginTime--; 
-        
-        console.log(loginTime);
-            
-        }else{
-            alert("out")
-        }
-        
-        
-    },1000);
-    
-    $(document).on("keydown, mousemove","",function(){
-        
-        loginTime = 1800;
-        
-    });
-	*/
 	
 	////////////////////     LNB     ////////////////////
 	
 	/*   LNB 로드   */
-	/*$("#lnb").load('../_inc/lnb.html',function(){
+	$("#lnb").load('../_inc/lnb.html',function(){
 		lnbLoad();
-	});*/
+	});
 	
 	function lnbLoad(){
 		$("#lnb .menu li").eq(m).addClass("on");
 	};
+    
+    
+    $(document).on("click",".menu ul li a",function(){
+			
+			var self = this;
+			
+			
+			
+			//현재 선택된 메뉴의 하위메뉴 의 열림,닫힘 상태를 변수에 담는다.
+			var openLength = $(this).closest("ul").find("li ul[style*='block']").length;
+			var open = $(this).closest("ul").find("li ul[style*='block']");
+			var displayCondition = $(this).next().css("display");
+				
+			//클릭한 버튼에 하위 메뉴가 있고 slide 이벤트가 완료가 되었다면 (더블 클릭 방지)
+			if($(this).next().is("ul") == true){
+				
+				if( openLength > 0 && displayCondition=="none"){  // 클릭한 메뉴의 하위메뉴는 닫혀있고 다른 메뉴가 열려있을때
+                    //console.log("a");
+					open.slideUp(500,'easeInOutExpo',function(){
+						$("#lnb a[class^='on']").removeClass("on");
+						$(self).addClass("on");	
+						$(self).parents("ul").siblings("a").addClass("on");
+						$(self).next().slideDown(500,'easeInOutExpo');
+						
+					});
+					return false;
+						
+				}else if( openLength > 0 && displayCondition=="block"){  // 클릭한 메뉴의 하위메뉴가 열려있을때
+                    //console.log("b");
+					open.slideUp(500,'easeInOutExpo',function(){
+						open.prev().removeClass("on");
+					});
+					return false; 
+							
+				}else if( openLength == 0 && displayCondition=="none" ){  // 아무런 메뉴도 열리지 않았을때
+                    //console.log("c");
+					$("#lnb a[class^='on']").removeClass("on");
+					$(self).addClass("on");	
+					$(self).parents("ul").siblings("a").addClass("on");
+					$(self).next().slideDown(500,'easeInOutExpo');
+					return false;	
+				}
+				
+			}else{
+				
+				open.slideUp(500,'easeInOutExpo');
+				$("#lnb a[class^='on']").removeClass("on");
+				$(self).addClass("on");	
+				$(self).parents("ul").siblings("a").addClass("on");
+			
+			}
+		}); //메뉴 버튼 클릭 이벤트 END	
+    
 	
 	////////////////////     라디오 그룹     ////////////////////
 	
@@ -82,7 +105,7 @@ $(function(){
         target.show();
     }
     
-    $(document).on("click",".modal-close",function(){
+    $(document).on("click",".btn-close",function(){
 		
         $(this).closest("#modal-wrap").hide();
 	});
@@ -109,10 +132,6 @@ $(function(){
 		}
         
 	});
-	
-	$(document).on("click",".multi-sel .item",function(){
-        $(this).remove();    
-    });
     
     
     
