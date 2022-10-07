@@ -50,6 +50,9 @@ table{
 				background: url("../_images/common/icon-s-caret-down-w@2x.png")no-repeat 50% 1px / 16px;
 			}
 		}
+        strong{
+            color: #f94450;
+        }
 	}
 	td{
 		line-height: 1.6;
@@ -96,6 +99,36 @@ table{
 			text-align: left;
 			padding-left: 20px;
 			height: 50px;
+            position: relative;
+            .info{
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 100%;
+                background: url("../_images/common/icon-s-info@2x.png") no-repeat center;
+                background-size: 24px;
+                span{
+                    position: absolute;
+                    bottom: 34px;
+                    left: 0;
+                    border: 2px solid $second;
+                    padding: 15px;
+                    color: $textColor;
+                    width: 300px;
+                    background: #fff;
+                    display: none;
+                    line-height: 1.4;
+                    font-weight: 400;
+                }
+                &:hover{
+                    span{
+                        display: block;
+                    }
+                }
+            }
 		}
         td{
             text-align: left;

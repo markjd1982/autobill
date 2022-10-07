@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*   Main   */
 /* form */
-.select-wrap { width: 100%; position: relative; height: 40px; }
+.select-wrap { width: 100%; position: relative; height: 40px; display: inline-block; }
 .select-wrap select { width: 100%; padding-left: 15px; border: 1px solid #dedede; vertical-align: middle; height: 40px; border-radius: 10px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; color: #454545; }
 .select-wrap:after { content: ""; width: 16px; height: 16px; position: absolute; top: 50%; transform: translateY(-50%); display: block; right: 15px; background: url("../_images/_form/icon-s-caret-down.png") no-repeat center; background-size: contain; }
 
@@ -12,7 +12,7 @@ select::-ms-expand { display: none; }
 
 input:disabled { background: #f5f5f5; }
 
-input[type="text"], input[type="password"], input[type="tel"], input[type="email"] { width: 100%; line-height: 38px; height: 40px; padding: 0 10px; font-size: 14px; letter-spacing: -0.59px; border: 1px solid #dedede; vertical-align: middle; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"] { display: inline-block; width: 100%; line-height: 38px; height: 40px; padding: 0 10px; font-size: 14px; letter-spacing: -0.59px; border: 1px solid #dedede; vertical-align: middle; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 input:focus, textarea:focus { border: 1px solid #4866db; }
 
@@ -21,7 +21,7 @@ textarea { width: 100%; height: 120px; padding: 10px; border: 1px solid #dedede;
 input[type="radio"], input[type="checkbox"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 input[type="radio"]:focus, input[type="checkbox"]:focus { width: 20px; height: 20px; outline: solid; }
 
-input[type="radio"] + label, input[type="checkbox"] + label { display: inline-block; position: relative; padding-left: 30px; cursor: pointer; color: #454545; min-width: 0; line-height: 20px; text-align: left; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; margin-right: 20px; position: relative; }
+input[type="radio"] + label, input[type="checkbox"] + label { display: inline-block; position: relative; padding-left: 25px; cursor: pointer; color: #454545; min-width: 0; line-height: 20px; text-align: left; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; margin-right: 20px; position: relative; }
 input[type="radio"] + label:before, input[type="checkbox"] + label:before { position: absolute; left: 0; top: 0; display: inline-block; content: ""; width: 20px; height: 20px; vertical-align: middle; margin-right: 10px; border: 1px solid #dedede; background: #fff; }
 input[type="radio"] + label:last-of-type, input[type="checkbox"] + label:last-of-type { margin: 0; }
 
@@ -152,6 +152,13 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #modal-wrap .modal-aco .modal-btn-wrap li button { line-height: 40px; text-align: center; width: 100%; color: #fff; }
 
 .modal-scroll { max-height: 300px; overflow: auto; }
+
+.code-wrap { margin-top: 20px; border-top: 2px solid #454545; }
+.code-wrap .code-top { padding: 5px 0; display: flex; justify-content: space-between; border-bottom: 1px solid #dedede; }
+.code-wrap .code-top button { width: 57px; height: 40px; background: #3B405D; color: #fff; border-radius: 10px; }
+.code-wrap .code-body { padding-top: 5px; border-bottom: 1px solid #dedede; }
+.code-wrap .code-body .item { display: flex; justify-content: space-between; padding-bottom: 5px; }
+.code-wrap .code-body .item button { width: 57px; height: 40px; border: 1px solid #4866db; color: #4866db; border-radius: 10px; }
 
 #lnb { position: sticky; top: 0; width: 250px; height: 100vh; }
 #lnb .con { position: absolute; top: 0; z-index: 1; }
