@@ -5,8 +5,9 @@
 .select-wrap select { width: 100%; padding-left: 15px; border: 1px solid #dedede; vertical-align: middle; height: 40px; border-radius: 10px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; color: #454545; }
 .select-wrap:after { content: ""; width: 16px; height: 16px; position: absolute; top: 50%; transform: translateY(-50%); display: block; right: 15px; background: url("../_images/_form/icon-s-caret-down.png") no-repeat center; background-size: contain; }
 
-.input-btn { display: flex; justify-content: space-between; }
+.input-btn { display: flex; }
 .input-btn input[type="text"] { width: calc(100% - 130px); }
+.input-btn button { margin-left: 10px; }
 
 select::-ms-expand { display: none; }
 

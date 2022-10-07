@@ -31,9 +31,11 @@
 
 .input-btn{
     display: flex;
-    justify-content: space-between;
     input[type="text"]{
         width: calc(100% - 130px);
+    }
+    button{
+        margin-left: 10px;
     }
 }
 

@@ -22,7 +22,7 @@
 		<div id="lnb"></div>
 		
 		<div id="contents">
-			<h2>비용계정 설정<p>회사에서 사용하는 계정항목 및 세부 계정항목을 설정합니다.</p></h2>
+			<h2>임직원 관리<p>회사의 부서와 임직원을 등록합니다.</p></h2>
             
             <div class="top-search-wrap single-con">
                 <div class="wrap">
@@ -36,7 +36,9 @@
                             </div>
                             <input type="text" style="width: 300px;" placeholder="검색어 입력">
                             <input type="checkbox" id="checkbox111" name="checkbox" checked>
-                            <label class="ml20" for="checkbox111">미사용 계정 제외</label>
+                            <label class="ml20" for="checkbox111">퇴직직원 제외</label>
+                            <input type="checkbox" id="checkbox111" name="checkbox">
+                            <label for="checkbox111">미사용 부서 제외</label>
                         </div>
                     </div>
                     <button class="expand"></button>
@@ -46,9 +48,143 @@
             
             <div class="board-top end">
                 <div class="btn-top-wrap"> 
-                    <a href="#" class="dis">삭제</a>
-                    <a href="#" class="sec btn-modal" data-target="dept-modal">추가</a>
-                    <a href="#" class="pri">저장</a>
+                    <a href="#" class="sec btn-expand" data-target="idx1">직원 등록</a>
+                    <a href="#" class="sec">부서 등록</a>
+                    <a href="#" class="sec">부서 수정</a>
+                    <a href="#" class="sec">직급 관리</a>
+                    <a href="#" class="file">엑셀 업로드</a>
+                </div>
+            </div>
+            
+            <div id="expand-slide" class="idx1">
+                <div class="wrap">
+                    <h4>직원등록<p>관리자 권한은 경비처리 담당 임직원만 등록하시기 바랍니다.</p></h4>
+                     <table class="mt10 search-table">
+                        <colgroup>
+                            <col width="176px">
+                            <col width="365px">
+                            <col width="176px">
+                            <col width="365px">
+                        </colgroup>
+                        <tr>
+                            <th>아이디<strong>*</strong></th>
+                            <td>
+                                <div class="input-btn">
+                                    <input type="text"><button>중복확인</button>
+                                </div>    
+                            </td>
+                            <th>이름<strong>*</strong></th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>직급<strong>*</strong></th>
+                            <td>
+                                <div class="select-wrap">
+                                    <select>
+                                        <option>대리</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>권한<strong>*</strong></th>
+                            <td>
+                                <div class="select-wrap">
+                                    <select>
+                                        <option>임직원</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>휴대전화<strong>*</strong></th>
+                            <td><input type="text"></td>
+                            <th>이메일</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>사원 ERP 코드</th>
+                            <td><input type="text"></td>
+                            <th>부서장</th>
+                            <td>
+                                <input type="radio" id="radio1" name="radio">
+                                <label for="radio1">네</label>
+                                <input type="radio" id="radio2" name="radio" checked>
+                                <label for="radio2">아니오</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>사원 ERP 코드</th>
+                            <td>
+                                <input type="radio" id="radio3" name="radio3">
+                                <label for="radio3">네</label>
+                                <input type="radio" id="radio4" name="radio3" checked>
+                                <label for="radio4">아니오</label>
+                            </td>
+                            <th>부서장</th>
+                            <td>
+                                <input type="radio" id="radio5" name="radio5">
+                                <label for="radio5">네</label>
+                                <input type="radio" id="radio6" name="radio5" checked>
+                                <label for="radio6">아니오</label>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th>앱 사용여부</th>
+                            <td colspan="3">
+                                <div class="input-btn">
+                                    <input type="text" style="width: 215px;"><button>기기초기화</button>
+                                </div>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>소속부서<strong>*</strong></th>
+                            <td colspan="3">
+                                <div id="tree" class="dept">
+                                    <ul>
+                                        <li><a href="#">1 Depth(10)</a>
+                                            <ul>
+                                                <li><a href="#">2 Depth(2)</a>
+                                                    <ul>
+                                                        <li><a href="#">3 Depth(2)</a>
+                                                            <ul>
+                                                                <li><a href="#">4 Depth(2)</a>
+                                                                    <ul>
+                                                                        <li class="last"><a href="#">5 Depth</a></li>
+                                                                        <li class="last"><a href="#">5 Depth</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">1 Depth(10)</a>
+                                            <ul>
+                                                <li><a href="#">2 Depth(2)</a>
+                                                    <ul>
+                                                        <li><a href="#">3 Depth(2)</a>
+                                                            <ul>
+                                                                <li><a href="#">4 Depth(2)</a>
+                                                                    <ul>
+                                                                        <li class="last"><a href="#">5 Depth</a></li>
+                                                                        <li class="last"><a href="#">5 Depth</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btn-con-wrap"> 
+                        <a href="#" class="dis expand-close">취소</a>
+                        <a href="#" class="pri">저장</a>
+                    </div>
                 </div>
             </div>
             
@@ -95,93 +231,51 @@
                     </ul>
                 </div>
                 
-                <table class="search-table">
+                <table>
                     <colgroup>
-                        <col width="176px">
-                        <col width="*">
+                        <col width="161px">
                     </colgroup>
                     <tr>
-                        <th>상위 계정명<strong>*</strong></th>
-                        <td><input type="text" disabled></td>
+                        <th>이름</th>
+                        <th>직급</th>
+                        <th>부서장</th>
+                        <th>권한</th>
+                        <th>재직여부</th>
                     </tr>
                     <tr>
-                        <th>사용 계정명<strong>*</strong></th>
-                        <td><input type="text"></td>
+                        <td><a href="#">김영훈</a></td>
+                        <td>팀장</td>
+                        <td>네</td>
+                        <td>사용자</td>
+                        <td>재직</td>
                     </tr>
                     <tr>
-                        <th>ERP 코드</th>
-                        <td><input type="text"></td>
+                        <td><a href="#">김영훈</a></td>
+                        <td>팀장</td>
+                        <td>네</td>
+                        <td>사용자</td>
+                        <td>재직</td>
                     </tr>
                     <tr>
-                        <th>계정설명 사용<strong>*</strong></th>
-                        <td>
-                            <input type="radio" id="radio1" name="radio1" checked>
-                            <label for="radio1">네</label>
-                            <input type="radio" id="radio2" name="radio1">
-                            <label for="radio2">아니오</label>
-                        </td>
+                        <td><a href="#">김영훈</a></td>
+                        <td>팀장</td>
+                        <td>네</td>
+                        <td>사용자</td>
+                        <td>재직</td>
                     </tr>
                     <tr>
-                        <th>계정 설명</th>
-                        <td><input type="text"></td>
+                        <td><a href="#">김영훈</a></td>
+                        <td>팀장</td>
+                        <td>네</td>
+                        <td>사용자</td>
+                        <td>재직</td>
                     </tr>
                     <tr>
-                        <th>부가세 공제 대상<strong>*</strong></th>
-                        <td>
-                            <input type="radio" id="radio3" name="radio3" checked>
-                            <label for="radio3">네</label>
-                            <input type="radio" id="radio4" name="radio3">
-                            <label for="radio4">아니오</label>
-                            <input type="radio" id="radio5" name="radio3">
-                            <label for="radio5">관리자선택</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>업무추진비 관리 연동<strong>*</strong></th>
-                        <td>
-                            <input type="radio" id="radio6" name="radio6" checked>
-                            <label for="radio6">네</label>
-                            <input type="radio" id="radio7" name="radio6">
-                            <label for="radio7">아니오</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>관리항목 사용(ERP용)<strong>*</strong></th>
-                        <td>
-                            <input type="radio" id="radio8" name="radio8" checked>
-                            <label for="radio8">네</label>
-                            <input type="radio" id="radio9" name="radio8">
-                            <label for="radio9">아니오</label>
-                            <button class="ml20 btn-modal" data-target="erp-modal">설정하기</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>우선순위 정렬<strong>*</strong></th>
-                        <td>
-                            <input type="radio" id="radio10" name="radio10" checked>
-                            <label for="radio10">네</label>
-                            <input type="radio" id="radio11" name="radio10">
-                            <label for="radio11">아니오</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>사용부서 설정<strong>*</strong></th>
-                        <td>
-                            <input type="radio" id="radio12" name="radio12" checked>
-                            <label for="radio12">네</label>
-                            <input type="radio" id="radio13" name="radio12">
-                            <label for="radio13">아니오</label>
-                            <button class="ml20 btn-modal" data-target="manage-modal">설정하기</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>사용여부<strong>*</strong></th>
-                        <td>
-                            <input type="radio" id="radio14" name="radio14" checked>
-                            <label for="radio14">네</label>
-                            <input type="radio" id="radio15" name="radio14">
-                            <label for="radio15">아니오</label>
-                        </td>
+                        <td><a href="#">김영훈</a></td>
+                        <td>팀장</td>
+                        <td>네</td>
+                        <td>사용자</td>
+                        <td>재직</td>
                     </tr>
                 </table>
 

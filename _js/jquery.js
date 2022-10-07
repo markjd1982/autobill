@@ -126,6 +126,27 @@ $(function(){
 		
         $(this).closest(".popup-wrap").hide();
 	});
+    
+    
+    ////////////////////     expand     ////////////////////    
+    
+    $(document).on("click",".btn-expand",function(){
+        var target = $(this).attr("data-target");
+        expandSlide(target)
+        
+	});
+    
+    
+    function expandSlide(tg){
+        
+        var target = $("."+tg);
+        target.slideDown(500,"easeInOutExpo");
+    }
+    
+    $(document).on("click",".expand-close",function(){
+		
+        $(this).closest("#expand-slide").slideUp(500,"easeInOutExpo");
+	});
 	
 	
 	//    달력
