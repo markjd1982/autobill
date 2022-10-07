@@ -67,9 +67,6 @@ table{
 		&.right{
 			text-align: right;
 		}
-		&.flex{
-			align-items: center;
-		}
         &.notice{
             background: url("../_images/common/icon-s-notice@2x.png") no-repeat center;
             background-size: 20px;
@@ -83,6 +80,13 @@ table{
             vertical-align: middle;
             margin-left: 10px;
         }
+        button{
+            border-radius: 10px;
+            background: $primary;
+            height: 40px;
+            color: #fff;
+            width: 120px;
+        }
 	}
 	th:first-child,td:first-child{
 		border-left:none;
@@ -93,6 +97,9 @@ table{
 			padding-left: 20px;
 			height: 50px;
 		}
+        td{
+            text-align: left;
+        }
 	}
 	&.resist{
 		th,td{

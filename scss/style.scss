@@ -33,6 +33,12 @@ h3{
 	line-height: 1.5;
 	color: $textColor;
 } 
+h4{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
 
 a{
     color: $second;
@@ -154,6 +160,7 @@ a{
 .btn-btm-wrap{
 	display: flex;
 	justify-content: center;
+    margin-top: 50px;
 	a{
 		display: block;
 		width: 300px;

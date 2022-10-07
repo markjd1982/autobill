@@ -8,7 +8,7 @@
 	z-index: 100;
 	left: 0;
 	top: 0;
-	//display: none;
+	display: none;
 	.alert-wrap{
 		position: absolute;
 		left: 50%;
@@ -79,7 +79,7 @@
 		border: solid 2px $textColor;
 		//display: none;
 		@include box-sizing(border-box);
-		.btn-close{
+		.modal-close{
 			display: block;
 			width: 40px;
 			height: 40px;
@@ -125,11 +125,11 @@
 		.box-sub-title{
 			margin-top: 30px;
 			border: 1px solid #dedede;
-			line-height: 38px;
+			line-height: 1.6;
 			letter-spacing: -0.59px;
 			color: $textColor;
 			background-color: #f5f5f5;
-			padding-left: 15px;
+			padding: 10px;
 			//@include box-sizing(border-box);
 		}
 		.box-select-radio{
