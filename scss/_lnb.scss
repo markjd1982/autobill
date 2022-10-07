@@ -82,6 +82,7 @@
 						background: url("../_images/common/plus@2x.png")no-repeat left center;
 						background-size: 20px;
 						line-height: 20px;
+						text-decoration: none;
 						&.on{
 							background: url("../_images/common/minus@2x.png")no-repeat left center / 20px;
 							color: $white;

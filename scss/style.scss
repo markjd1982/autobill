@@ -40,6 +40,48 @@ a{
     font-weight: 700;
 } 
 
+#paging{ 
+	width:100%;
+	margin-top:40px;
+	text-align:center;
+	.wrap{
+		display: inline-block;
+	}
+	a{
+		display:inline-block;
+		width:30px;
+		height:30px;
+		vertical-align:middle;
+		line-height:30px;
+		text-align:center;
+		font-size: 14px;
+		color: $textColor;
+		text-decoration: none;
+	}
+	a.on{
+		color: $second;
+		font-weight: 700;
+	}
+	a.l{
+		width: 50px;
+		height: 50px;
+		border: solid 1px #454545;
+		background:url("../_images/_board/icon-s-caret-left@2x.png") no-repeat center / 24px;
+		text-indent: -9999px;
+		border-radius: 100%;
+		margin-right: 20px;
+	}
+	a.r{
+		width: 50px;
+		height: 50px;
+		border: solid 1px #454545;
+		background:url("../_images/_board/icon-s-caret-right@2x.png") no-repeat center / 24px;
+		text-indent: -9999px;
+		border-radius: 100%;
+		margin-left: 20px;
+	}
+}
+
 .col2flex{
 	display: flex;
 }

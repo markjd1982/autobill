@@ -164,7 +164,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #lnb .con .top .log { font-size: 16px; line-height: 24px; color: #969696; }
 #lnb .con .menu { width: 250px; height: calc(100vh - 200px); background-color: #3B405D; border-radius: 0 50px 30px 40px; padding: 30px; }
 #lnb .con .menu > ul > li { margin-bottom: 20px; }
-#lnb .con .menu > ul > li > a { display: block; font-size: 16px; color: #dedede; padding-left: 30px; background: url("../_images/common/plus@2x.png") no-repeat left center; background-size: 20px; line-height: 20px; }
+#lnb .con .menu > ul > li > a { display: block; font-size: 16px; color: #dedede; padding-left: 30px; background: url("../_images/common/plus@2x.png") no-repeat left center; background-size: 20px; line-height: 20px; text-decoration: none; }
 #lnb .con .menu > ul > li > a.on { background: url("../_images/common/minus@2x.png") no-repeat left center/20px; color: #fff; font-weight: 500; }
 #lnb .con .menu > ul > li ul { padding: 10px 0 0 40px; display: none; }
 #lnb .con .menu > ul > li ul li { margin: 0; }
