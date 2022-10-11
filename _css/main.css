@@ -30,7 +30,7 @@ input[type="radio"] + label:before { border-radius: 100%; }
 
 input[type="radio"]:checked + label:before, input[type="checkbox"]:checked + label:before { background: url("../_images/_form/form_check@2x.png") no-repeat center #4866db; background-size: 15px; border: none; }
 
-input[type="file"] { margin: 0px; border: 1px solid #dedede; height: 40px; width: 400px; border-radius: 10px; box-sizing: border-box; }
+input[type="file"] { width: 100%; margin: 0px; border: 1px solid #dedede; height: 40px; border-radius: 10px; box-sizing: border-box; }
 
 /*
 //1. 인풋 스타일 변경
@@ -151,6 +151,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #modal-wrap .modal-aco .modal-btn-wrap li.sec { background: #454545; border-bottom-left-radius: 19px; }
 #modal-wrap .modal-aco .modal-btn-wrap li.full { background: #4866db; border-bottom-right-radius: 19px; border-bottom-left-radius: 19px; }
 #modal-wrap .modal-aco .modal-btn-wrap li button { line-height: 40px; text-align: center; width: 100%; color: #fff; }
+#modal-wrap.block { display: block; }
 
 .modal-scroll { max-height: 300px; overflow: auto; }
 
@@ -160,6 +161,8 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 .code-wrap .code-body { padding-top: 5px; border-bottom: 1px solid #dedede; }
 .code-wrap .code-body .item { display: flex; justify-content: space-between; padding-bottom: 5px; }
 .code-wrap .code-body .item button { width: 57px; height: 40px; border: 1px solid #4866db; color: #4866db; border-radius: 10px; }
+
+.dd-ui { width: 40px; height: 40px; background: url("../_images/common/icon-s-menu@2x.png") no-repeat center; background-size: 16px; border: 1px solid #454545; border-radius: 10px; }
 
 #lnb { position: sticky; top: 0; width: 250px; height: 100vh; }
 #lnb .con { position: absolute; top: 0; z-index: 1; }

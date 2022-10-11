@@ -336,6 +336,9 @@
 			}
 		}
 	}
+    &.block{
+        display: block;
+    }
 }
 
 
@@ -376,4 +379,13 @@
             }
         }
     }
+}
+
+.dd-ui{
+    width: 40px;
+    height: 40px;
+    background: url("../_images/common/icon-s-menu@2x.png") no-repeat center;
+    background-size: 16px;
+    border: 1px solid #454545;
+    border-radius: 10px;
 }
