@@ -2,44 +2,44 @@
 
 .ui-datepicker.ui-widget-content{
 	padding: 0;
-	width: 30rem !important;
+	width: 300px !important;
 	border: 1px solid $lineColor;
-	border-radius: 2rem;
+	border-radius: 20px;
 	text-align: center;
 	&.ui-widget-content{
-		border-radius: 2rem;
+		border-radius: 20px;
 		background: $white;
 		.ui-datepicker-header{
-			width: 30rem;
-			height: 6rem;
+			width: 300px;
+			height: 60px;
 			background: $primary;
-			border-top-left-radius: 2rem;
-			border-top-right-radius: 2rem;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
 			.ui-datepicker-title{
 				color: $white;
-				font-size: 2rem;
-				line-height: 6rem;
+				font-size: 20px;
+				line-height: 60px;
 			}
 			.ui-datepicker-prev{
-				background: url("../_images/_calendar/btn-prev@2x.png") no-repeat center / 2rem;
+				background: url("../_images/_calendar/btn-prev@2x.png") no-repeat center / 20px;
 				top: 50%;
 				transform: translateY(-35%);
-				left: 5rem;
+				left: 50px;
 			}
 			.ui-datepicker-next{
-				background: url("../_images/_calendar/btn-next@2x.png") no-repeat center / 2rem;
+				background: url("../_images/_calendar/btn-next@2x.png") no-repeat center / 20px;
 				top: 50%;
 				transform: translateY(-35%);
-				right: 5rem;
+				right: 50px;
 			}
 		}
 		.ui-datepicker-calendar{
-			width: 28rem;
+			width: 280px;
 			border: none;
 			th{
-				line-height: 3rem;
+				line-height: 30px;
 				background: $white;
-				font-size: 1.2rem;
+				font-size: 14px;
 				color: $textColor;
 				font-weight: 400;
 				&:nth-child(1){
@@ -49,21 +49,24 @@
 			td{
 				vertical-align: middle;
 				text-align: center;
+                height: 30px;
+                line-height: 30px;
+                padding: 0;
 				a{
 					display: inline-block;
-					border: none;
+					border: 0;
 					background: $white;
 					text-align: center;
-					line-height: 4rem;
-					width: 4rem;
-					height: 4rem;
+					line-height: 40px;
+					width: 40px;
+					height: 40px;
 					border-radius: 100%;
 					&.ui-state-highlight{
 						color: $white;
 						background: $primary;
-						line-height: 3rem;
-						width: 3rem;
-						height: 3rem;
+						line-height: 30px;
+						width: 30px;
+						height: 30px;
 					}
 				}
 				&:nth-child(7n+1) {
@@ -75,9 +78,9 @@
 			.ui-state-active{
 				color: #ffffff;
 				background: $second;
-				line-height: 3rem;
-				width: 3rem;
-				height: 3rem;
+				line-height: 30px;
+				width: 30px;
+				height: 30px;
 			}
 		}
 	}

@@ -59,6 +59,9 @@ input[type="text"],input[type="password"],input[type="tel"],input[type="email"]{
 	@include border-radius(10px);
 	@include appearance(none);
 	@include box-sizing(border-box);
+    &.price{
+        text-align: right;
+    }
 }
 
 input:focus, textarea:focus{
@@ -104,8 +107,8 @@ input[type="radio"] + label, input[type="checkbox"] + label{
 	padding-left:25px;
 	cursor: pointer;
 	color:$textColor;
-	min-width:0;
-	//height:25px;
+	min-width:20px;
+    min-height: 20px;
 	line-height:20px;
 	text-align:left;
 	vertical-align: middle;
@@ -265,4 +268,17 @@ input[type="file"]::-ms-browse {
 	}
 }*/
 
-
+.date-wrap{
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: url("../_images/common/btn-calendar@2x.png") no-repeat center;
+        background-size: 16px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
