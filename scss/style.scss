@@ -29,9 +29,10 @@ h2{
     }
 }
 h3{
-	font-size: 16px;
-	line-height: 1.5;
+	font-size: 20px;
+	line-height: 1;
 	color: $textColor;
+    text-align: left;
 } 
 h4{
     font-size: 16px;
@@ -211,23 +212,43 @@ a{
 			line-height: 40px;
 			font-size: 16px;
 			font-weight: 500;
-			width: 80px;
+			width: 120px;
 			border-radius: 10px 10px 0 0;
 			color: $textColor;
 			text-align: center;
 			border: solid 1px $lineColor;
 			border-bottom: solid 1px #4866db;
 			background-color: #f5f5f5;
+            position: relative;
 			&.on{
-				width: 180px;
+				//width: 180px;
 				border: solid 1px #4866db;
 				background-color: $white;
-				color: $second;
 				border-bottom: none;
+                a{
+                    color: $second;
+                }
 			}
-			a{
-				display: block;
-			}
+            a{
+                text-decoration: none;
+                color: $textColor;
+                display: block;
+            }
+            &.btn-add{
+                width: 40px;
+                background: url("../_images/common/icon-s-add@2x.png") no-repeat center;
+                background-size: 20px;
+                cursor: pointer;
+            }
+            .btn-remove{
+                width: 16px;
+                height: 16px;
+                background: url("../_images/common/icon-s-tab-del@2x.png") no-repeat center;
+                background-size: 16px;
+                position: absolute;
+                right: 0;
+                top: -8px;
+            }
 		}
 	}
 }
@@ -352,6 +373,9 @@ a{
                     font-weight: 700;
                     margin-right: 20px;
                 }
+                em{
+                    padding: 0 10px; 
+                }
             }
             .expand-wrap{
                 display: none;
@@ -371,6 +395,23 @@ a{
         &.on{
             .expand{
                 background-image: url("../_images/common/icon-s-caret-up@2x.png");
+            }
+        }
+        .month-btn-wrap{
+            display: flex;
+            button{
+                margin-left: 10px;
+                border-radius: 10px;
+                border: 1px solid $second;
+                color: $second;
+                width: 60px;
+                height: 40px;
+                background: #fff;
+                &.on{
+                    background: $primary;
+                    color: #fff;
+                    border: none;
+                }
             }
         }
     }
@@ -454,4 +495,183 @@ a{
 
 #expand-slide{
     display: none;
+    &.gray{
+        //display: block;
+        background: #f5f5f5;
+    }
+    .wrap{
+        overflow: hidden;
+        padding: 40px;
+        padding-bottom: 0;
+        text-align: left;
+    }
+    h4{
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #454545;
+        display: flex;
+        justify-content: space-between;
+        label{
+            font-weight: 400;
+        }
+    }
+    .con{
+        padding: 20px;
+        padding-top: 0;
+        border-bottom: 1px solid $lineColor;
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            .form-wrap{
+                width: 472px;
+            }
+            button{
+                width: 100px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                background: #3B405D;
+                height: 40px;
+                color: #fff;
+            }
+            &.left{
+                justify-content: flex-start
+            }
+        }
+        .pic-item{
+            padding-left: 25px;
+            line-height: 16px;
+            position: relative;
+            .btn-del{
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                background: url("../_images/common/icon-s-del@2x.png") no-repeat center;
+                background-size: 16px;
+                left: 0;
+                top: 0;
+                cursor: pointer;
+            }
+        }
+        .rdx-wrap{
+            padding: 7px 0;
+        }
+    }
+    .col2-flex{
+        display: flex;
+        justify-content: space-between;
+        .layout-left{
+            width: 400px;
+            .box{
+                border: 2px solid #454545;
+                padding: 30px;
+                margin-top: 10px;
+                background: #fff;
+                .list-between-wrap{
+                    padding: 10px 0;
+                    border-bottom:  1px solid $lineColor;
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        li{
+                            line-height: 30px;
+                            &:first-child{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                &.blue{
+                    border-color: $second;
+                    h4{
+                        border-bottom: 2px solid $second;
+                    }
+                }
+            }
+            .all{
+                border: 1px solid $lineColor;
+                text-align: center;
+                line-height: 38px;
+                display: block;
+                color: #454545;
+                font-weight: 400;
+                text-decoration: none;
+                margin-top: 10px;
+                border-radius: 10px;
+            }
+        }
+        .layout-right{
+            width: 560px;
+            text-align: left;
+            .tab1-wrap{
+                ul{
+                    li{
+                        &.on{
+                            background: #f5f5f5;
+                        }
+                    }
+                }
+            }
+            .con{
+                .flex{
+                    .form-wrap{
+                        width: 250px;
+                    }
+                    button{
+                        width: 68px;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+            .red{
+                color: $red;
+            }
+            .blue{
+                color: $second;
+            }
+        }
+        .total{
+            margin-top: 10px;
+            font-size: 30px;
+            font-weight: 700;
+            color: #000;
+            text-align: right;
+            strong{
+                font-weight: 700;
+                color: $second;
+            }
+        }
+    }
 }
+
+.form-wrap{
+    .title{
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        strong{
+            color: $red;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
