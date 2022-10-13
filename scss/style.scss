@@ -113,7 +113,7 @@ a{
 	}
 	a{
 		border-radius: 25px;
-		width: 120px;
+		width: 140px;
 		display: block;
 		text-align: center;
 		line-height: 40px;
@@ -129,6 +129,7 @@ a{
 			background-color: $second;
 		}
 		&.sec{
+			line-height: 38px;
 			background-color: $white;
 			color: $second;
 			border: 1px solid $second;

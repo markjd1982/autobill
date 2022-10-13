@@ -297,10 +297,10 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 
 .btn-top-wrap { display: flex; justify-content: flex-end; }
 .btn-top-wrap.sample { height: 100vh; align-items: center; justify-content: center; }
-.btn-top-wrap a { border-radius: 25px; width: 120px; display: block; text-align: center; line-height: 40px; font-size: 14px; font-weight: 400; letter-spacing: -1px; color: #fff; text-decoration: none; }
+.btn-top-wrap a { border-radius: 25px; width: 140px; display: block; text-align: center; line-height: 40px; font-size: 14px; font-weight: 400; letter-spacing: -1px; color: #fff; text-decoration: none; }
 .btn-top-wrap a:not(:first-child) { margin-left: 10px; }
 .btn-top-wrap a.pri { background-color: #4866db; }
-.btn-top-wrap a.sec { background-color: #fff; color: #4866db; border: 1px solid #4866db; }
+.btn-top-wrap a.sec { line-height: 38px; background-color: #fff; color: #4866db; border: 1px solid #4866db; }
 .btn-top-wrap a.file { background-color: #3B405D; }
 .btn-top-wrap a.dis { background-color: #979797; }
 
