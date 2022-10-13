@@ -188,7 +188,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #lnb .con .menu > ul > li > a.on { background: url("../_images/common/minus@2x.png") no-repeat left center/20px; color: #fff; font-weight: 500; }
 #lnb .con .menu > ul > li ul { padding: 10px 0 0 40px; display: none; }
 #lnb .con .menu > ul > li ul li { margin: 0; }
-#lnb .con .menu > ul > li ul li a { font-size: 14px; background: none; line-height: 30px; padding: 0; color: #dedede; font-weight: 300; }
+#lnb .con .menu > ul > li ul li a { font-size: 14px; background: none; line-height: 30px; padding: 0; color: #dedede; font-weight: 300; text-decoration: none; }
 #lnb .con .menu > ul > li ul li a.on { color: #fff; font-weight: 500; }
 #lnb .bg { position: absolute; left: 0; top: 0; z-index: 0; width: 250px; height: calc(100vh - 200px); background-color: #f5f5f5; border-radius: 0 50px 30px 40px; }
 #lnb:before { position: absolute; top: 0; right: 0; border-radius: 0 50px 30px 40px; content: ""; display: block; width: 50vw; background-color: #f5f5f5; height: calc(100vh - 200px); }
