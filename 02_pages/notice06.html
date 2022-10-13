@@ -28,19 +28,19 @@
                 <div class="wrap">
                     <div>
                         <div class="item first">
-							<p class="label">앱 게시</p>
+                            <p class="label">앱 게시</p>
+                            <div class="select-wrap" style="width:150px;">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                            <p class="label ml20">검색</p>
                             <div class="select-wrap mr10" style="width:150px;">
                                 <select>
                                     <option>전체</option>
                                 </select>
                             </div>
-                            <p class="label">검색</p>
-                            <div class="select-wrap mr10" style="width:150px;">
-                                <select>
-                                    <option>전체</option>
-                                </select>
-                            </div>
-                            <input type="text" placeholder="검색어 입력">
+                            <input type="text" placeholder="검색어 입력" style="width:150px;">
                         </div>
                     </div>
                     <button class="expand"></button>
@@ -51,6 +51,7 @@
             <div class="board-top">
                 <p class="total-num">총 : 10건</p>
                 <div class="btn-top-wrap"> 
+					<a href="#" class="dis">삭제</a>
                     <a href="#" class="pri">등록</a>
                 </div>
             </div>
@@ -58,45 +59,72 @@
             <table class="mt10">
                 <colgroup>
                     <col width="50px">
-                    <col width="730px">
+					<col width="50px">
+                    <col width="480px">
+                    <col width="200px">
                     <col width="150px">
-                    <col width="150px">
+					<col width="150px">
                 </colgroup>
                 <tr>
+					<th>
+						<input type="checkbox" id="checkbox201" name="checkbox201">
+						<label for="checkbox201"></label>
+					</th>
                     <th>번호</th> 
                     <th>제목</th>
+					<th>앱 게시 기간</th>
                     <th>등록일</th>
                     <th>등록자</th>
                 </tr>
                 <tr>
-                    <td class="notice"></td>
+					<td>
+						<input type="checkbox" id="checkbox202" name="checkbox202">
+                        <label for="checkbox202"></label></td>
+                    <td>5</td>
                     <td class="left"><a href="#">오토빌 관리자 매뉴얼</a></td>
+                    <td>2017-12-27 ~ 2018-01-15</td>
                     <td>2017-10-25</td>
-                    <td>관리자</td>
+					<td>이강호</td>
                 </tr>
                 <tr>
-                    <td class="notice"></td>
-                    <td class="left"><a href="#">오토빌 관리자 매뉴얼</a><span class="ico-file"></span></td>
+					<td>
+						<input type="checkbox" id="checkbox203" name="checkbox203">
+                        <label for="checkbox203"></label></td>
+                    <td>4</td>
+                    <td class="left"><a href="#">오토빌 관리자 매뉴얼</a></td>
+                    <td>2017-12-27 ~ 2018-01-15</td>
                     <td>2017-10-25</td>
-                    <td>관리자</td>
+					<td>이강호</td>
                 </tr>
-                <tr>
+				<tr>
+					<td>
+						<input type="checkbox" id="checkbox204" name="checkbox204">
+                        <label for="checkbox204"></label></td>
                     <td>3</td>
-                    <td class="left"><a href="#">오토빌 관리자 매뉴얼</a><span class="ico-file"></span></td>
+                    <td class="left"><a href="#">오토빌 관리자 매뉴얼</a></td>
+                    <td>2017-12-27 ~ 2018-01-15</td>
                     <td>2017-10-25</td>
-                    <td>관리자</td>
+					<td>이강호</td>
                 </tr>
-                <tr>
+				<tr>
+					<td>
+						<input type="checkbox" id="checkbox205" name="checkbox205">
+                        <label for="checkbox205"></label></td>
                     <td>2</td>
                     <td class="left"><a href="#">오토빌 관리자 매뉴얼</a></td>
+                    <td>2017-12-27 ~ 2018-01-15</td>
                     <td>2017-10-25</td>
-                    <td>관리자</td>
+					<td>이강호</td>
                 </tr>
-                <tr>
+				<tr>
+					<td>
+						<input type="checkbox" id="checkbox206" name="checkbox206">
+                        <label for="checkbox206"></label></td>
                     <td>1</td>
                     <td class="left"><a href="#">오토빌 관리자 매뉴얼</a></td>
+                    <td>2017-12-27 ~ 2018-01-15</td>
                     <td>2017-10-25</td>
-                    <td>관리자</td>
+					<td>이강호</td>
                 </tr>
             </table>
             <div id="paging">
