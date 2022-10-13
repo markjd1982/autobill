@@ -84,12 +84,16 @@ table{
             vertical-align: middle;
             margin-left: 10px;
         }
-        button{
+        button, .btn{
             border-radius: 10px;
             background: $primary;
             height: 40px;
             color: #fff;
             width: 120px;
+            display: inline-block;
+            line-height: 40px;
+            text-decoration: none;
+            font-weight: 400;
             &.btn{
                 width: 100px;
             }
@@ -101,6 +105,20 @@ table{
         }
         &.flex{
             display: flex;
+        }
+        .move-ui{
+            width: 40px;
+            height: 40px;
+            border: 1px solid $lineColor;
+            border-radius: 0;
+            &.down{
+                background: url("../_images/common/icon-s-caret-down@2x.png") no-repeat center;
+                background-size: 24px;
+            }
+            &.up{
+                background: url("../_images/common/icon-s-caret-up@2x.png") no-repeat center;
+                background-size: 24px;
+            }
         }
 	}
 	th:first-child,td:first-child{

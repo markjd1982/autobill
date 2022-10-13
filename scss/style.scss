@@ -372,6 +372,8 @@ a{
                     font-size: 14px;
                     font-weight: 700;
                     margin-right: 20px;
+                    width: 50px;
+                    text-align: right;
                 }
                 em{
                     padding: 0 10px; 
@@ -436,6 +438,14 @@ a{
 .tree-wrap{
     margin-top: 10px;
     display: flex;
+    .tree-btn{
+        height: 40px;
+        border: 1px solid $second;
+        color: $second;
+        width: 245px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
     //justify-content: space-between;
 }
 
@@ -447,6 +457,7 @@ a{
     padding: 20px 10px;
     max-height: 400px;
     overflow: auto;
+    flex-shrink: 0;
     ul{
         li{
             line-height: 30px;
@@ -488,6 +499,13 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    .total-num{
+        strong{
+            font-weight: 700;
+            color: $second;
+            padding-left: 10px;
+        }
+    }
     &.end{
         justify-content: flex-end;
     }
@@ -655,7 +673,65 @@ a{
 }
 
 
-
+.pay-top{
+    margin-top: 30px;
+    .search{
+        display: flex;
+        justify-content: space-between;
+        .print{
+            width: 80px;
+            background: $second;
+            color: #fff;
+            height: 40px;
+            border-radius: 10px;
+        }
+        .flex{
+            display: flex;
+            button{
+                width: 80px;
+                background: $primary;
+                color: #fff;
+                height: 40px;
+                border-radius: 10px;
+            }
+        }
+    }
+    .dept-wrap{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .dept{
+            border: 1px solid $textColor;
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    line-height: 30px;
+                    text-align: center;
+                    width: 120px;
+                    min-height: 40px;
+                    padding: 0 10px;
+                    &:not(:first-child){
+                        border-left: 1px solid $textColor;
+                    }
+                    &.left{
+                        text-align: left;
+                    }
+                    &.right{
+                        text-align: right;
+                    }
+                }
+                &:not(:first-child){
+                    border-top: 1px solid $textColor;
+                }
+                &:first-child li{
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
 
 
 

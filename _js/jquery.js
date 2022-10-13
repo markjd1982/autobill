@@ -177,10 +177,10 @@ $(function(){
     $(document).on("click",".top-search-wrap .expand",function(){
         if($(this).closest(".wrap").hasClass("on")){
             $(this).closest(".wrap").removeClass("on");
-            $(".top-search-wrap .expand-wrap").slideUp(500,"easeInOutExpo");
+            $(this).closest(".wrap").find(".expand-wrap").slideUp(500,"easeInOutExpo");
         }else{
             $(this).closest(".wrap").addClass("on");
-            $(".top-search-wrap .expand-wrap").slideDown(500,"easeInOutExpo");
+            $(this).closest(".wrap").find(".expand-wrap").slideDown(500,"easeInOutExpo");
         }
         
     });
