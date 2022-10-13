@@ -127,6 +127,8 @@ table.resist th, table.resist td { text-align: left; }
 table.resist .cate { text-align: center; }
 table tfoot td { background: #E9EDF7; }
 table tfoot.red td { color: #F94450; }
+table .red td { color: #F94450; }
+table .del td { text-decoration: line-through; }
 
 /* Layout */
 .container-full { width: 100%; }

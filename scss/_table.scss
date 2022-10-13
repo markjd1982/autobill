@@ -183,6 +183,16 @@ table{
             }
         }
     }
+    .red{
+        td{
+            color: $red;
+        }
+    }
+    .del{
+        td{
+            text-decoration: line-through;
+        }
+    }
 }
 
 
