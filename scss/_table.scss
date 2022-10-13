@@ -11,7 +11,7 @@ table{
 		//border-left:1px solid $lineColor; 
 		padding:5px 0;
 		color:$textColor;
-		font-weight: 500;
+		font-weight: 700;
 		background-color:$bgColor; 
 		vertical-align:middle;
 		text-align: center;
@@ -101,6 +101,7 @@ table{
         }
         &.flex{
             display: flex;
+			align-items: center;
         }
 	}
 	th:first-child,td:first-child{

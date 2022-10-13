@@ -96,7 +96,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 
 /* table */
 table { border-top: 2px solid #454545; text-align: left; width: 100%; }
-table th { line-height: 1.6; border-bottom: 1px solid #dedede; padding: 5px 0; color: #454545; font-weight: 500; background-color: #E9EDF7; vertical-align: middle; text-align: center; font-size: 14px; height: 40px; }
+table th { line-height: 1.6; border-bottom: 1px solid #dedede; padding: 5px 0; color: #454545; font-weight: 700; background-color: #E9EDF7; vertical-align: middle; text-align: center; font-size: 14px; height: 40px; }
 table th.up, table th.down { cursor: pointer; }
 table th.left { text-align: left; padding-left: 10px; }
 table th.up:after { width: 16px; height: 16px; display: inline-block; content: ""; background: url("../_images/common/icon-s-caret-up@2x.png") no-repeat 50% 1px/16px; margin-left: 5px; }
@@ -113,7 +113,7 @@ table td .ico-file { display: inline-block; width: 16px; height: 16px; backgroun
 table td button { border-radius: 10px; background: #3B405D; height: 40px; color: #fff; width: 120px; }
 table td button.btn { width: 100px; }
 table td.expand { padding: 0; height: 0; border-bottom: none; }
-table td.flex { display: flex; }
+table td.flex { display: flex; align-items: center; }
 table th:first-child, table td:first-child { border-left: none; }
 table.search-table th { text-align: left; padding-left: 10px; height: 50px; position: relative; }
 table.search-table th .info { position: absolute; width: 24px; height: 24px; right: 10px; top: 50%; transform: translateY(-50%); border-radius: 100%; background: url("../_images/common/icon-s-info@2x.png") no-repeat center; background-size: 24px; }
