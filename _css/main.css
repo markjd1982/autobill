@@ -119,7 +119,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #modal-wrap .modal-con .bottom-con { margin-top: 10px; border: 1px solid #dedede; padding: 10px; font-size: 14px; letter-spacing: -0.59px; color: #454545; line-height: 1.5; }
 #modal-wrap .modal-con .bottom-con dt { margin-bottom: 20px; }
 #modal-wrap .modal-con .bottom-con dd:not(:last-child) { margin-bottom: 20px; }
-#modal-wrap .modal-con .title { margin-top: 22px; font-size: 20px; font-weight: 500; letter-spacing: -0.85px; color: #000; padding-bottom: 10px; border-bottom: 2px solid #454545; }
+#modal-wrap .modal-con .title { margin-top: 22px; font-size: 20px; font-weight: 700; letter-spacing: -0.85px; color: #000; padding-bottom: 10px; border-bottom: 2px solid #454545; }
 #modal-wrap .modal-con .sub-title { margin-top: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.68px; color: #000; }
 #modal-wrap .modal-con .box-sub-title { margin-top: 30px; border: 1px solid #dedede; line-height: 1.6; letter-spacing: -0.59px; color: #454545; background-color: #f5f5f5; padding: 10px; }
 #modal-wrap .modal-con .box-select-radio { width: 100%; margin-top: 20px; }
@@ -185,11 +185,11 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #lnb .con .menu { width: 250px; height: calc(100vh - 200px); background-color: #3B405D; border-radius: 0 50px 30px 40px; padding: 30px; }
 #lnb .con .menu > ul > li { margin-bottom: 20px; }
 #lnb .con .menu > ul > li > a { display: block; font-size: 16px; color: #dedede; padding-left: 30px; background: url("../_images/common/plus@2x.png") no-repeat left center; background-size: 20px; line-height: 20px; text-decoration: none; }
-#lnb .con .menu > ul > li > a.on { background: url("../_images/common/minus@2x.png") no-repeat left center/20px; color: #fff; font-weight: 500; }
+#lnb .con .menu > ul > li > a.on { background: url("../_images/common/minus@2x.png") no-repeat left center/20px; color: #fff; font-weight: 700; }
 #lnb .con .menu > ul > li ul { padding: 10px 0 0 40px; display: none; }
 #lnb .con .menu > ul > li ul li { margin: 0; }
-#lnb .con .menu > ul > li ul li a { font-size: 14px; background: none; line-height: 30px; padding: 0; color: #dedede; font-weight: 300; text-decoration: none; }
-#lnb .con .menu > ul > li ul li a.on { color: #fff; font-weight: 500; }
+#lnb .con .menu > ul > li ul li a { font-size: 14px; background: none; line-height: 30px; padding: 0; color: #dedede; font-weight: 400; text-decoration: none; }
+#lnb .con .menu > ul > li ul li a.on { color: #fff; font-weight: 700; }
 #lnb .bg { position: absolute; left: 0; top: 0; z-index: 0; width: 250px; height: calc(100vh - 200px); background-color: #f5f5f5; border-radius: 0 50px 30px 40px; }
 #lnb:before { position: absolute; top: 0; right: 0; border-radius: 0 50px 30px 40px; content: ""; display: block; width: 50vw; background-color: #f5f5f5; height: calc(100vh - 200px); }
 
