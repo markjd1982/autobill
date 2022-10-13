@@ -106,10 +106,10 @@ a{
 .btn-top-wrap{
 	display: flex;
 	justify-content: flex-end;
+    align-items: center;
 	&.sample{
 		height: 100vh;
 		align-items: center;
-		justify-content: center;
 	}
 	a{
 		border-radius: 25px;
@@ -604,6 +604,11 @@ a{
         justify-content: space-between;
         label{
             font-weight: 400;
+        }
+        &.left{
+            justify-content: flex-start;
+            padding: 0;
+            border: none;
         }
     }
     .con{
