@@ -106,6 +106,9 @@ table{
         &.flex{
             display: flex;
 			align-items: center;
+            &.bet{
+                justify-content: space-between;
+            }
         }
         .move-ui{
             width: 40px;
@@ -120,6 +123,26 @@ table{
                 background: url("../_images/common/icon-s-caret-up@2x.png") no-repeat center;
                 background-size: 24px;
             }
+        }
+        &.rate-a{
+            color: #45b821;
+            font-weight: 700;
+        }
+        &.rate-b{
+            color: #7dd501;
+            font-weight: 700;
+        }
+        &.rate-c{
+           color: #ffa443; 
+            font-weight: 700;
+        }
+        &.rate-d{
+           color: #d82800; 
+            font-weight: 700;
+        }
+        &.rate-n{
+            color: #8c8c8c;
+            font-weight: 700;
         }
 	}
 	th:first-child,td:first-child{
@@ -193,6 +216,15 @@ table{
             text-decoration: line-through;
         }
     }
+    .gray td{
+        background: #f5f5f5;
+    }
+    .green td{
+        background: #EDFAF4;
+        font-weight: 700;
+    }
 }
+
+
 
 

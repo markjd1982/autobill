@@ -114,6 +114,13 @@
 			color: $black;
 			padding-bottom: 10px;
 			border-bottom: 2px solid $textColor;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            span{
+                font-weight: 400;
+                font-size: 14px;
+            }
 		}
 		.sub-title{
 			margin-top: 30px;
@@ -343,7 +350,7 @@
 
 
 .modal-scroll{
-    max-height: 300px;
+    max-height: 80vh;
     overflow: auto;
 }
 

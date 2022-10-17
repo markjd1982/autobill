@@ -103,6 +103,9 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 
 .point { color: #4866db !important; }
 
+#loading { position: fixed; left: 50%; top: 50%; display: inline-block; width: 68px; height: 68px; background: url("../_images/common/loading@2x.png") no-repeat center; background-size: 68px; animation: spin 1s linear infinite; }
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
 #modal-wrap { width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.5); position: fixed; z-index: 100; left: 0; top: 0; display: none; }
 #modal-wrap .alert-wrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 0 20px 70px 20px; width: 280px; background: #fff; box-shadow: 0 10px 20px -8px rgba(6, 16, 88, 0.5); }
 #modal-wrap .alert-wrap .title { margin-top: 30px; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: -0.68px; }
@@ -119,7 +122,8 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #modal-wrap .modal-con .bottom-con { margin-top: 10px; border: 1px solid #dedede; padding: 10px; font-size: 14px; letter-spacing: -0.59px; color: #454545; line-height: 1.5; }
 #modal-wrap .modal-con .bottom-con dt { margin-bottom: 20px; }
 #modal-wrap .modal-con .bottom-con dd:not(:last-child) { margin-bottom: 20px; }
-#modal-wrap .modal-con .title { margin-top: 22px; font-size: 20px; font-weight: 700; letter-spacing: -0.85px; color: #000; padding-bottom: 10px; border-bottom: 2px solid #454545; }
+#modal-wrap .modal-con .title { margin-top: 22px; font-size: 20px; font-weight: 700; letter-spacing: -0.85px; color: #000; padding-bottom: 10px; border-bottom: 2px solid #454545; display: flex; justify-content: space-between; align-items: flex-end; }
+#modal-wrap .modal-con .title span { font-weight: 400; font-size: 14px; }
 #modal-wrap .modal-con .sub-title { margin-top: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.68px; color: #000; }
 #modal-wrap .modal-con .box-sub-title { margin-top: 30px; border: 1px solid #dedede; line-height: 1.6; letter-spacing: -0.59px; color: #454545; background-color: #f5f5f5; padding: 10px; }
 #modal-wrap .modal-con .box-select-radio { width: 100%; margin-top: 20px; }
@@ -157,7 +161,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #modal-wrap .modal-aco .modal-btn-wrap li button { line-height: 40px; text-align: center; width: 100%; color: #fff; }
 #modal-wrap.block { display: block; }
 
-.modal-scroll { max-height: 300px; overflow: auto; }
+.modal-scroll { max-height: 80vh; overflow: auto; }
 
 .code-wrap { margin-top: 20px; border-top: 2px solid #454545; }
 .code-wrap .code-top { padding: 5px 0; display: flex; justify-content: space-between; border-bottom: 1px solid #dedede; }
