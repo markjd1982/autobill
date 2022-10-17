@@ -19,7 +19,7 @@
 	<div id="container">
 		
 		<!--   LNB   -->
-		<!--<div id="lnb"></div>-->
+		<div id="lnb"></div>
 		
 		<div id="contents">
 			<h2>업무추진비 관리<p>비용사용 거래처를 등록합니다.</p></h2>
@@ -59,7 +59,7 @@
 					<td>필수</td>
 					<td>오토빌 기본값</td>
 					<td>
-						<a href="#" class="sec btn-modal" data-target="idx1">사용</a>
+						<a href="#" class="sec btn-modal" data-target="modify1-modal">사용</a>
 					</td>
 				</tr>
 				<tr>
@@ -70,7 +70,7 @@
 					<td>선택</td>
 					<td>사용자 추가</td>
 					<td>
-						<a href="#" class="sec btn-modal" data-target="idx1">사용</a>
+						<a href="#" class="sec btn-modal" data-target="modify2-modal">사용</a>
 					</td>
 				</tr>
 				<tr>
@@ -190,6 +190,69 @@
 				</colgroup>
 				<tr>
 					<th>항목명<strong>*</strong></th>
+					<td><input type="text" placeholder="Placeholder" disabled></td>
+				</tr>
+				<tr>
+					<th>입력타입<strong>*</strong></th>
+					<td><input type="text" placeholder="Placeholder" disabled></td>
+				</tr>
+				<tr>
+					<th>청탁금지법<br>적용대상 확인<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>네</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>힌트 텍스트<strong>*</strong></th>
+					<td><input type="text" placeholder="회사명 입력 후 청탁금지법 적용대상 여부를"></td>
+				</tr>
+				<tr>
+					<th>필수여부<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>필수</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>선택조건</th>
+					<td class="flex">
+						<div class="select-wrap mr10" style="width: 120px">
+							<select>
+								<option>카드사용액</option>
+							</select>
+						</div>
+						<input type="text" style="width: 80px" class="mr5" placeholder="500,000">원 이상
+					</td>
+				</tr>
+			</table>
+            
+			<div class="btn-btm-wrap mt20">
+				<a href="#" class="pri modalwidth btn-close">저장</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="modal-wrap" class="modify1-modal">
+		<div class="modal-con" style="width: 500px;">
+			<button class="modal-close btn-close">닫기</button>
+            
+            <p class="title">업무추진비 입력항목 수정</p>
+            <p class="box-sub-title">업무추진비 입력항목을 추가합니다.</p>
+			
+            <table class="mt20 search-table">
+				<colgroup>
+					<col width="150px">
+					<col width="287px">
+				</colgroup>
+				<tr>
+					<th>항목명<strong>*</strong></th>
 					<td><input type="text" placeholder="Placeholder"></td>
 				</tr>
 				<tr>
@@ -227,6 +290,16 @@
 						<input type="text" style="width: 80px" class="mr5" placeholder="500,000">원 이상
 					</td>
 				</tr>
+				<tr>
+					<th>사용여부<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>사용</option>
+							</select>
+						</div>
+					</td>
+				</tr>
 			</table>
             
 			<div class="btn-btm-wrap mt20">
@@ -235,79 +308,12 @@
 		</div>
 	</div>
 	
-	<div id="modal-wrap" class="modify1-modal">
-		<div class="modal-con" style="width: 500px;">
-			<button class="modal-close btn-close">닫기</button>
-            
-            <p class="title">관리항목 수정</p>
-            <p class="box-sub-title">비용계정에 연동되는 ERP 관리항목을 수정합니다.</p>
-			
-            <table class="mt20 search-table">
-				<colgroup>
-					<col width="150px">
-					<col width="287px">
-				</colgroup>
-				<tr>
-					<th>관리항목 코드<strong>*</strong></th>
-					<td><input type="text" placeholder="A전자"></td>
-				</tr>
-				<tr>
-					<th>관리항목 명<strong>*</strong></th>
-					<td><input type="text" placeholder="123-45-67890"></td>
-				</tr>
-				<tr>
-					<th>필수여부<strong>*</strong></th>
-					<td>
-						<input type="radio" id="radio13" name="radio4">
-						<label for="radio13">네</label>
-						<input type="radio" id="radio23" name="radio4" checked>
-						<label for="radio23">아니오</label>
-					</td>
-				</tr>
-				<tr>
-					<th>코드 여부<strong>*</strong></th>
-					<td>
-						<input type="radio" id="radio14" name="radio5">
-						<label for="radio14">네</label>
-						<input type="radio" id="radio24" name="radio5" checked>
-						<label for="radio24">아니오</label>
-					</td>
-				</tr>
-				<tr>
-					<th>힌트텍스트 사용<strong>*</strong></th>
-					<td>
-						<input type="radio" id="radio15" name="radio6">
-						<label for="radio15">네</label>
-						<input type="radio" id="radio25" name="radio6" checked>
-						<label for="radio25">아니오</label>
-					</td>
-				</tr>
-				<tr>
-					<th>힌트텍스트 내용</th>
-					<td><input type="text" placeholder="B1344"></td>
-				</tr>
-				<tr>
-					<th>사용여부<strong>*</strong></th>
-					<td>
-						<input type="radio" id="radio16" name="radio7">
-						<label for="radio16">네</label>
-						<input type="radio" id="radio26" name="radio7" checked>
-						<label for="radio26">아니오</label>
-					</td>
-				</tr>
-			</table>
-            
-			<div class="btn-btm-wrap mt20">
-				<a href="#" class="pri modalwidth btn-close">저장</a>
-			</div>
-		</div>
-	</div>
 	<div id="modal-wrap" class="modify2-modal">
 		<div class="modal-con" style="width: 500px;">
 			<button class="modal-close btn-close">닫기</button>
             
-            <p class="title">관리항목 추가</p>
-            <p class="box-sub-title">관리항목의 하위 관리내역을 추가합니다.</p>
+            <p class="title">업무추진비 입력항목 추가</p>
+            <p class="box-sub-title">업무추진비 입력항목을 추가합니다.</p>
 			
             <table class="mt20 search-table">
 				<colgroup>
@@ -315,24 +321,56 @@
 					<col width="287px">
 				</colgroup>
 				<tr>
-					<th>상위 관리항목<strong>*</strong></th>
-					<td><input type="text" placeholder="세부비용항목"></td>
+					<th>항목명<strong>*</strong></th>
+					<td><input type="text" placeholder="Placeholder" disabled></td>
 				</tr>
 				<tr>
-					<th>관리내역 코드<strong>*</strong></th>
-					<td><input type="text" placeholder="60000001"></td>
+					<th>입력타입<strong>*</strong></th>
+					<td><input type="text" placeholder="Placeholder" disabled></td>
 				</tr>
 				<tr>
-					<th>관리내역 명<strong>*</strong></th>
-					<td><input type="text" placeholder="실사시외출장비"></td>
+					<th>접대인원수 연동<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>네</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>힌트 텍스트<strong>*</strong></th>
+					<td><input type="text" placeholder="접대상대방 이름을 입력하세요"></td>
+				</tr>
+				<tr>
+					<th>필수여부<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>필수</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>선택조건</th>
+					<td class="flex">
+						<div class="select-wrap mr10" style="width: 120px">
+							<select>
+								<option>카드사용액</option>
+							</select>
+						</div>
+						<input type="text" style="width: 80px" class="mr5" placeholder="500,000">원 이상
+					</td>
 				</tr>
 				<tr>
 					<th>사용여부<strong>*</strong></th>
 					<td>
-						<input type="radio" id="radio17" name="radio8">
-						<label for="radio17">네</label>
-						<input type="radio" id="radio27" name="radio8" checked>
-						<label for="radio27">아니오</label>
+						<div class="select-wrap mr10">
+							<select>
+								<option>사용</option>
+							</select>
+						</div>
 					</td>
 				</tr>
 			</table>
