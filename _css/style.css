@@ -110,8 +110,9 @@ table td.left { text-align: left; }
 table td.right { text-align: right; }
 table td.notice { background: url("../_images/common/icon-s-notice@2x.png") no-repeat center; background-size: 20px; }
 table td .ico-file { display: inline-block; width: 16px; height: 16px; background: url("../_images/common/icon-s-clip@2x.png") no-repeat center; background-size: 16px; vertical-align: middle; margin-left: 10px; }
-table td button, table td .btn { border-radius: 10px; background: #3B405D; height: 40px; color: #fff; width: 120px; display: inline-block; line-height: 40px; text-decoration: none; font-weight: 400; }
+table td button, table td .btn { border-radius: 10px; background: #3B405D; height: 40px; color: #fff; width: 120px; display: inline-block; line-height: 38px; text-decoration: none; font-weight: 400; }
 table td button.btn, table td .btn.btn { width: 100px; }
+table td button.sec, table td .btn.sec { background-color: #fff; border: 1px solid #dedede; color: #454545; }
 table td.expand { padding: 0; height: 0; border-bottom: none; }
 table td.flex { display: flex; align-items: center; }
 table td.flex.bet { justify-content: space-between; }
