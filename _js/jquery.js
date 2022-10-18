@@ -206,6 +206,22 @@ $(function(){
         }
         
     });
+    
+    
+    ////////////////////     TAB     ////////////////////
+    
+    
+    $(document).on("click",".inter-tab li",function(){
+    
+        var idx= $(this).index();
+        
+        $(this).closest(".modal-con").find(".tab-con").hide();
+        $(this).closest(".modal-con").find(".tab-con").eq(idx).show();
+        
+        $(this).closest(".tab1-wrap").find("li").removeClass("on");
+        $(this).addClass("on");
+        
+    });
 });
 
 

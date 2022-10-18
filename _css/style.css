@@ -310,6 +310,8 @@ h4 { font-size: 16px; font-weight: 700; margin-top: 30px; display: flex; align-i
 h4 p { font-weight: 400; margin-left: 10px; padding-left: 10px; border-left: 1px solid #dedede; font-size: 14px; color: #454545; }
 h4 span { font-weight: 400; color: #454545; font-feature-settings: 14px; margin-left: auto; }
 
+.tab-con { display: none; }
+
 a { color: #4866db; text-decoration: underline; font-weight: 700; }
 
 #paging { width: 100%; margin-top: 40px; text-align: center; }
