@@ -1,9 +1,19 @@
 @charset "UTF-8";
 /*   Main   */
 /* form */
-.select-wrap { width: 100%; position: relative; height: 40px; display: inline-block; }
-.select-wrap select { width: 100%; padding-left: 15px; border: 1px solid #dedede; vertical-align: middle; height: 40px; border-radius: 10px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; color: #454545; }
-.select-wrap:after { content: ""; width: 16px; height: 16px; position: absolute; top: 50%; transform: translateY(-50%); display: block; right: 15px; background: url("../_images/_form/icon-s-caret-down.png") no-repeat center; background-size: contain; }
+.select-wrap { width: 100%; position: relative; height: 40px; display: inline-block; 	/*&:after{
+		content: "";
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: block;
+		right: 15px;
+		background: url("../_images/_form/icon-s-caret-down.png")no-repeat center;
+		background-size: contain; //z-index: -1;
+	}*/ }
+.select-wrap select { width: 100%; padding-left: 15px; border: 1px solid #dedede; vertical-align: middle; height: 40px; border-radius: 10px; background: url("../_images/_form/icon-s-caret-down.png") no-repeat top 12px right 15px; background-size: 16px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; color: #454545; }
 
 .input-btn { display: flex; }
 .input-btn input[type="text"] { width: calc(100% - 130px); }
@@ -91,8 +101,9 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 		border: 0;
 	}
 }*/
-.date-wrap { position: relative; }
-.date-wrap:after { content: ""; position: absolute; width: 16px; height: 16px; background: url("../_images/common/btn-calendar@2x.png") no-repeat center; background-size: 16px; right: 10px; top: 50%; transform: translateY(-50%); }
+.date-wrap { position: relative; /*&:after{ content: ""; position: absolute; width: 16px; height: 16px; background: url("../_images/common/btn-calendar@2x.png") no-repeat center; background-size: 16px; right: 10px; top: 50%; transform: translateY(-50%);
+}*/ }
+.date-wrap input[type="text"] { background: url("../_images/common/btn-calendar@2x.png") no-repeat top 12px right 15px #fff; background-size: 16px; }
 
 /* table */
 table { border-top: 2px solid #454545; text-align: left; width: 100%; }
