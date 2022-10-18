@@ -29,6 +29,7 @@
 				<div class="btn-top-wrap">
 					<a href="#" class="pri btn-modal" data-target="add1-modal">항목추가1</a>
 					<a href="#" class="pri btn-modal" data-target="add2-modal">항목추가2</a>
+                    <a href="#" class="pri btn-modal" data-target="add3-modal">항목추가3</a>
 				</div>
 			</div>
 
@@ -70,7 +71,7 @@
 					<td>선택</td>
 					<td>사용자 추가</td>
 					<td>
-						<a href="#" class="sec btn-modal" data-target="modify2-modal">사용</a>
+						<a href="#" class="sec btn-modal" data-target="modify1-modal">사용</a>
 					</td>
 				</tr>
 				<tr>
@@ -81,7 +82,7 @@
 					<td>필수</td>
 					<td>오토빌 기본값</td>
 					<td>
-						<a href="#" class="sec btn-modal" data-target="idx1">사용</a>
+						<a href="#" class="sec btn-modal" data-target="modify1-modal">사용</a>
 					</td>
 				</tr>
 			</table>
@@ -96,27 +97,8 @@
 		</div>
 	</div>
     
-    <div id="modal-wrap" class="dept-modal">
-		<div class="modal-con">
-			<button class="modal-close btn-close">닫기</button>
-            
-            <p class="title">임직원/부서 목록</p>
-			
-			<div class="box-select-radio radio-group">
-				<div class="item box-item on marbottom">
-					<p>부서 : 인터넷사업팀<br>직급 : 과장<br>이름 : 이강호<br>연락처 : 010-5235-4324</p>
-				</div>
-				<div class="item box-item">
-					<p>부서 : 인터넷사업팀<br>직급 : 과장<br>이름 : 이강호<br>연락처 : 010-5235-4324</p>
-				</div>
-			</div>
-			
-			<div class="btn-btm-wrap mt20">
-				<a href="#" class="pri modalwidth btn-close">저장</a>
-			</div>
-		</div>
-	</div>
     
+    <!--  업무추진비 입력항목 추가1  -->
 	<div id="modal-wrap" class="add1-modal">
 		<div class="modal-con" style="width: 500px;">
 			<button class="modal-close btn-close">닫기</button>
@@ -176,6 +158,7 @@
 		</div>
 	</div>
 	
+    <!--  업무추진비 입력항목 추가2  -->
 	<div id="modal-wrap" class="add2-modal">
 		<div class="modal-con" style="width: 500px;">
 			<button class="modal-close btn-close">닫기</button>
@@ -239,76 +222,8 @@
 		</div>
 	</div>
 	
-	<div id="modal-wrap" class="modify1-modal">
-		<div class="modal-con" style="width: 500px;">
-			<button class="modal-close btn-close">닫기</button>
-            
-            <p class="title">업무추진비 입력항목 수정</p>
-            <p class="box-sub-title">업무추진비 입력항목을 추가합니다.</p>
-			
-            <table class="mt20 search-table">
-				<colgroup>
-					<col width="150px">
-					<col width="287px">
-				</colgroup>
-				<tr>
-					<th>항목명<strong>*</strong></th>
-					<td><input type="text" placeholder="Placeholder"></td>
-				</tr>
-				<tr>
-					<th>입력타입<strong>*</strong></th>
-					<td>
-						<div class="select-wrap mr10">
-							<select>
-								<option>텍스트</option>
-							</select>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<th>힌트 텍스트<strong>*</strong></th>
-					<td><input type="text" placeholder="Placeholder"></td>
-				</tr>
-				<tr>
-					<th>필수여부<strong>*</strong></th>
-					<td>
-						<div class="select-wrap mr10">
-							<select>
-								<option>필수</option>
-							</select>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<th>선택조건</th>
-					<td class="flex">
-						<div class="select-wrap mr10" style="width: 120px">
-							<select>
-								<option>카드사용액</option>
-							</select>
-						</div>
-						<input type="text" style="width: 80px" class="mr5" placeholder="500,000">원 이상
-					</td>
-				</tr>
-				<tr>
-					<th>사용여부<strong>*</strong></th>
-					<td>
-						<div class="select-wrap mr10">
-							<select>
-								<option>사용</option>
-							</select>
-						</div>
-					</td>
-				</tr>
-			</table>
-            
-			<div class="btn-btm-wrap mt20">
-				<a href="#" class="pri modalwidth btn-close">저장</a>
-			</div>
-		</div>
-	</div>
-	
-	<div id="modal-wrap" class="modify2-modal">
+     <!--  업무추진비 입력항목 추가3  -->
+    <div id="modal-wrap" class="add3-modal">
 		<div class="modal-con" style="width: 500px;">
 			<button class="modal-close btn-close">닫기</button>
             
@@ -380,6 +295,77 @@
 			</div>
 		</div>
 	</div>
+    
+    <!--  업무추진비 입력항목 수정  -->
+	<div id="modal-wrap" class="modify1-modal">
+		<div class="modal-con" style="width: 500px;">
+			<button class="modal-close btn-close">닫기</button>
+            
+            <p class="title">업무추진비 입력항목 수정</p>
+            <p class="box-sub-title">업무추진비 입력항목을 추가합니다.</p>
+			
+            <table class="mt20 search-table">
+				<colgroup>
+					<col width="150px">
+					<col width="287px">
+				</colgroup>
+				<tr>
+					<th>항목명<strong>*</strong></th>
+					<td><input type="text" placeholder="Placeholder"></td>
+				</tr>
+				<tr>
+					<th>입력타입<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>텍스트</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>힌트 텍스트<strong>*</strong></th>
+					<td><input type="text" placeholder="Placeholder"></td>
+				</tr>
+				<tr>
+					<th>필수여부<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>필수</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>선택조건</th>
+					<td class="flex">
+						<div class="select-wrap mr10" style="width: 120px">
+							<select>
+								<option>카드사용액</option>
+							</select>
+						</div>
+						<input type="text" style="width: 80px" class="mr5" placeholder="500,000">원 이상
+					</td>
+				</tr>
+				<tr>
+					<th>사용여부<strong>*</strong></th>
+					<td>
+						<div class="select-wrap mr10">
+							<select>
+								<option>사용</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+			</table>
+            
+			<div class="btn-btm-wrap mt20">
+				<a href="#" class="pri modalwidth btn-close">저장</a>
+			</div>
+		</div>
+	</div>
+	
 	
 </body>
 	
