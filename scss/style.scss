@@ -207,6 +207,47 @@ a{
 	}
 }
 
+.btn-addr-wrap{
+	display: flex;
+	height: 40px;
+	align-items: center;
+	font-size: 14px;
+	letter-spacing: 0.59px;
+	color: $textColor;
+	
+	&.bold-border{
+		border-top: 2px solid $textColor;
+		//border-bottom: 1px solid $textColor;
+	}
+	&.light-border{
+		border-top: 1px solid #979797;
+	}
+	.newaddr{
+		width: 100px;
+		margin-right: 20px;
+		height: 30px;
+		line-height: 28px;
+		//padding: 5px 9px;
+		text-align: center;
+		border-radius: 15px;
+		border: solid 1px #4866db;
+		background-color: #fff;
+		color: $second;
+	}
+	.oldaddr{
+		width: 100px;
+		margin-right: 20px;
+		height: 30px;
+		line-height: 28px;
+		text-align: center;
+		border-radius: 15px;
+		border: solid 1px #979797;
+		background-color: #fff;
+		color: #979797;
+	}
+	
+}
+
 .tab1-wrap{
 	border-bottom: 1px solid #4866db;
 	height: 40px;
