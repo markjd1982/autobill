@@ -13,7 +13,7 @@
 		background: url("../_images/_form/icon-s-caret-down.png")no-repeat center;
 		background-size: contain; //z-index: -1;
 	}*/ }
-.select-wrap select { width: 100%; padding-left: 15px; border: 1px solid #dedede; vertical-align: middle; height: 40px; border-radius: 10px; background: url("../_images/_form/icon-s-caret-down.png") no-repeat top 12px right 15px; background-size: 16px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; color: #454545; }
+.select-wrap select { width: 100%; padding-left: 15px; border: 1px solid #dedede; vertical-align: middle; height: 40px; border-radius: 10px; background: url("../_images/_form/icon-s-caret-down.png") no-repeat top 12px right 15px #fff; background-size: 16px; -moz-appearance: none; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; color: #454545; }
 
 .input-btn { display: flex; }
 .input-btn input[type="text"] { width: calc(100% - 130px); }
@@ -343,11 +343,12 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 .btn-btm-wrap a.dis { background-color: #979797; }
 .btn-btm-wrap a.modalwidth { width: 200px; }
 
-.btn-addr-wrap { display: flex; height: 40px; align-items: center; font-size: 14px; letter-spacing: 0.59px; color: #454545; }
-.btn-addr-wrap.bold-border { border-top: 2px solid #454545; }
-.btn-addr-wrap.light-border { border-top: 1px solid #979797; }
-.btn-addr-wrap .newaddr { width: 100px; margin-right: 20px; height: 30px; line-height: 28px; text-align: center; border-radius: 15px; border: solid 1px #4866db; background-color: #fff; color: #4866db; }
-.btn-addr-wrap .oldaddr { width: 100px; margin-right: 20px; height: 30px; line-height: 28px; text-align: center; border-radius: 15px; border: solid 1px #979797; background-color: #fff; color: #979797; }
+.addr-wrap { margin-top: 20px; border-top: 2px solid #454545; }
+.addr-wrap .item { border-bottom: 1px solid #454545; }
+.addr-wrap .item .btn-addr-wrap { display: flex; height: 40px; align-items: center; font-size: 14px; letter-spacing: 0.59px; color: #454545; }
+.addr-wrap .item .btn-addr-wrap .newaddr { width: 100px; margin-right: 20px; height: 30px; line-height: 28px; text-align: center; border-radius: 15px; border: solid 1px #4866db; background-color: #fff; color: #4866db; }
+.addr-wrap .item .btn-addr-wrap .oldaddr { width: 100px; margin-right: 20px; height: 30px; line-height: 28px; text-align: center; border-radius: 15px; border: solid 1px #979797; background-color: #fff; color: #979797; }
+.addr-wrap .item .btn-addr-wrap:nth-child(1) { border-bottom: 1px solid #dedede; }
 
 .tab1-wrap { border-bottom: 1px solid #4866db; height: 40px; }
 .tab1-wrap ul { display: flex; height: 40px; position: relative; z-index: 1; }
