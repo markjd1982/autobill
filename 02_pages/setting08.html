@@ -7,6 +7,8 @@
 
 <link href="../_css/reset.css" rel="stylesheet" type="text/css">
 <link href="../_css/style.css" rel="stylesheet" type="text/css">
+    
+<link rel="icon" type="image/png" sizes="16x16" href="../_images/common/favicon-16x16.png">
 
 <script type="text/javascript" src="../_js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../_js/jquery.js"></script>
@@ -46,7 +48,7 @@
             <div class="board-top">
 				<p class="total-num">총 : 10건</p>
                 <div class="btn-top-wrap"> 
-					<a href="#" class="file btn-modal"  data-target="excel-modal">엑셀 다운로드</a>
+					<a href="#" class="file btn-modal"  data-target="excel-modal">엑셀 업로드</a>
                     <a href="#" class="pri btn-expand" data-target="idx1">프로젝트 등록</a>
                 </div>
             </div>
@@ -235,170 +237,8 @@
 			</div>
 		</div>
 	</div>
-    
-    <div id="modal-wrap" class="dept-modal">
-		<div class="modal-con">
-			<button class="modal-close btn-close">닫기</button>
-            
-            <p class="title">임직원/부서 목록</p>
-			
-			<div class="box-select-radio radio-group">
-				<div class="item box-item on marbottom">
-					<p>부서 : 인터넷사업팀<br>직급 : 과장<br>이름 : 이강호<br>연락처 : 010-5235-4324</p>
-				</div>
-				<div class="item box-item">
-					<p>부서 : 인터넷사업팀<br>직급 : 과장<br>이름 : 이강호<br>연락처 : 010-5235-4324</p>
-				</div>
-			</div>
-			
-			<div class="btn-btm-wrap mt20">
-				<a href="#" class="pri modalwidth btn-close">저장</a>
-			</div>
-		</div>
-	</div>
-    
-    <div id="modal-wrap" class="manage-modal">
-		<div class="modal-con" style="width: 500px;">
-			<button class="modal-close btn-close">닫기</button>
-            
-            <p class="title">사용부서 설정</p>
-            <p class="box-sub-title">회계담당부서 “네” 선택 시 지출결의서를 수신할 수 있습니다.<br>상위부서를 반드시 지정하시기 바랍니다.</p>
-			<table class="mt20 search-table">
-                <colgroup>
-                    <col width="150px">
-                    <col width="287px">
-                </colgroup>
-                <tr>
-                    <th>부서명<strong>*</strong></th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>부서 ERP코드</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>코스트센터 ERP 코드</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>회계단위</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>회계담당 부서</th>
-                    <td>
-                        <input type="radio" id="radio21" name="radio21" checked>
-                        <label for="radio3">네</label>
-                        <input type="radio" id="radio22" name="radio21">
-                        <label for="radio22">아니오</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th>사용부서 선택</th>
-                    <td>
-                        <div id="tree" class="dept">
-                            <ul>
-                                <li><a href="#">1 Depth(10)</a>
-                                    <ul>
-                                        <li><a href="#">2 Depth(2)</a>
-                                            <ul>
-                                                <li><a href="#">3 Depth(2)</a>
-                                                    <ul>
-                                                        <li><a href="#">4 Depth(2)</a>
-                                                            <ul>
-                                                                <li class="last"><a href="#">5 Depth</a></li>
-                                                                <li class="last"><a href="#">5 Depth</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">1 Depth(10)</a>
-                                    <ul>
-                                        <li><a href="#">2 Depth(2)</a>
-                                            <ul>
-                                                <li><a href="#">3 Depth(2)</a>
-                                                    <ul>
-                                                        <li><a href="#">4 Depth(2)</a>
-                                                            <ul>
-                                                                <li class="last"><a href="#">5 Depth</a></li>
-                                                                <li class="last"><a href="#">5 Depth</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            
-			<div class="btn-btm-wrap mt20">
-				<a href="#" class="pri modalwidth btn-close">저장</a>
-			</div>
-		</div>
-	</div>
-    
-    <div id="modal-wrap" class="dept-modify-modal">
-		<div class="modal-con" style="width: 500px;">
-			<button class="modal-close btn-close">닫기</button>
-            
-            <p class="title">부서 수정</p>
-            <p class="box-sub-title">회계담당부서 “네” 선택 시 지출결의서를 수신할 수 있습니다.</p>
-			<table class="mt20 search-table">
-                <colgroup>
-                    <col width="150px">
-                    <col width="287px">
-                </colgroup>
-                <tr>
-                    <th>부서명<strong>*</strong></th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>부서 ERP코드</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>코스트센터 ERP 코드</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>회계단위</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>회계담당 부서</th>
-                    <td>
-                        <input type="radio" id="radio31" name="radio31" checked>
-                        <label for="radio31">네</label>
-                        <input type="radio" id="radio32" name="radio31">
-                        <label for="radio32">아니오</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th>미사용부서</th>
-                    <td>
-                        <input type="radio" id="radio41" name="radio41" checked>
-                        <label for="radio41">네</label>
-                        <input type="radio" id="radio42" name="radio41">
-                        <label for="radio42">아니오</label>
-                    </td>
-                </tr>
-            </table>
-            
-			<div class="btn-btm-wrap mt20">
-				<a href="#" class="pri modalwidth btn-close">저장</a>
-			</div>
-		</div>
-	</div>
 	
+    <!-- 예산 엑셀 업로드-->
     <div id="modal-wrap" class="excel-modal">
 		<div class="modal-con" style="width: 500px;">
 			<button class="modal-close btn-close">닫기</button>
