@@ -11,11 +11,13 @@
 		vertical-align:middle;
 		height: 40px;
 		border-radius: 10px;
+        background: url("../_images/_form/icon-s-caret-down.png")no-repeat top 12px right 15px;
+        background-size: 16px;
 		@include appearance(none); 
 		@include box-sizing(border-box);
 		color: $textColor;
 	}
-	&:after{
+	/*&:after{
 		content: "";
 		width: 16px;
 		height: 16px;
@@ -26,7 +28,8 @@
 		right: 15px;
 		background: url("../_images/_form/icon-s-caret-down.png")no-repeat center;
 		background-size: contain;
-	}
+        //z-index: -1;
+	}*/
 }
 
 .input-btn{
@@ -270,7 +273,11 @@ input[type="file"]::-ms-browse {
 
 .date-wrap{
     position: relative;
-    &:after{
+    input[type="text"]{
+        background: url("../_images/common/btn-calendar@2x.png") no-repeat top 12px right 15px #fff;
+        background-size: 16px;
+    }
+    /*&:after{
         content: "";
         position: absolute;
         width: 16px;
@@ -280,5 +287,5 @@ input[type="file"]::-ms-browse {
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
-    }
+    }*/
 }
