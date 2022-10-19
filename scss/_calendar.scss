@@ -37,7 +37,7 @@
 			width: 280px;
 			border: none;
 			th{
-				line-height: 30px;
+				//line-height: 30px;
 				background: $white;
 				font-size: 14px;
 				color: $textColor;
@@ -57,14 +57,14 @@
 					border: 0;
 					background: $white;
 					text-align: center;
-					line-height: 40px;
+					//line-height: 40px;
 					width: 40px;
 					height: 40px;
 					border-radius: 100%;
 					&.ui-state-highlight{
 						color: $white;
 						background: $primary;
-						line-height: 30px;
+						//line-height: 30px;
 						width: 30px;
 						height: 30px;
 					}
@@ -78,7 +78,7 @@
 			.ui-state-active{
 				color: #ffffff;
 				background: $second;
-				line-height: 30px;
+				//line-height: 30px;
 				width: 30px;
 				height: 30px;
 			}
