@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>오토빌</title>
+
+<link href="../_css/reset.css" rel="stylesheet" type="text/css">
+<link href="../_css/style.css" rel="stylesheet" type="text/css">
+    
+<link rel="icon" type="image/png" sizes="16x16" href="../_images/common/favicon-16x16.png">
+
+<script type="text/javascript" src="../_js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../_js/jquery.js"></script>
+<script type="text/javascript" src="../_js/jquery.easing.1.3.js"></script>
+
+	
+</head>
+<body class="main">
+	
+	<div id="container">
+		
+		<!--   LNB   -->
+		<!--<div id="lnb"></div>-->
+		
+		<div id="contents">
+			<h2>부서별 예산 사용현황<p>부서별/임직원별 예산 편성 대비 집행률을 확인합니다.</p></h2>
+            
+            <div class="top-search-wrap single-con">
+                <div class="wrap">
+                    <div>
+                        <div class="item first">
+                            <p class="label">기간</p>
+                            <div class="select-wrap" style="width:150px;">
+                                <select>
+                                    <option>2018</option>
+                                </select>
+                            </div>
+							<p class="label ml50" style="width: 80px">부서/임직원</p>
+                            <input type="text" placeholder="Placeholder" style="width:250px;">
+                        </div>
+                    </div>
+                    <button class="expand"></button>
+                </div>
+                <button class="search"></button>
+            </div>
+            
+            <div class="board-top">
+                <p class="total-num">총 : 10건</p>
+                <div class="btn-top-wrap">
+                    <a href="#" class="file btn-modal" data-target="apply-modal">엑셀 다운로드</a>
+                </div>
+            </div>
+            
+            <table class="mt10">
+                <colgroup>
+					<col width="50px">
+                    <col width="380px">
+                    <col width="150px">
+                    <col width="150px">
+                    <col width="150px">
+                    <col width="150px">
+                    <col width="50px">
+                </colgroup>
+                <tr class="table-group">
+                    <th rowspan="2">번호</th>
+					<th rowspan="2">비용계정</th>
+					<th colspan="4">법인카드 정보</th>
+					<th rowspan="2"></th>
+                </tr>
+				<tr>
+					<th>예산</th>
+					<th>사용금액</th>
+					<th>잔액</th>
+					<th>예산대비 사용률</th>
+				</tr>
+                <tr class="green">
+					<td colspan="2">합계</td>
+					<td class="right">26,123,000</td>
+					<td class="right">17,400,000</td>
+					<td class="right">8,723,000</td>
+					<td>67%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>복리후생비</td>
+					<td class="right">26,123,000</td>
+					<td class="right">17,400,000</td>
+					<td class="right">8,723,000</td>
+					<td>67%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>복리후생비</td>
+					<td class="right">26,123,000</td>
+					<td class="right">17,400,000</td>
+					<td class="right">8,723,000</td>
+					<td>67%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>복리후생비</td>
+					<td class="right">26,123,000</td>
+					<td class="right">17,400,000</td>
+					<td class="right">8,723,000</td>
+					<td>67%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>복리후생비</td>
+					<td class="right">26,123,000</td>
+					<td class="right">17,400,000</td>
+					<td class="right">8,723,000</td>
+					<td>67%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>복리후생비</td>
+					<td class="right">26,123,000</td>
+					<td class="right">17,400,000</td>
+					<td class="right">8,723,000</td>
+					<td>67%</td>
+					<td></td>
+				</tr>
+            </table>
+			
+            <div id="paging">
+				<a href="#" class="l">이전 목록</a>
+				<div class="wrap">
+					<a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a>
+				</div>
+				<a href="#" class="r">다음 목록</a>
+			</div>
+		</div>
+	</div>
+	
+	<!--  자주가는 거래처 등록  -->
+	<div id="modal-wrap" class="apply-modal">
+		<div class="modal-con" style="width: 500px;">
+			<button class="modal-close btn-close">닫기</button>
+            
+            <p class="title">자주가는 거래처 등록</p>
+			<table class="mt20 search-table">
+                <colgroup>
+                    <col width="140px">
+                    <col width="387px">
+                </colgroup>
+                <tr>
+                    <th>차량번호</th>
+                    <td class="flex"><input type="text" placeholder="나이스데이터"></td>
+                </tr>
+                <tr>
+                    <th>구분</th>
+                   <td>
+                        <input type="radio" id="radio31" name="radio31" checked>
+                        <label for="radio31">공통</label>
+                        <input type="radio" id="radio32" name="radio31">
+                        <label for="radio32">개인</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td><input type="text" placeholder="서울특별시 영등포구 여의도동 123-1"></td>
+                </tr>
+            </table>
+			
+			<div class="btn-btm-wrap mt20">
+				<a href="#" class="pri modalwidth btn-close">저장</a>
+			</div>
+		</div>
+	</div>
+	
+</body>
+	
+
+</html>
