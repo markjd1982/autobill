@@ -605,6 +605,9 @@ a{
             }
             &.on{
                 background-image: url("../_images/common/formTreeMinus.png");
+                &.last{
+                    background-image: url("../_images/common/formTreeDept.png");
+                }
                 >a{
                     color: $second;
                     font-weight: 700;
@@ -624,6 +627,7 @@ a{
             li.last{
                 background-image: url("../_images/common/formTreeMan.png");
             }
+            li.on{}
         }
     }
 }

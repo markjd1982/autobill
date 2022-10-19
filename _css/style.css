@@ -427,6 +427,7 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 #tree ul li { line-height: 30px; padding-left: 25px; background: url("../_images/common/formTreePlus.png") no-repeat left 5px; background-size: 20px; font-weight: 400; cursor: pointer; }
 #tree ul li.last { background-image: url("../_images/common/formTreeDept.png"); }
 #tree ul li.on { background-image: url("../_images/common/formTreeMinus.png"); }
+#tree ul li.on.last { background-image: url("../_images/common/formTreeDept.png"); }
 #tree ul li.on > a { color: #4866db; font-weight: 700; }
 #tree ul li ul { display: none; }
 #tree ul li a { text-decoration: none; color: #454545; }
