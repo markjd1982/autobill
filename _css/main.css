@@ -260,6 +260,7 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 .main-mid2 ul li:not(:last-child) { margin-right: 24px; }
 
 .wrap-1 .box-1 { padding: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.2); }
+.wrap-1 .box-1 p { white-space: nowrap; word-break: break-all; overflow: hidden; text-overflow: ellipsis; }
 
 .main-mid3 .wrapper { width: 100%; border-radius: 10px; box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.2); padding: 27px 55px 30px 55px; background-color: #fff; }
 .main-mid3 .wrapper ul { display: flex; align-items: center; }
