@@ -596,15 +596,15 @@ a{
         li{
             line-height: 30px;
             padding-left: 25px;
-            background: url("../_images/common/form-tree-plus@2x.png") no-repeat left 5px;
+            background: url("../_images/common/formTreePlus.png") no-repeat left 5px;
             background-size: 20px;
             font-weight: 400;
             cursor: pointer;
             &.last{
-                background-image: url("../_images/common/form-tree-dept@2x.png");
+                background-image: url("../_images/common/formTreeDept.png");
             }
             &.on{
-                background-image: url("../_images/common/form-tree-minus@2x.png");
+                background-image: url("../_images/common/formTreeMinus.png");
                 >a{
                     color: $second;
                     font-weight: 700;
@@ -622,7 +622,7 @@ a{
     &.emp{
         ul{
             li.last{
-                background-image: url("../_images/common/form-tree-man@2x.png");
+                background-image: url("../_images/common/formTreeMan.png");
             }
         }
     }
