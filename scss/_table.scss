@@ -102,6 +102,17 @@ table{
 				border: 1px solid #dedede;
 				color: $textColor
 			}
+            &.btn-plus{
+                width: 20px;
+                height: 20px;
+                border-radius: 0;
+                background: url("../_images/common/form-tree-plus@2x.png") no-repeat center;
+                background-size: 20px;
+                &.on{
+                    background-image: url("../_images/common/form-tree-minus@2x.png");
+                }
+            }
+            
         }
         &.expand{
             padding: 0;
@@ -230,6 +241,12 @@ table{
     .green td{
         background: #EDFAF4;
         font-weight: 700;
+    }
+    table{
+        border-top: none;
+    }
+    tr.on td{
+        background: #f5f5f5;
     }
 }
 
