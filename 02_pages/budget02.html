@@ -24,20 +24,48 @@
 		<!--<div id="lnb"></div>-->
 		
 		<div id="contents">
-			<h2>부서별 예산 사용현황<p>부서별/임직원별 예산 편성 대비 집행률을 확인합니다.</p></h2>
+			<h2>프로젝트 경비 사용현황<p>프로젝트별 예산 편성 대비 집행률을 확인합니다.</p></h2>
             
-            <div class="top-search-wrap single-con">
+            <div class="top-search-wrap">
                 <div class="wrap">
                     <div>
                         <div class="item first">
                             <p class="label">기간</p>
-                            <div class="select-wrap" style="width:150px;">
+                            <div class="select-wrap mr10" style="width:80px;">
                                 <select>
                                     <option>2018</option>
                                 </select>
                             </div>
-							<p class="label ml50" style="width: 80px">부서/임직원</p>
-                            <input type="text" placeholder="Placeholder" style="width:250px;">
+                            <div class="select-wrap mr10" style="width:80px;">
+                                <select>
+                                    <option>01</option>
+                                </select>
+                            </div>
+                            <span>~</span>
+                            <div class="select-wrap ml10 mr10" style="width:80px;">
+                                <select>
+                                    <option>2018</option>
+                                </select>
+                            </div>
+                            <div class="select-wrap mr10" style="width:80px;">
+                                <select>
+                                    <option>01</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="expand-wrap">
+                            <div class="item">
+                                <p class="label">상태</p>
+                                <div class="select-wrap" style="width:300px;">
+                                    <select>
+                                        <option>전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p class="label">프로젝트</p>
+                                <input type="text" placeholder="검색어 입력" style="width: 300px">
+                            </div>
                         </div>
                     </div>
                     <button class="expand"></button>
@@ -64,8 +92,8 @@
                 </colgroup>
                 <tr class="table-group">
                     <th rowspan="2">번호</th>
-					<th rowspan="2">비용계정</th>
-					<th colspan="4">법인카드 정보</th>
+					<th rowspan="2">프로젝트 명</th>
+					<th colspan="4">비용 계정항목 적용 현황</th>
 					<th rowspan="2"></th>
                 </tr>
 				<tr>

@@ -91,17 +91,6 @@ $(function(){
 	
 	
 	
-	////////////////////     탭     ////////////////////
-	
-	/*$(".tab li").click(function(){
-		var idx = $(this).index();
-		$(this).closest(".tab-wrap").find(".tab-con").hide();
-		$(this).closest(".tab-wrap").find(".tab-con").eq(idx).show();
-		$(this).closest(".tab").find("li").removeClass("on");
-		$(this).addClass("on");
-	});*/
-	
-	
 	////////////////////     modal     ////////////////////    
     
     $(document).on("click",".btn-modal,.btn-popup",function(){
@@ -149,24 +138,17 @@ $(function(){
 	});
 	
 	
-	//    달력
-    
-   /* $( "#datepicker,#datepicker2,#datepicker3,#datepicker4" ).datepicker({
-        inline: true,
-		dayNamesMin:['일','월','화','수','목','금','토'],
-		monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-    });*/
-	
-	
 	////////////////////     acodion     //////////////////// 
 	
-	$(document).on("click",".btn-aco",function(){
-		if($(this).closest(".acodion").hasClass("on")){
-			$(this).closest(".acodion").removeClass("on");	
-			$(this).closest(".acodion").find(".aco-con").slideUp(500,"easeInOutExpo");
+	$(document).on("click",".btn-plus",function(){
+		if($(this).hasClass("on")){
+			$(this).closest("tr").removeClass("on");
+            $(this).removeClass("on");
+            $(this).closest("tr").next("tr").find("#expand-slide").slideUp(500,"easeInOutExpo");
 		}else{
-			$(this).closest(".acodion").addClass("on");
-			$(this).closest(".acodion").find(".aco-con").slideDown(500,"easeInOutExpo");
+			$(this).closest("tr").addClass("on");
+            $(this).addClass("on");
+            $(this).closest("tr").next("tr").find("#expand-slide").slideDown(500,"easeInOutExpo");
 		}
         
 	});
