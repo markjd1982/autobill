@@ -296,13 +296,13 @@ table tr.on td { background: #f5f5f5; }
 .ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-header .ui-datepicker-prev { background: url("../_images/_calendar/btn-prev@2x.png") no-repeat center/20px; top: 50%; transform: translateY(-35%); left: 50px; }
 .ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-header .ui-datepicker-next { background: url("../_images/_calendar/btn-next@2x.png") no-repeat center/20px; top: 50%; transform: translateY(-35%); right: 50px; }
 .ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar { width: 280px; border: none; }
-.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar th { line-height: 30px; background: #fff; font-size: 14px; color: #454545; font-weight: 400; }
+.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar th { background: #fff; font-size: 14px; color: #454545; font-weight: 400; }
 .ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar th:nth-child(1) { color: #F94450; }
 .ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar td { vertical-align: middle; text-align: center; height: 30px; line-height: 30px; padding: 0; }
-.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar td a { display: inline-block; border: 0; background: #fff; text-align: center; line-height: 40px; width: 40px; height: 40px; border-radius: 100%; }
-.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar td a.ui-state-highlight { color: #fff; background: #3B405D; line-height: 30px; width: 30px; height: 30px; }
+.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar td a { display: inline-block; border: 0; background: #fff; text-align: center; width: 40px; height: 40px; border-radius: 100%; }
+.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar td a.ui-state-highlight { color: #fff; background: #3B405D; width: 30px; height: 30px; }
 .ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar td:nth-child(7n+1) a { color: #F94450; }
-.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar .ui-state-active { color: #ffffff; background: #4866db; line-height: 30px; width: 30px; height: 30px; }
+.ui-datepicker.ui-widget-content.ui-widget-content .ui-datepicker-calendar .ui-state-active { color: #ffffff; background: #4866db; width: 30px; height: 30px; }
 
 .ui-datepicker td.holiday a, .ui-datepicker td.holiday a:hover { color: #F94450; }
 
