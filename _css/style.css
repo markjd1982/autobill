@@ -135,6 +135,7 @@ table td.rate-b { color: #7dd501; font-weight: 700; }
 table td.rate-c { color: #ffa443; font-weight: 700; }
 table td.rate-d { color: #d82800; font-weight: 700; }
 table td.rate-n { color: #8c8c8c; font-weight: 700; }
+table td.red { color: #F94450; }
 table th:first-child, table td:first-child { border-left: none; }
 table.search-table th { text-align: left; padding-left: 10px; height: 50px; position: relative; }
 table.search-table th .info { position: absolute; width: 24px; height: 24px; right: 10px; top: 50%; transform: translateY(-50%); border-radius: 100%; background: url("../_images/common/icon-s-info@2x.png") no-repeat center; background-size: 24px; }
@@ -343,6 +344,7 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 .btn-btm-wrap a:not(:first-child) { margin-left: 10px; }
 .btn-btm-wrap a.pri { background-color: #4866db; }
 .btn-btm-wrap a.dis { background-color: #979797; }
+.btn-btm-wrap a.sec { border: 1px solid #4866db; color: #4866db; line-height: 48px; }
 .btn-btm-wrap a.modalwidth { width: 200px; }
 
 .addr-wrap { margin-top: 20px; border-top: 2px solid #454545; }
@@ -550,3 +552,16 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 .premium-slogan .sub { font-size: 20px; margin-top: 10px; color: #454545; }
 
 .premium-email { margin-top: 20px; font-size: 20px; line-height: 1.6; color: #454545; }
+
+.legal-top { margin-top: 30px; border: 1px solid #dedede; }
+.legal-top > ul { display: flex; }
+.legal-top > ul > li { text-align: center; line-height: 100px; font-size: 14px; color: #454545; }
+.legal-top > ul > li:not(:first-child) { border-left: 1px solid #dedede; }
+.legal-top > ul > li:nth-child(1) { width: 100px; }
+.legal-top > ul > li:nth-child(2) { width: 200px; }
+.legal-top > ul > li:nth-child(3) { width: 418px; font-size: 30px; font-weight: 700; }
+.legal-top > ul > li ul { display: flex; }
+.legal-top > ul > li ul li { line-height: 50px; text-align: center; }
+.legal-top > ul > li ul li:nth-child(1) { width: 100px; border-right: 1px solid #dedede; }
+.legal-top > ul > li ul li:nth-child(2) { width: 200px; }
+.legal-top > ul > li ul:nth-child(1) li { border-bottom: 1px solid #dedede; }

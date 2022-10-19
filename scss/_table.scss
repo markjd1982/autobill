@@ -149,6 +149,9 @@ table{
             color: #8c8c8c;
             font-weight: 700;
         }
+        &.red{
+            color: $red;
+        }
 	}
 	th:first-child,td:first-child{
 		border-left:none;
