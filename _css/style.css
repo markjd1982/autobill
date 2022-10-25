@@ -321,12 +321,14 @@ h4 span { font-weight: 400; color: #454545; font-feature-settings: 14px; margin-
 
 a { color: #4866db; text-decoration: underline; font-weight: 700; }
 
-#paging { width: 100%; margin-top: 40px; text-align: center; }
+#paging { width: 100%; margin-top: 40px; text-align: center; display: flex; justify-content: center; align-items: center; }
 #paging .wrap { display: inline-block; }
 #paging a { display: inline-block; width: 30px; height: 30px; vertical-align: middle; line-height: 30px; text-align: center; font-size: 14px; color: #454545; text-decoration: none; }
 #paging a.on { color: #4866db; font-weight: 700; }
 #paging a.l { width: 50px; height: 50px; border: solid 1px #454545; background: url("../_images/_board/icon-s-caret-left@2x.png") no-repeat center/24px; text-indent: -9999px; border-radius: 100%; margin-right: 20px; }
+#paging a.ll { width: 50px; height: 50px; border: solid 1px #454545; background: url("../_images/_board/icon-s-caret-left-left@2x.png") no-repeat center/24px; text-indent: -9999px; border-radius: 100%; margin-right: 10px; }
 #paging a.r { width: 50px; height: 50px; border: solid 1px #454545; background: url("../_images/_board/icon-s-caret-right@2x.png") no-repeat center/24px; text-indent: -9999px; border-radius: 100%; margin-left: 20px; }
+#paging a.rr { width: 50px; height: 50px; border: solid 1px #454545; background: url("../_images/_board/icon-s-caret-right-right@2x.png") no-repeat center/24px; text-indent: -9999px; border-radius: 100%; margin-left: 10px; }
 
 .col2flex { display: flex; }
 
