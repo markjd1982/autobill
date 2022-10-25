@@ -453,6 +453,7 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 #expand-slide .con .flex { display: flex; justify-content: space-between; }
 #expand-slide .con .flex .form-wrap { width: 472px; }
 #expand-slide .con .flex button { width: 100px; flex-shrink: 0; border-radius: 10px; background: #3B405D; height: 40px; color: #fff; }
+#expand-slide .con .flex button.gray { background-color: #979797; }
 #expand-slide .con .flex.left { justify-content: flex-start; }
 #expand-slide .con .pic-item { padding-left: 25px; line-height: 16px; position: relative; }
 #expand-slide .con .pic-item .btn-del { width: 16px; height: 16px; position: absolute; background: url("../_images/common/icon-s-del@2x.png") no-repeat center; background-size: 16px; left: 0; top: 0; cursor: pointer; }
