@@ -17,7 +17,7 @@
 				width: 167px;
 				height: 56px;
 				background: url("../_images/common/auto-bill@2x.png") no-repeat center;
-				background-size: 167px;
+				background-size: 164px;
 				a{
 					display: block;
 					width: 100%;
@@ -28,13 +28,15 @@
 				display: flex;
 				li{
 					margin-right: 11px;
-					width: 24px;
+					width: 25px;
 					height: 29px;
 					&.logout{
 						background: url("../_images/common/icon-logout.png") no-repeat center;
+                        background-size: 25px;
 					}
 					&.mypage{
 						background: url("../_images/common/icon-man.png") no-repeat center;
+                        background-size: 25px;
 					}
 					&.name{
 						width: 74px;

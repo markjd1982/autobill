@@ -105,6 +105,8 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 }*/ }
 .date-wrap input[type="text"] { background: url("../_images/common/btn-calendar@2x.png") no-repeat top 12px right 15px #fff; background-size: 16px; }
 
+.input-search { background: url("../_images/common/icon-s-search.png") no-repeat top 12px right 15px #fff; background-size: 16px; }
+
 /* Layout */
 .container-full { width: 100%; }
 
@@ -187,12 +189,12 @@ input[type="file"]::-ms-browse { color: #fff; border: 0; background: #343f4e; wi
 #lnb { position: sticky; top: 0; width: 250px; height: 100vh; }
 #lnb .con { position: absolute; top: 0; z-index: 1; }
 #lnb .con .top { height: 179px; padding-top: 20px; }
-#lnb .con .top .autobill_logo { width: 167px; height: 56px; background: url("../_images/common/auto-bill@2x.png") no-repeat center; background-size: 167px; }
+#lnb .con .top .autobill_logo { width: 167px; height: 56px; background: url("../_images/common/auto-bill@2x.png") no-repeat center; background-size: 164px; }
 #lnb .con .top .autobill_logo a { display: block; width: 100%; height: 100%; }
 #lnb .con .top .icons { display: flex; }
-#lnb .con .top .icons li { margin-right: 11px; width: 24px; height: 29px; }
-#lnb .con .top .icons li.logout { background: url("../_images/common/icon-logout.png") no-repeat center; }
-#lnb .con .top .icons li.mypage { background: url("../_images/common/icon-man.png") no-repeat center; }
+#lnb .con .top .icons li { margin-right: 11px; width: 25px; height: 29px; }
+#lnb .con .top .icons li.logout { background: url("../_images/common/icon-logout.png") no-repeat center; background-size: 25px; }
+#lnb .con .top .icons li.mypage { background: url("../_images/common/icon-man.png") no-repeat center; background-size: 25px; }
 #lnb .con .top .icons li.name { width: 74px; line-height: 29px; color: #454545; font-size: 20px; }
 #lnb .con .top .icons li.name strong { font-weight: 700; }
 #lnb .con .top .icons li a { display: block; width: 100%; height: 100%; }
