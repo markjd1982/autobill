@@ -177,7 +177,7 @@ $(function(){
     ////////////////////     TREE     ////////////////////
     
     
-    $(document).on("click","#tree ul li a",function(){
+    $(document).on("click","#tree ul li a",function(e){
     
         if($(this).closest("li").hasClass("on")){
             $(this).closest("li").removeClass("on");
@@ -186,6 +186,7 @@ $(function(){
             $(this).closest("li").addClass("on");
             $(this).closest("li").find(">ul").slideDown(500,"easeInOutExpo");
         }
+        e.preventDefault();
         
     });
     
