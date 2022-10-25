@@ -177,7 +177,7 @@ $(function(){
     ////////////////////     TREE     ////////////////////
     
     
-    $(document).on("click","#tree ul li a",function(e){
+    $(document).on("click","#tree ul li button",function(e){
     
         if($(this).closest("li").hasClass("on")){
             $(this).closest("li").removeClass("on");
@@ -186,6 +186,19 @@ $(function(){
             $(this).closest("li").addClass("on");
             $(this).closest("li").find(">ul").slideDown(500,"easeInOutExpo");
         }
+        
+    });
+    
+    $(document).on("click","#tree ul li a",function(e){
+    
+        if($(this).hasClass("on")){
+            $(this).removeClass("on");
+        }else{
+            $(this).closest("#tree").find("a").removeClass("on");
+            $(this).addClass("on");
+        }
+        
+        
         e.preventDefault();
         
     });
