@@ -549,6 +549,11 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 .premium-grid li:nth-child(2) .img { background: url("../_images/common/premium-icon2@2x.png") no-repeat center #f5f5f5; background-size: 100px; }
 .premium-grid li:nth-child(3) .img { background: url("../_images/common/premium-icon3@2x.png") no-repeat center #f5f5f5; background-size: 100px; }
 .premium-grid li:nth-child(4) .img { background: url("../_images/common/premium-icon4@2x.png") no-repeat center #f5f5f5; background-size: 100px; }
+.premium-grid.two li:nth-child(1) .img { background: url("../_images/common/premium-info1@2x.png") no-repeat center #f5f5f5; background-size: 100px; }
+.premium-grid.two li:nth-child(2) .img { background: url("../_images/common/premium-info2@2x.png") no-repeat center #f5f5f5; background-size: 100px; }
+.premium-grid.two li:nth-child(3) .img { background: url("../_images/common/premium-info3@2x.png") no-repeat center #f5f5f5; background-size: 100px; }
+.premium-grid.two li:nth-child(4) .img { background: url("../_images/common/premium-info4@2x.png") no-repeat center #f5f5f5; background-size: 100px; }
+.premium-grid.two li .text { font-size: 16px; font-weight: 700; line-height: 1.4; margin-top: 20px; }
 
 .premium-step { display: flex; justify-content: space-between; }
 .premium-step li { border-radius: 20px; border: 1px solid #454545; width: 252px; height: 150px; padding: 0 20px; color: #454545; }
@@ -560,7 +565,7 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 
 .premium-slogan { padding-top: 120px; padding-bottom: 30px; text-align: center; }
 .premium-slogan .main { font-size: 30px; font-weight: 700; }
-.premium-slogan .sub { font-size: 20px; margin-top: 10px; color: #454545; }
+.premium-slogan .sub { font-size: 20px; margin-top: 10px; color: #454545; line-height: 1.4; }
 
 .premium-email { margin-top: 20px; font-size: 20px; line-height: 1.6; color: #454545; }
 
@@ -576,3 +581,10 @@ a { color: #4866db; text-decoration: underline; font-weight: 700; }
 .legal-top > ul > li ul li:nth-child(1) { width: 100px; border-right: 1px solid #dedede; }
 .legal-top > ul > li ul li:nth-child(2) { width: 200px; }
 .legal-top > ul > li ul:nth-child(1) li { border-bottom: 1px solid #dedede; }
+
+.premium-info { display: flex; justify-content: space-between; margin-top: 30px; }
+.premium-info > li { width: calc((100% - 72px) / 4); border: 1px solid #dedede; }
+.premium-info > li .top { line-height: 50px; color: #fff; font-size: 16px; font-weight: 700; background: #4866db; text-align: center; }
+.premium-info > li div { padding: 20px; }
+.premium-info > li div ul li { line-height: 30px; font-size: 14px; color: #454545; }
+.premium-info > li div ul li ul li { padding-left: 15px; line-height: 24px; font-size: 13px; color: #767676; }
