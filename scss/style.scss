@@ -572,6 +572,7 @@ a{
 .tree-wrap{
     margin-top: 10px;
     display: flex;
+    align-items: flex-start;
     .tree-btn{
         height: 40px;
         border: 1px solid $second;
