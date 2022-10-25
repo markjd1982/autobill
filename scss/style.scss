@@ -728,6 +728,9 @@ a{
                 flex-shrink: 0;
                 border-radius: 10px;
                 background: #3B405D;
+				&.gray{
+					background-color: #979797;
+				}
                 height: 40px;
                 color: #fff;
             }
