@@ -7,13 +7,14 @@
 
 <link href="../_css/reset.css" rel="stylesheet" type="text/css">
 <link href="../_css/style.css" rel="stylesheet" type="text/css">
+<link href="../_css/jquery-ui.css" rel="stylesheet" type="text/css">
     
 <link rel="icon" type="image/png" sizes="16x16" href="../_images/common/favicon-16x16.png">
 
 <script type="text/javascript" src="../_js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../_js/jquery.js"></script>
 <script type="text/javascript" src="../_js/jquery.easing.1.3.js"></script>
-
+<script type="text/javascript" src="../_js/jquery-ui.js"></script>
 	
 </head>
 <body class="main">
@@ -72,15 +73,20 @@
                                 <input type="text" style="width: 215px;" placeholder="날짜 입력" id="datepicker1">
                             </div>
 							<div class="date-wrap">
-                                <input type="text" style="width: 215px;" placeholder="날짜 입력" id="datepicker1">
+                                <input type="text" style="width: 215px;" placeholder="날짜 입력" id="datepicker3">
                             </div>
 						</td>
 					</tr>
 					<tr>
 						<th>프로젝트 ERP 코드</th>
-						<td><input type="text" value="A사 고도화"</td>
-						<td></td>
-						<td></td>
+						<td><input type="text" value="A사 고도화"></td>
+						<th>프로젝트 상태</th>
+						<td>
+                            <input type="radio" id="checkbox7" name="checkbox">
+                            <label for="checkbox7">진행</label>
+                            <input type="radio" id="checkbox8" name="checkbox">
+                            <label for="checkbox8">종료</label>
+                        </td>
 					</tr>
 				</table>
 					<div class="tree-wrap">
@@ -186,6 +192,7 @@
 					<a href="#" class="sec mt10" style="width:245px ">항목추가</a>
 				</div>
 				<div class="btn-con-wrap"> 
+					<a href="#" class="dis expand-close">취소</a>
 					<a href="#" class="pri expand-close">저장</a>
 				</div>
             </div>
@@ -262,6 +269,18 @@
 	</div>
     
 </body>
-	
+<script>
+    
+$(function(){
+        
+    $( "#datepicker1,#datepicker2,#datepicker3,#datepicker4,#datepicker5,#datepicker6" ).datepicker({
+        inline: true,
+		dayNamesMin:['일','월','화','수','목','금','토'],
+		monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+    });
+    
+});
+    
+</script>	
 
 </html>
