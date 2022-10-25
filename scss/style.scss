@@ -1152,6 +1152,41 @@ a{
             }
         }
     }
+    &.two{
+        li{
+            &:nth-child(1){
+                .img{
+                    background: url("../_images/common/premium-info1@2x.png") no-repeat center #f5f5f5;
+                    background-size: 100px;
+                }
+            }
+            &:nth-child(2){
+                .img{
+                    background: url("../_images/common/premium-info2@2x.png") no-repeat center #f5f5f5;
+                    background-size: 100px;
+                }
+            }
+            &:nth-child(3){
+                .img{
+                    background: url("../_images/common/premium-info3@2x.png") no-repeat center #f5f5f5;
+                    background-size: 100px;
+                }
+            }
+            &:nth-child(4){
+                .img{
+                    background: url("../_images/common/premium-info4@2x.png") no-repeat center #f5f5f5;
+                    background-size: 100px;
+                }
+            }
+            .text{
+                font-size: 16px;
+                //color: $second;
+                font-weight: 700;
+                line-height: 1.4;
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 
@@ -1203,6 +1238,7 @@ a{
         font-size: 20px;
         margin-top: 10px;
         color: $textColor;
+        line-height: 1.4;
     }
 }
 
@@ -1259,7 +1295,37 @@ a{
     }
 }
 
-
+.premium-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    >li{
+        width: calc((100% - 72px) / 4);
+        border: 1px solid $lineColor;
+        .top{
+            line-height: 50px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            background: $second;
+            text-align: center;
+        }
+        div{
+            padding: 20px;
+            ul li{
+                line-height: 30px;
+                font-size: 14px;
+                color: $textColor;
+                ul li{
+                    padding-left: 15px;
+                    line-height: 24px;
+                    font-size: 13px;
+                    color: #767676;
+                }
+            }
+        }
+    }
+}
 
 
 
