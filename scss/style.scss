@@ -70,6 +70,9 @@ a{
 	width:100%;
 	margin-top:40px;
 	text-align:center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	.wrap{
 		display: inline-block;
 	}
@@ -97,6 +100,15 @@ a{
 		border-radius: 100%;
 		margin-right: 20px;
 	}
+	a.ll{
+		width: 50px;
+		height: 50px;
+		border: solid 1px #454545;
+		background:url("../_images/_board/icon-s-caret-left-left@2x.png") no-repeat center / 24px;
+		text-indent: -9999px;
+		border-radius: 100%;
+		margin-right: 10px;
+	}
 	a.r{
 		width: 50px;
 		height: 50px;
@@ -105,6 +117,15 @@ a{
 		text-indent: -9999px;
 		border-radius: 100%;
 		margin-left: 20px;
+	}
+	a.rr{
+		width: 50px;
+		height: 50px;
+		border: solid 1px #454545;
+		background:url("../_images/_board/icon-s-caret-right-right@2x.png") no-repeat center / 24px;
+		text-indent: -9999px;
+		border-radius: 100%;
+		margin-left: 10px;
 	}
 }
 
